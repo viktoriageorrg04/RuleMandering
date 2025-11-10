@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RuleMandering Mockup</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles/tokens.css" />
+    <link rel="stylesheet" href="styles/base.css" />
+    <link rel="stylesheet" href="styles/header.css" />
+    <link rel="stylesheet" href="styles/layout.css" />
+    <link rel="stylesheet" href="styles/map.css" />
+    <link rel="stylesheet" href="styles/metrics.css" />
+    <link rel="stylesheet" href="styles/responsive.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header class="app-header">
+        <div class="brand">RuleMandering</div>
+            <div class="header-controls">
+                <label class="select-control pill">
+                <span class="sr-only">Country</span>
+                <div class="dropdown" data-dropdown="country">
+                  <button class="dropdown-toggle" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="dropdown-label">Country</span>
+                    <span class="dropdown-caret" aria-hidden="true">▾</span>
+                  </button>
+                  <div class="dropdown-menu" role="listbox" tabindex="-1" aria-label="Country list">
+                    <div class="dropdown-controls">
+                      <input class="dropdown-search" placeholder="Filter countries…" aria-label="Search countries" />
+                    </div>
+                    <div class="dropdown-list" role="presentation"></div>
+                  </div>
+                </div>
+                </label>
+                <label class="select-control pill">
+                <span class="sr-only">Scenario</span>
+                <div class="dropdown" data-dropdown="scenario">
+                  <button class="dropdown-toggle" aria-haspopup="listbox" aria-expanded="false">
+                    <span class="dropdown-label">Scenario</span>
+                    <span class="dropdown-caret" aria-hidden="true">▾</span>
+                  </button>
+                  <div class="dropdown-menu" role="listbox" tabindex="-1" aria-label="Scenario list">
+                    <div class="dropdown-list" role="presentation"></div>
+                  </div>
+                </div>
+                </label>
+            <label class="switch compare-control" title="Compare mode">
+                <input type="checkbox" id="compareToggle" />
+                <span class="switch-track">
+                <span class="switch-thumb"></span>
+                </span>
+                <span class="switch-label">Compare</span>
+            </label>
+        </div>
+        <button class="sign-in" type="button">Sign in</button>
+      </header>
+      <main class="layout">
+        <aside class="control-panel">
+          <div class="card control-card">
+            <div class="card-title">Threshold</div>
+            <div class="slider-row">
+              <input type="range" min="0" max="10" value="4" />
+              <span class="value">n%</span>
+            </div>
+            <div class="divider"></div>
+            <div class="form-field">
+            <div class="card-title">Seat-allocation formula</div>
+              <div class="radio-group">
+                <label class="formula">
+                  <input type="radio" name="formula" checked>
+                  <span class="marker-wrap" aria-hidden="true">
+                    <svg class="marker-icon" viewBox="0 0 12 12" width="12" height="12" focusable="false">
+                      <path d="M3 2.4 L9 6 L3 9.6 Z"
+                            fill="currentColor"
+                            stroke="currentColor"
+                            stroke-width="1.6"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  <span class="text">Formula 1</span>
+                </label>
+                <label class="formula">
+                  <input type="radio" name="formula">
+                  <span class="marker-wrap" aria-hidden="true">
+                    <svg class="marker-icon" viewBox="0 0 12 12" width="12" height="12" focusable="false">
+                      <path d="M3 2.4 L9 6 L3 9.6 Z"
+                            fill="currentColor"
+                            stroke="currentColor"
+                            stroke-width="1.6"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  <span class="text">Formula 2</span>
+                </label>
+                <label class="formula">
+                  <input type="radio" name="formula">
+                  <span class="marker-wrap" aria-hidden="true">
+                    <svg class="marker-icon" viewBox="0 0 12 12" width="12" height="12" focusable="false">
+                      <path d="M3 2.4 L9 6 L3 9.6 Z"
+                            fill="currentColor"
+                            stroke="currentColor"
+                            stroke-width="1.6"
+                            stroke-linejoin="round"
+                            stroke-linecap="round"/>
+                    </svg>
+                  </span>
+                  <span class="text">Formula 3</span>
+                </label>
+              </div>
+            </div>
+            <div class="divider"></div>
+            <div class="form-field">
+              <div class="field-row">
+                <div class="card-title">District magnitude</div>
+                <div class="mode-wrap">
+                  <div class="segmented tabs" role="tablist" aria-label="District magnitude mode">
+
+                    <input id="mode-1" name="dm-mode" type="radio" checked aria-controls="dm-mode-1-panel">
+                    <label for="mode-1" role="tab" aria-selected="true" tabindex="0">Mode 1</label>
+
+                    <input id="mode-2" name="dm-mode" type="radio" aria-controls="dm-mode-2-panel">
+                    <label for="mode-2" role="tab" aria-selected="false" tabindex="-1">Mode 2</label>
+
+                    <input id="mode-3" name="dm-mode" type="radio" aria-controls="dm-mode-3-panel">
+                    <label for="mode-3" role="tab" aria-selected="false" tabindex="-1">Mode 3</label>
+
+                    <span class="seg-thumb" aria-hidden="true"></span>
+                  </div>
+                </div>
+              </div>
+              <div class="slider-row">
+                <input type="range" min="0" max="10" value="4" />
+                <span class="value">n%</span>
+              </div>
+            </div>
+            <div class="toolbar">
+              <button class="action reset">Reset</button>
+              <span class="toolbar-sep" aria-hidden="true"></span>
+              <button class="action apply">Apply</button>
+            </div>
+          </div>
+        </aside>
+        <section class="visual-panel">
+          <div class="card map-card">
+            <div class="map-header">
+              <div>
+                <h2>MAP VIEW</h2>
+              </div>
+              <div class="map-actions">
+                <button class="btn ghost" type="button">Download</button>
+                <button class="btn ghost" type="button">Share</button>
+              </div>
+            </div>
+            <div class="map-placeholder">
+              <div class="map"></div>
+              <aside class="legend">
+                <h3>What changed here?</h3>
+                <p class="legend-intro">
+                  Seats shifted once the threshold rose above 4%. Districts with
+                  smaller magnitudes are more volatile.
+                </p>
+                <ul>
+                  <li><span class="dot blue"></span> Majority coalition gains 3 seats.</li>
+                  <li><span class="dot purple"></span> Opposition loses representation.</li>
+                  <li><span class="dot red"></span> New parties fall below threshold.</li>
+                </ul>
+                <div class="methods">
+                  <h4>Methods</h4>
+                  <p>
+                    Results are simulated using proportional allocation models
+                    and historic vote shares. District magnitudes are set to 6
+                    seats with rounding to the nearest integer.
+                  </p>
+                </div>
+              </aside>
+            <div class="map-meta">
+              Country → <span class="meta-accent">Threshold 4%</span> → District magnitude 6
+            </div>
+          </div>
+          <div class="card insights-card">
+            <div class="metric-group">
+              <div class="metric">
+                <span class="label">Seat bonus</span>
+                <div class="bar">
+                  <div class="fill blue" style="width: 60%"></div>
+                </div>
+                <span class="value">60%</span>
+              </div>
+              <div class="metric highlight">
+                <span class="label">Votes wasted</span>
+                <div class="circle">25%</div>
+              </div>
+              <div class="metric highlight">
+                <span class="label">District magnitude</span>
+                <div class="circle red">5.8</div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+    <script src="scripts/app.js" defer></script>
+  </body>
+</html>

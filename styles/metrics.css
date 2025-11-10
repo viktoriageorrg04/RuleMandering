@@ -1,0 +1,14 @@
+/* Metrics card below the breadcrumb */
+.insights-card{margin-top:12px;display:grid;grid-template-columns:2fr 1fr;gap:32px;align-items:center}
+.metric-group{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 26px;align-items:end}
+.metric{display:grid;gap:10px}
+.metric .label{font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gray-600)}
+.bar{width:100%;height:12px;background:var(--gray-200);border-radius:999px;overflow:hidden}
+.fill{height:100%;border-radius:999px}
+.fill.blue{background:var(--blue-800)} .fill.purple{background:var(--purple)}
+.metric .value{font-weight:600;color:var(--gray-900)}
+.metric.highlight{text-align:center;justify-items:center}
+.circle{width:80px;height:80px;border-radius:50%;display:grid;place-items:center;background:var(--blue-100);color:var(--blue-900);font-weight:600;font-size:1.1rem}
+.circle.red{background:rgba(239,92,103,.12);color:var(--red)}
+.notes h3{text-transform:uppercase;letter-spacing:.12em;font-size:.95rem;color:var(--gray-600);margin-bottom:12px}
+.notes p{font-size:.95rem;color:var(--gray-900);line-height:1.5}

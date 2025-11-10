@@ -1,0 +1,89 @@
+/* Main layout columns */
+.layout { display: grid; grid-template-columns: 320px 1fr; gap: 32px; margin-top: 28px; }
+.control-card + .control-card { margin-top: 20px; }
+
+/* Left control panel cards */
+.control-panel .control-card { padding: var(--card-pad); }
+
+/* Headings OWN the first gap below them (works for both .card-title and h3) */
+.control-panel .control-card h3,
+.control-panel .control-card .card-title {
+  margin: 0 0 var(--heading-gap);
+}
+/* Ensure wrappers don’t re-add top margins after headings */
+.control-panel .control-card .slider-row,
+.control-panel .control-card .radio-group,
+.control-panel .control-card .mode-wrap {
+  margin-top: 0;
+}
+
+/* Seat-allocation formula (compact radio rows + small gap before divider) */
+.control-panel .control-card .radio-group {
+  display: grid;
+  row-gap: 6px;
+  margin-bottom: var(--field-gap);
+}
+
+/* Light grey separators with consistent spacing */
+.control-panel .control-card .divider {
+  height: 1px;
+  background: var(--gray-200);
+  margin: var(--section-gap) 0;
+}
+.control-panel .control-card .radio-group + .divider {
+  margin-top: var(--field-gap);
+}
+
+/* District magnitude: same heading→first control gap; tight link to slider */
+/* .control-panel .control-card .mode-wrap + .slider-row { margin-top: var(--field-gap); } */
+.control-panel .control-card .mode-wrap + .slider-row { margin-top: var(--space-5); }
+
+/* kill any stray bottom margins so the gap is controlled only by the sibling rule */
+.control-panel .control-card .mode-wrap,
+.control-panel .control-card .mode-wrap .segmented { margin-bottom: 0; }
+
+/* spacing between the mode selector row and the slider below it */
+.control-panel .control-card .field-row + .slider-row {
+  margin-top: var(--space-5);
+}
+
+/* Slider rows (both cards): compact top; give space before toolbar */
+.control-panel .control-card .slider-row {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: var(--section-gap);
+}
+.control-panel .control-card .slider-row input[type="range"] { margin-bottom: 0; }
+
+/* Reset / Apply toolbar flush to the card edges, full-height halves */
+.toolbar {
+  display: grid;
+  grid-template-columns: 1fr 1px 1fr;
+  align-items: stretch;
+  margin: 0 calc(var(--card-pad) * -1) calc(var(--card-pad) * -1);
+  padding: 0;
+  border-top: 1px solid var(--gray-200);
+  border-bottom-left-radius: 22px;
+  border-bottom-right-radius: 22px;
+  overflow: hidden;
+}
+.toolbar .action {
+  display: flex; align-items: center; justify-content: center;
+  height: 100%; padding: 28px 0;
+  font-size: .95rem; font-weight: 600;
+  background: transparent; color: var(--gray-900);
+  transition: background-color .18s ease;
+  border: 0; outline: 0; box-shadow: none;
+}
+.toolbar > .action.reset { color: var(--gray-700); }
+.toolbar > .action.apply { color: var(--blue-900); }
+.toolbar-sep { width: 1px; background: var(--gray-200); height: 100%; }
+.toolbar .action:hover { background: var(--gray-100); }
+.toolbar > .action:active { transform: none; box-shadow: none; }
+.toolbar > .action:focus-visible { outline: 2px solid var(--blue-300); outline-offset: 2px; }
+
+/* Guard: no stray gap above the toolbar */
+.control-panel .control-card .form-field + .toolbar,
+.control-panel .control-card .slider-row + .toolbar { margin-top: 0; }

@@ -1,0 +1,16 @@
+/* Header compaction */
+@media (max-width:900px){
+  .app-header{padding:14px 18px}
+  .header-controls{gap:8px}
+  .app-header .select-control.pill select{height:30px;font-size:.9rem}
+  .sign-in{padding:6px 10px;font-size:.82rem}
+}
+
+/* One-column layout & card grids */
+@media (max-width:1024px){
+  .layout{grid-template-columns:1fr}
+  .control-panel{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
+  .map-placeholder{grid-template-columns:1fr}
+  .insights-card{grid-template-columns:1fr}
+  .metric-group{grid-template-columns:repeat(2,minmax(0,1fr))}
+}

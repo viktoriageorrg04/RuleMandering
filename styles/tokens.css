@@ -1,0 +1,45 @@
+:root{
+  /* Brand blues */
+  --blue-100:#EAF1FF;
+  --blue-200:#D7E3FF;
+  --blue-300:#BBD0FF;
+  --blue-800:#2E59C7;
+  --blue-900:#1A41AA;
+
+  /* Grays */
+  --gray-100:#F6F8FB;
+  --gray-200:#E7ECF3;
+  --gray-600:#8190A7;
+  --gray-900:#1E2633;
+  --gray-1000:#0F1420;
+
+  /* Formula color tokens */
+  --formula-active: var(--blue-900);
+  --formula-inactive: var(--gray-600);
+  /* --formula-hover: var(--gray-900); */
+--formula-hover: rgba(30,38,51,0.7);
+
+  /* Shadow + radii */
+  --shadow:0 10px 40px rgba(26,65,170,.10), 0 2px 8px rgba(20,32,64,.06);
+  --radius-lg:22px;
+  --radius-md:16px;
+  --radius-sm:12px;
+
+  /* Spacing scale */
+  --space-2:8px;
+  --space-3:12px;
+  --space-4:16px;
+  --space-5:20px;
+  --space-6:24px;
+  --space-7:28px;
+  --space-8:32px;
+
+  /* Card padding & section rhythm */
+--card-pad: var(--space-8);   /* increase space inside cards (was space-7) */
+--heading-gap: var(--space-6);/* more gap under titles */
+--field-gap: var(--space-4);  /* space between fields inside a section */
+--section-gap: var(--space-6);/* gap around dividers / section breaks */
+
+  /* Typography */
+  --title-size: 1.05rem;
+}

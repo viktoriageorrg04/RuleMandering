@@ -1,0 +1,42 @@
+.map-card{padding:28px}
+.map-header{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:14px}
+.map-header h2{font-size:1rem;letter-spacing:.15em;color:var(--blue-900)}
+.map-actions{display:flex;gap:10px;align-items:center}
+
+/* Map + legend grid with tight breadcrumb row */
+/* .map-placeholder{
+  display:grid;
+  grid-template-columns:4fr 1.25fr;
+  grid-template-rows:auto auto;
+  column-gap:32px;
+  row-gap:6px;
+  align-items:start;
+} */
+ .map-placeholder .map{
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  min-height: 220px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, rgba(14,49,137,0.06), rgba(14,49,137,0.02));
+  overflow: hidden;
+}
+.map{grid-column:1;grid-row:1;background:linear-gradient(135deg,#d9e3ff,#f3f6ff);border-radius:18px;position:relative;aspect-ratio:2.15/1;min-height:240px;overflow:hidden}
+.legend{grid-column:2;grid-row:1 / span 2}
+.map-meta{grid-column:1;grid-row:2;display:flex;align-items:center;gap:10px;margin-top:0;padding:10px 14px;background:#fff;border-radius:14px;box-shadow:var(--shadow);color:var(--gray-600);font-size:.92rem}
+.map-meta .meta-accent{color:var(--blue-900);font-weight:600}
+
+/* Decorative blobs */
+.map::before,.map::after{content:'';position:absolute;background:rgba(15,61,158,.2);border-radius:50%}
+.map::before{width:150px;height:150px;top:36px;left:74px}
+.map::after{width:110px;height:110px;bottom:36px;right:54px}
+
+/* Legend & methods */
+.legend h3{font-size:1.1rem;margin-bottom:12px}
+.legend-intro{color:var(--gray-600);font-size:.95rem;margin-bottom:16px}
+.legend ul{list-style:none;display:grid;gap:10px;color:var(--gray-900);font-size:.95rem}
+.legend li{display:flex;align-items:center;gap:12px}
+.dot{width:12px;height:12px;border-radius:50%;display:inline-flex}
+.dot.blue{background:var(--blue-800)} .dot.purple{background:var(--purple)} .dot.red{background:var(--red)}
+.methods{margin-top:24px;padding-top:20px;border-top:1px solid var(--gray-200)}
+.methods h4{font-size:.95rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;color:var(--gray-600)}
+.methods p{font-size:.9rem;color:var(--gray-600);line-height:1.5}
