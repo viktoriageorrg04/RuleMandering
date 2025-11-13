@@ -1,181 +1,91 @@
+/* container alignment and padding */
+:root { --container-max: 1240px; --page-pad: 24px; }
 
-/* Header container */
+.page { max-width: var(--container-max); margin-inline: auto; padding-inline: var(--page-pad); }
+.layout { max-width: var(--container-max); margin-inline: auto; }
+
+/* header */
 .app-header{
+  width: 100%;
+  /* padding-inline: var(--page-pad); */
+  background: var(--blue-900);
+  color: #fff;
+  box-shadow: var(--shadow);
+  border-radius: 18px;
+  padding-block: 14px;
+}
+
+.app-header-inner{
+  max-width: var(--container-max);
+  margin-inline: auto;
+  padding-inline: var(--page-pad);
   display: grid;
+  /* grid-template-columns: 1fr auto 1fr; */
   grid-template-columns: 320px 1fr auto;
   align-items: center;
   column-gap: 32px;
-  background: var(--blue-900);
-  color: #fff;
-  padding: 18px 24px 18px 24px;
-  border-radius: 18px;
-  box-shadow: var(--shadow);
-  max-width: 1200px;
-  margin: 0 auto;
-  width: 100%;
-}
-.brand{grid-column:1; font-weight:600;font-size:1.5rem;letter-spacing:.03em}
-
-/* Header controls: country/scenario pills, compare switch, sign-in */
-.header-controls{
-  grid-column:2;
-  display:flex;
-  align-items:center;
-  gap:12px;
-  justify-self:start;
-  margin:0;
-  margin-right: 0;
+  box-sizing: border-box;
 }
 
-/* Dropdowns in header (country / scenario) */
-.select-control.pill .dropdown { position: relative; display: inline-block; }
+.app-header .controls,
+.app-header .header-actions,
+.app-header .toolbar,
+.app-header .actions {
+   display: flex;
+   align-items: center;
+   gap: 12px;
+   justify-self: start;
+}
+
+/* disable the offset on small screens where layout stacks */
+@media (max-width: 900px) {
+  .app-header-inner {
+    grid-template-columns: 1fr auto 1fr;
+  }
+  .app-header .controls,
+  .app-header .header-actions,
+  .app-header .toolbar,
+  .app-header .actions {
+    justify-self: start;
+    gap: 8px;
+  }
+}
+
+.brand{ grid-column:1; font-weight:700; font-size:1.5rem; letter-spacing:.03em; }
+/* .header-controls{ grid-column:2; display:flex; align-items:center; gap:12px; justify-self:center; } */
+.header-controls{ grid-column:2; display:flex; align-items:center; gap:12px; justify-self:start; }
+.sign-in{ grid-column:3; justify-self:end; padding:8px 14px; border-radius:10px; font-size:.85rem; background:#fff; color:var(--blue-900); font-weight:600; text-transform:uppercase; letter-spacing:.08em; border:0; cursor:pointer }
+
+.select-control.pill .dropdown { position:relative; display:inline-block; }
 .select-control.pill .dropdown-toggle{
-  display:inline-flex;
-  align-items:center;
-  justify-content: space-between;
-  gap:8px;
-  height:40px;
-  padding:0 18px;
-  min-width: 160px;
-  border-radius:999px;
-  background:transparent;
-  color:#fff;
-  border:3px solid rgba(255,255,255,.50);
-  font-weight:600;
-  cursor:pointer;
+  display:inline-flex; align-items:center; justify-content:space-between; gap:8px;
+  height:40px; padding:0 18px; min-width:160px; border-radius:999px;
+  background:transparent; color:#fff; border:3px solid rgba(255,255,255,.50);
+  font-weight:600; cursor:pointer;
 }
-/* label grows and stays left-aligned */
 .select-control.pill .dropdown-toggle .dropdown-label{
-  flex:1 1 auto;
-  text-align:left;
-  display:inline-block;
-  padding-right:8px;
-  white-space:nowrap;
-  overflow:hidden;
-  text-overflow:ellipsis;
+  flex:1; text-align:left; padding-right:8px; white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
 }
-/* caret pinned to the right */
-.select-control.pill .dropdown-toggle .dropdown-caret{
-  flex:0 0 auto;
-  margin-left:8px;
-  font-size:1.15em;
-  line-height:1;
-  opacity:0.95;
-}
+.select-control.pill .dropdown-toggle .dropdown-caret{ margin-left:8px; font-size:1.15em; line-height:1; opacity:.95; }
+
 .select-control.pill .dropdown-menu{
-  position: absolute;
-  right: 0;
-  top: calc(100% + 10px);
-  min-width: 220px;
-  max-width: 360px;          /* don't stretch infinitely */
-  width: max-content;
-  background: #fff;
-  color: var(--gray-900);
-  border-radius: 12px;
-  box-shadow: var(--shadow);
-  padding: 8px;
-  z-index: 1200;
-  display: none;
-  overflow: hidden;
+  position:absolute; right:0; top:calc(100% + 10px); min-width:220px; max-width:360px; width:max-content;
+  background:#fff; color:var(--gray-900); border-radius:12px; box-shadow:var(--shadow); padding:8px; z-index:1200; display:none;
 }
+.select-control.pill .dropdown.open .dropdown-menu{ display:block; }
+.dropdown-controls{ padding:6px 8px 8px; }
+.dropdown-search{ width:100%; padding:8px 10px; border-radius:8px; border:1px solid var(--gray-200); font-size:.95rem; }
+.dropdown-list{ max-height:260px; overflow:auto; padding:6px 4px; }
+.dropdown-list .item{ padding:8px 12px; border-radius:8px; cursor:pointer; font-weight:600; color:var(--gray-900); }
+.dropdown-list .item[aria-selected="true"]{ background:var(--blue-100); color:var(--blue-900); }
+.dropdown-list .item:hover{ background:var(--gray-100); color:var(--gray-900); }
 
-/* show */
-.select-control.pill .dropdown.open .dropdown-menu { display:block; }
-
-/* controls */
-.dropdown-controls { padding: 6px 8px 8px; }
-.dropdown-search{
-  width:100%;
-  padding:8px 10px;
-  border-radius:8px;
-  border:1px solid var(--gray-200);
-  font-size:0.95rem;
-}
-
-/* list area with limited height and native scrolling */
-.dropdown-list{
-  max-height: 260px; /* control height */
-  overflow:auto;
-  padding: 6px 4px;
-  position: relative;
-}
-
-/* item */
-.dropdown-list .item{
-  padding: 8px 12px;
-  border-radius:8px;
-  cursor:pointer;
-  font-weight:600;
-  color:var(--gray-900);
-}
-.dropdown-list .item[aria-selected="true"]{ background: var(--blue-100); color:var(--blue-900); }
-.dropdown-list .item:hover{ background: var(--gray-100); color:var(--gray-900); }
-
-/* vertical slider on the right — rotated range to appear vertical */
-.dropdown-scroll{
-  position:absolute;
-  right:6px;
-  top: 48px;
-  bottom: 8px;
-  width: 28px;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  pointer-events:auto;
-}
-.dropdown-scroll .dropdown-scroll-slider{
-  -webkit-appearance:none;
-  appearance:none;
-  width: 160px; height: 22px;  /* horizontal slider rotated */
-  transform: rotate(90deg);
-  transform-origin: center;
-  background: transparent;
-  cursor: pointer;
-  opacity: 0.95;
-}
-/* simple thumb styling */
-.dropdown-scroll-slider::-webkit-slider-thumb{
-  -webkit-appearance:none; width:14px;height:14px;border-radius:50%; background:var(--blue-900);
-  box-shadow:0 1px 3px rgba(0,0,0,.15);
-}
-.dropdown-scroll-slider::-webkit-slider-runnable-track{ height:6px; background:var(--gray-200); border-radius:4px; }
-/* hide slider for the scenario dropdown (no long list) */
-.select-control.pill[data-dropdown="scenario"] .dropdown-scroll{ display:none; }
-/* ensure white space and readability */
-.select-control.pill .dropdown-menu .dropdown-list::-webkit-scrollbar { width:10px; }
-.select-control.pill .dropdown-menu .dropdown-list::-webkit-scrollbar-thumb { background: rgba(0,0,0,0.06); border-radius:6px; }
-
-/* Compare switch */
 .switch{display:inline-flex;align-items:center;gap:8px;color:#fff;font-weight:600;text-transform:uppercase;letter-spacing:.06em;cursor:pointer;user-select:none}
 .switch input{position:absolute;opacity:0;pointer-events:none}
 .switch-track{position:relative;width:40px;height:22px;border-radius:999px;background:rgba(255,255,255,.22);box-shadow:inset 0 0 0 1px rgba(255,255,255,.35);transition:background .25s}
 .switch-thumb{position:absolute;top:2px;left:2px;width:18px;height:18px;border-radius:50%;background:#fff;box-shadow:0 2px 8px rgba(0,0,0,.15);transition:transform .25s}
-.switch input:checked + .switch-track{
-  background: #e9ecef;
-  border: 1px solid rgba(0,0,0,0.06);
-}
-.switch input:checked + .switch-track .switch-thumb{
-  transform: translateX(18px);
-  background: #ffffff;
-}
-.switch input:checked:focus + .switch-track{
-  box-shadow: 0 0 0 3px rgba(14,49,137,0.06);
-}
-.switch .switch-label{color:#fff}
+.switch input:checked + .switch-track{ background:#e9ecef; border:1px solid rgba(0,0,0,0.06) }
+.switch input:checked + .switch-track .switch-thumb{ transform:translateX(18px); background:#fff }
+.switch .switch-label{ color:#fff }
 
-/* Sign-in */
-.sign-in{
-  grid-column:3;
-  justify-self:end;
-  padding:8px 14px;
-  border-radius:10px;
-  font-size:.85rem;
-  margin-left:0;
-  background:#fff;
-  color:var(--blue-900);
-  font-weight:600;
-  text-transform:uppercase;
-  letter-spacing:.08em;
-  border:0;
-  cursor:pointer;
-}
+/* .sign-in{ grid-column:3; justify-self:end; padding:8px 14px; border-radius:10px; font-size:.85rem; background:#fff; color:var(--blue-900); font-weight:600; text-transform:uppercase; letter-spacing:.08em; border:0; cursor:pointer } */

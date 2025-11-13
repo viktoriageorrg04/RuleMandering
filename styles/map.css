@@ -1,42 +1,194 @@
-.map-card{padding:28px}
-.map-header{display:flex;justify-content:space-between;align-items:flex-start;gap:18px;margin-bottom:14px}
-.map-header h2{font-size:1rem;letter-spacing:.15em;color:var(--blue-900)}
-.map-actions{display:flex;gap:10px;align-items:center}
+.map-card{ padding:28px }
+.map-header{ display:flex; justify-content:space-between; align-items:flex-start; gap:18px; margin-bottom:14px }
+.map-header h2{ font-size:1rem; letter-spacing:.15em; color:var(--blue-900) }
+.map-actions{ display:flex; gap:10px; align-items:center }
 
-/* Map + legend grid with tight breadcrumb row */
-/* .map-placeholder{
-  display:grid;
-  grid-template-columns:4fr 1.25fr;
-  grid-template-rows:auto auto;
-  column-gap:32px;
-  row-gap:6px;
-  align-items:start;
+/* layout under the header */
+/* .map-placeholder{ display:flex; flex-direction:column; gap:16px }
+@media (min-width:1100px){
+  .map-placeholder{
+    display:grid;
+    grid-template-columns:minmax(560px,1.5fr) minmax(300px,.9fr);
+    grid-template-rows:auto 1fr;
+    grid-template-areas:
+      "map   legend"
+      "meta  legend";
+    column-gap:24px; row-gap:16px; align-items:stretch;
+  }
+  .map{ grid-area:map }
+  .map-meta{ grid-area:meta }
+  .legend{ grid-area:legend; position:sticky; top:110px; height:100%; align-self:stretch; max-width:420px; }
 } */
- .map-placeholder .map{
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  min-height: 220px;
-  border-radius: 16px;
-  background: linear-gradient(135deg, rgba(14,49,137,0.06), rgba(14,49,137,0.02));
-  overflow: hidden;
+
+/* layout under the header */
+.map-placeholder{
+  display: grid;
+  gap: 16px;
 }
-.map{grid-column:1;grid-row:1;background:linear-gradient(135deg,#d9e3ff,#f3f6ff);border-radius:18px;position:relative;aspect-ratio:2.15/1;min-height:240px;overflow:hidden}
-.legend{grid-column:2;grid-row:1 / span 2}
-.map-meta{grid-column:1;grid-row:2;display:flex;align-items:center;gap:10px;margin-top:0;padding:10px 14px;background:#fff;border-radius:14px;box-shadow:var(--shadow);color:var(--gray-600);font-size:.92rem}
-.map-meta .meta-accent{color:var(--blue-900);font-weight:600}
 
-/* Decorative blobs */
-.map::before,.map::after{content:'';position:absolute;background:rgba(15,61,158,.2);border-radius:50%}
-.map::before{width:150px;height:150px;top:36px;left:74px}
-.map::after{width:110px;height:110px;bottom:36px;right:54px}
+/* desktop: map uses the full width; meta + legend stacked below */
+@media (min-width:1100px){
+  .map-placeholder{
+    grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto;
+    grid-template-areas:
+      "map"
+      "meta"
+      "legend";
+  }
 
-/* Legend & methods */
-.legend h3{font-size:1.1rem;margin-bottom:12px}
-.legend-intro{color:var(--gray-600);font-size:.95rem;margin-bottom:16px}
-.legend ul{list-style:none;display:grid;gap:10px;color:var(--gray-900);font-size:.95rem}
-.legend li{display:flex;align-items:center;gap:12px}
-.dot{width:12px;height:12px;border-radius:50%;display:inline-flex}
-.dot.blue{background:var(--blue-800)} .dot.purple{background:var(--purple)} .dot.red{background:var(--red)}
-.methods{margin-top:24px;padding-top:20px;border-top:1px solid var(--gray-200)}
-.methods h4{font-size:.95rem;text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px;color:var(--gray-600)}
-.methods p{font-size:.9rem;color:var(--gray-600);line-height:1.5}
+  .map{ grid-area: map; }
+  .map-meta{ grid-area: meta; }
+
+  .legend{
+    grid-area: legend;
+    position: static;
+    top: auto;
+    max-width: none;
+    align-self: stretch;
+  }
+}
+
+/* 16:9 canvas */
+/* .map{
+  width:100%; aspect-ratio:16/9; min-height:320px;
+  background:linear-gradient(135deg,#d9e3ff,#f3f6ff);
+  border-radius:18px; position:relative; overflow:hidden; box-shadow:var(--shadow);
+}
+.map svg{ width:100%; height:100%; display:block } */
+/* 16:9 canvas */
+.map{
+  width: 100%;
+  /* aspect-ratio: 16/9; */
+  min-height: 320px;
+  background: linear-gradient(135deg,#d9e3ff,#f3f6ff);
+  border-radius: 18px;
+  position: relative;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+
+  /* center the SVG inside */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* zoomed, non-stretched map */
+.map svg{
+  width: 100%;
+  height: 100%;
+  display: block;
+  transform: scale(1.00);
+  transform-origin: 50% 50%;
+}
+
+/* remove decorative circles over the map */
+.map::before,.map::after{ content:none !important }
+
+/* breadcrumb/meta — smaller and subtler */
+.map-meta{
+  align-self:stretch; width:100%;
+  display:flex; flex-wrap:wrap; justify-content:center; align-items:center; gap:10px 14px;
+  padding:14px 16px; background:#fff; border-radius:18px; box-shadow:var(--shadow);
+  color:var(--gray-1000); font-size:.92rem; font-weight:500;
+}
+.map-meta .meta-sep{ opacity:.38; color:var(--gray-600); margin:0 2px }
+
+/* legend card */
+/* .legend{
+  background:#fff; border-radius:18px; box-shadow:var(--shadow);
+  padding:20px 22px; text-align:left; min-height:100%;
+  display:flex; flex-direction:column; gap:12px;
+}
+.legend h3{ font-size:1.06rem; letter-spacing:.02em; margin:0; color:var(--gray-1000) }
+.legend-intro{ color:var(--gray-600); font-size:.96rem; line-height:1.55; margin:0 }
+.legend ul{ list-style:none; padding:0; margin:0; display:grid; gap:10px; color:var(--gray-900); font-size:.96rem }
+.legend li{ display:flex; align-items:center; gap:10px }
+.dot{ width:12px; height:12px; border-radius:50%; flex:0 0 12px; background:var(--gray-300); border:1px solid rgba(0,0,0,.06) }
+.dot.blue{ background:#3F66F0 } .dot.purple{ background:#7B61FF } .dot.red{ background:#EF5C67 }
+
+.metric .label{ font-size:.95rem; white-space:nowrap; } */
+
+/* legend card – clean version */
+.legend{
+  background:#fff;
+  border-radius:18px;
+  box-shadow:var(--shadow);
+  padding:20px 22px 22px;
+  text-align:left;
+  display:flex;
+  flex-direction:column;
+  gap:12px;
+}
+
+.legend h3{
+  margin:0 0 2px;
+  font-size:1.02rem;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  color:var(--gray-1000);
+}
+
+.legend-intro{
+  margin:0;
+  color:var(--gray-600);
+  font-size:.95rem;
+  line-height:1.55;
+}
+
+.legend ul{
+  list-style:none;
+  padding:0;
+  margin:4px 0 0;
+  display:grid;
+  gap:8px;
+  color:var(--gray-900);
+  font-size:.96rem;
+}
+
+.legend li{
+  display:flex;
+  align-items:center;
+  gap:10px;
+}
+
+.dot{
+  width:10px;
+  height:10px;
+  border-radius:50%;
+  flex:0 0 10px;
+  border:1px solid rgba(0,0,0,.06);
+}
+
+.dot.blue{ background:#3F66F0; }
+.dot.purple{ background:#7B61FF; }
+.dot.red{ background:#EF5C67; }
+
+/* desktop: split the legend into two columns with a divider */
+@media (min-width:1100px){
+  .legend{
+    display:grid;
+    grid-template-columns:minmax(0,1.3fr) minmax(0,1.4fr);
+    grid-template-rows:auto auto;
+    column-gap:24px;
+    row-gap:10px;
+    align-items:flex-start;
+  }
+
+  /* title spans across both columns */
+  .legend h3{
+    grid-column:1 / -1;
+  }
+
+  /* intro = left column */
+  .legend-intro{
+    margin-top:2px;
+  }
+
+  /* bullet list = right column with vertical separator */
+  .legend ul{
+    margin:0;
+    padding-left:20px;
+    border-left:1px solid var(--gray-200);
+  }
+}

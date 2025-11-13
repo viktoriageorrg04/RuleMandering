@@ -1,14 +1,189 @@
-/* Metrics card below the breadcrumb */
-.insights-card{margin-top:12px;display:grid;grid-template-columns:2fr 1fr;gap:32px;align-items:center}
-.metric-group{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px 26px;align-items:end}
-.metric{display:grid;gap:10px}
-.metric .label{font-size:.85rem;text-transform:uppercase;letter-spacing:.12em;color:var(--gray-600)}
-.bar{width:100%;height:12px;background:var(--gray-200);border-radius:999px;overflow:hidden}
-.fill{height:100%;border-radius:999px}
-.fill.blue{background:var(--blue-800)} .fill.purple{background:var(--purple)}
-.metric .value{font-weight:600;color:var(--gray-900)}
-.metric.highlight{text-align:center;justify-items:center}
-.circle{width:80px;height:80px;border-radius:50%;display:grid;place-items:center;background:var(--blue-100);color:var(--blue-900);font-weight:600;font-size:1.1rem}
-.circle.red{background:rgba(239,92,103,.12);color:var(--red)}
-.notes h3{text-transform:uppercase;letter-spacing:.12em;font-size:.95rem;color:var(--gray-600);margin-bottom:12px}
-.notes p{font-size:.95rem;color:var(--gray-900);line-height:1.5}
+/* row under the map: metrics (left) */
+.below-map{
+  display:grid;
+  gap:22px;
+  margin-top:16px;
+}
+@media (min-width:1100px){
+  .below-map{
+    grid-template-columns: 1fr;
+    align-items:start;
+  }
+}
+
+/* cards inside the row */
+.below-map .card{
+  width:100%;
+  box-sizing:border-box;
+  padding:18px 22px;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:var(--shadow);
+}
+
+.metric-grid{
+  display:grid;
+  grid-template-columns: repeat(3,minmax(0,1fr));
+  gap:22px 26px;
+  align-items:end;
+}
+.metric{display:grid;gap:10px;text-align:center;justify-items:center}
+.metric .label{font-weight:600;color:var(--gray-1000)}
+
+.metrics-card .metric-title,
+.kpi-block .kpi-title,
+.metrics h4 {
+  font-size: .95rem;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* seat bonus */
+.stackbar{
+  width:100%; max-width:420px; height:14px; border-radius:999px;
+  background:var(--gray-200); overflow:hidden; display:flex;
+}
+.stackbar .seg{height:100%}
+.stackbar .seg.red   { background:#EF5C67 }
+.stackbar .seg.green { background:#2BC48A }
+.stackbar .seg.purple{ background:#7B61FF }
+.stackbar .seg.gray  { background:#DDE3F0 }
+.legend-chips{display:flex;flex-wrap:wrap;gap:8px 10px;justify-content:center}
+.chip{
+  --c:#D0D7E6;
+  display:inline-flex;align-items:center;gap:8px;
+  padding:6px 10px;border-radius:999px;
+  background:#F6F8FB;color:var(--gray-900);font-size:.9rem
+}
+.chip::before{
+  content:"";width:10px;height:10px;border-radius:50%;background:var(--c);
+  box-shadow:0 0 0 1px rgba(0,0,0,.08) inset;
+}
+.chip.red   { --c:#EF5C67 }
+.chip.green { --c:#2BC48A }
+.chip.purple{ --c:#7B61FF }
+
+/* wasted votes donut */
+.gauge{
+  --v:25; --size:110px; --thick:12px;
+  width:var(--size); height:var(--size); border-radius:50%;
+  display:grid; place-items:center;
+  background:
+    conic-gradient(#4E6EF3 calc(var(--v)*1%), #E9EEF6 0),
+    radial-gradient(circle calc(50% - var(--thick)), #fff 99%, transparent 0);
+  box-shadow:0 1px 2px rgba(0,0,0,.04) inset;
+}
+.gauge > span{font-weight:700;color:#4E6EF3;font-size:1.15rem}
+
+/* DI KPI */
+.kpi{
+  display:grid;place-items:center;
+  width:110px;height:110px;border-radius:50%;
+  background:rgba(239,92,103,.12);
+}
+.kpi .num{font-size:1.8rem;font-weight:700;color:#EF5C67;line-height:1}
+.di .note{font-size:.85rem;color:var(--gray-600)}
+
+.control-panel .methods-card{
+  margin-top:16px;
+  padding:16px 18px;
+  border-radius:18px;
+  background:#fff;
+  box-shadow:var(--shadow);
+}
+
+/* collapsible header */
+.methods-card .collapse-toggle{
+  appearance:none; border:0; background:transparent;
+  width:100%; display:flex; align-items:center; justify-content:space-between;
+  padding:2px 0; cursor:pointer;
+}
+.methods-card .eyebrow{
+  font-size:.9rem; letter-spacing:.14em; color:var(--gray-600);
+}
+.methods-card .chev{ transition: transform 160ms ease; color:var(--gray-600) }
+.methods-card.is-collapsed .chev{ transform: rotate(-90deg) }
+
+/* body + formulas */
+.methods-body{
+  overflow: hidden;
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 240ms ease, opacity 180ms ease;
+}
+.methods-card:not(.is-collapsed) .methods-body{
+  max-height: 1000px;
+  opacity: 1;
+}
+
+.method-list{ list-style:none; padding:0; margin:0; display:grid; gap:14px }
+.m-title{ font-weight:600; color:var(--gray-1000); margin-bottom:4px }
+.m-text{ color:var(--gray-900); font-size:.95rem; line-height:1.55 }
+.m-text .m-muted{ color:var(--gray-600); margin-left:6px }
+
+/* improved formula styling */
+.math{
+  font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+  color: var(--gray-1000);
+  background: #F7F9FD;
+  border:1px solid var(--gray-200);
+  border-radius:10px;
+  padding:2px 8px;
+  white-space: nowrap;
+  line-height:1.25;
+}
+.math i{font-style:italic}
+.math.chip{
+  background:#F1F5FF;
+  border-color:#E0E7FF;
+  padding:4px 10px;
+  border-radius:999px;
+}
+.math.block{
+  display:block;
+  width:100%;
+  text-align:center;
+  padding:8px 12px;
+  margin-top:8px;
+  background:#F7F9FD;
+  border-left:3px solid #D7E3FF;
+  white-space:normal;
+}
+
+/* floating "view results" pill (shown only on small screens) */
+.fab-to-results{
+  position: fixed;
+  left: 50%;
+  bottom: 16px;
+  transform: translateX(-50%);
+  z-index: 999;
+  padding: 10px 16px;
+  border: 0;
+  border-radius: 999px;
+  background: #3956F3;
+  color: #fff;
+  font-weight: 600;
+  box-shadow: 0 8px 24px rgba(57,86,243,.28);
+  display: none;
+  cursor: pointer;
+}
+@media (max-width: 1600px){
+  .fab-to-results{ display: inline-flex; align-items: center; gap: 8px; }
+}
+
+@media (max-width:1600px){
+  .map-card{ position: relative; }
+  .map-card::after{
+    content: "";
+    position: absolute;
+    left: 0; right: 0; bottom: 0;
+    height: 56px;
+    pointer-events: none;
+    background: linear-gradient(to bottom, rgba(255,255,255,0), rgba(255,255,255,.92));
+    border-bottom-left-radius: inherit;
+    border-bottom-right-radius: inherit;
+  }
+}
+
+.metric .label{ font-size:.95rem; white-space:nowrap; }
