@@ -183,11 +183,12 @@ document.addEventListener('DOMContentLoaded', () => {
         }
       };
 
-      // register instance so closeAll can call close()
-      instances.set(rootEl, { close });
-
       t.addEventListener('click', e => {
         e.stopPropagation();
+        // record the moment the toggle was clicked so the document click
+        // handler can ignore any immediately following clicks
+        window.__lastDropdownToggle = (typeof performance !== 'undefined') ? performance.now() : Date.now();
+
         const willOpen = !rootEl.classList.contains('open');
         if (willOpen) open(); else close();
       });
@@ -444,8 +445,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // close dropdowns when clicking outside / Esc
   // document.addEventListener('click', (e)=>{ if (!e.target.closest('.dropdown')) Dropdowns.closeAll(); });
+  // document.addEventListener('click', (e) => {
+  //   if (window.__dropdownOpening) return;
+  //   if (!e.target.closest('.dropdown')) Dropdowns.closeAll();
+  // });
   document.addEventListener('click', (e) => {
-    if (window.__dropdownOpening) return;
+    // ignore clicks that occur immediately after a toggle click (debounce)
+    const last = window.__lastDropdownToggle || 0;
+    const now = (typeof performance !== 'undefined') ? performance.now() : Date.now();
+    if (now - last < 250) return;
     if (!e.target.closest('.dropdown')) Dropdowns.closeAll();
   });
   document.addEventListener('keydown', (e)=>{ if (e.key==='Escape') Dropdowns.closeAll(); });
