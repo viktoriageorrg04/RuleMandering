@@ -332,15 +332,111 @@ document.addEventListener('DOMContentLoaded', () => {
     // scroll a bit further down for an extra reveal (tune offset/delay as needed)
     scrollToResults(140, 100);
   });
-  function applyChanges({scroll=false, userTriggered=false}={}){
+
+  // ---------- lightweight bottom-centered error toast ----------
+  function ensureErrorToast() {
+    let toast = document.querySelector('.rm-error-toast');
+    if (!toast) {
+      toast = document.createElement('div');
+      toast.className = 'rm-error-toast';
+      toast.setAttribute('role', 'status');
+      toast.setAttribute('aria-live', 'polite');
+
+      const dot = document.createElement('span'); dot.className = 'rm-error-toast__dot';
+      const text = document.createElement('span'); text.className = 'rm-error-toast__text';
+      toast.appendChild(dot); toast.appendChild(text);
+      document.body.appendChild(toast);
+
+      Object.assign(toast.style, {
+        position: 'fixed',
+        left: '50%',
+        zIndex: '1405',
+        transform: 'translateX(-50%) translateY(0)',
+        minWidth: '260px',
+        maxWidth: '640px',
+        padding: '0.6rem 1rem',
+        borderRadius: '999px',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '.6rem',
+        background: '#FEE2E2',
+        color: '#7F1D1D',
+        boxShadow: '0 10px 30px rgba(31,41,55,0.12)',
+        fontSize: '0.95rem',
+        opacity: '0',
+        pointerEvents: 'none',
+        transition: 'opacity .18s ease, transform .18s ease, bottom .12s ease',
+      });
+
+      Object.assign(dot.style, {
+        width: '8px',
+        height: '8px',
+        borderRadius: '999px',
+        background: '#DC2626',
+        flexShrink: '0'
+      });
+
+      Object.assign(text.style, {
+        display: 'inline-block'
+      });
+    }
+    return toast;
+  }
+
+  function showErrorToast(message) {
+    const toast = ensureErrorToast();
+    const textEl = toast.querySelector('.rm-error-toast__text');
+    if (textEl) textEl.textContent = message;
+
+    const bottomForNarrow = 48;
+    const bottomForWide = 56;
+    const bottom = window.innerWidth >= 1400 ? bottomForWide : bottomForNarrow;
+    toast.style.bottom = `${bottom}px`;
+
+    if (toast._hideTimer) clearTimeout(toast._hideTimer);
+
+    // show
+    toast.style.opacity = '1';
+    toast.style.pointerEvents = 'auto';
+    toast.style.transform = 'translateX(-50%) translateY(0)';
+
+    // hide after timeout
+    toast._hideTimer = setTimeout(() => {
+      toast.style.opacity = '0';
+      toast.style.transform = 'translateX(-50%) translateY(8px)';
+      toast.style.pointerEvents = 'none';
+    }, 2800);
+  }
+
+  // ---------- Apply / validation ----------
+  function applyChanges({scroll = false, userTriggered = false} = {}) {
+    // when user clicks Apply, require a country be selected
+    if (userTriggered) {
+      const country = currentCountry();
+      if (!country || country === 'Country') {
+        if (applyBtn) try { applyBtn.blur(); } catch (e) {}
+        showErrorToast('Please select a country before applying the results.');
+        return; // stop applying changes
+      }
+    }
+
     const s = readState();
     renderLegend(s);
 
-    // if (userTriggered) showFabAttention();
     if (userTriggered) setTimeout(showFabAttention, 260);
     if (applyBtn) applyBtn.blur();
     if (scroll && window.innerWidth < 1600) setTimeout(jumpToResults, 80);
   }
+
+  // function applyChanges({scroll=false, userTriggered=false}={}){
+  //   const s = readState();
+  //   renderLegend(s);
+
+  //   // if (userTriggered) showFabAttention();
+  //   if (userTriggered) setTimeout(showFabAttention, 260);
+  //   if (applyBtn) applyBtn.blur();
+  //   if (scroll && window.innerWidth < 1600) setTimeout(jumpToResults, 80);
+  // }
 
   // Apply button: render + reveal FAB with bounce
   // applyBtn?.addEventListener('click', (e)=>{ e.preventDefault(); applyChanges({scroll:true, userTriggered:true}); });
@@ -427,43 +523,4 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
   }
-
-  // Onboarding tutorial logic
-  // (function setupOnboarding() {
-  //   const tour = document.querySelector('#rm-tour');
-  //   if (!tour) return;
-
-  //   const storageKey = 'rm_tour_dismissed_v1';
-  //   if (localStorage.getItem(storageKey) === '1') {
-  //     tour.classList.add('is-hidden');
-  //     return;
-  //   }
-
-  //   const skipButtons = tour.querySelectorAll('[data-tour-skip]');
-  //   const nextButton  = tour.querySelector('[data-tour-next]');
-
-  //   function closeTour(permanent) {
-  //     tour.classList.add('is-hidden');
-  //     if (permanent) localStorage.setItem(storageKey, '1');
-  //   }
-
-  //   skipButtons.forEach(btn =>
-  //     btn.addEventListener('click', () => closeTour(true))
-  //   );
-
-  //   if (nextButton) {
-  //     nextButton.addEventListener('click', () => {
-  //       closeTour(true);
-  //       // scroll to the controls so the explanation makes sense
-  //       document
-  //         .querySelector('.control-panel')
-  //         ?.scrollIntoView({ behavior: 'smooth', block: 'start' });
-  //     });
-  //   }
-
-  //   // show after a short delay so it does not clash with layout load
-  //   setTimeout(() => {
-  //     tour.classList.remove('is-hidden');
-  //   }, 700);
-  // })();
 });

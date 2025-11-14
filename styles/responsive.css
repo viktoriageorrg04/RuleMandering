@@ -6,7 +6,7 @@
   .sign-in{padding:6px 10px;font-size:.82rem}
 }
 
-/* one-column layout & card grids */
+/* one-column layout and card grids */
 @media (max-width:1024px){
   .layout{grid-template-columns:1fr}
   .control-panel{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:20px}
