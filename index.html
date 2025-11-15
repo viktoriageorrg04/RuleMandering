@@ -17,6 +17,7 @@
     <link rel="stylesheet" href="styles/map.css" />
     <link rel="stylesheet" href="styles/metrics.css" />
     <link rel="stylesheet" href="styles/responsive.css" />
+    <link rel="stylesheet" href="styles/tour.css" />
   </head>
   <body>
     <div class="page">
@@ -238,40 +239,29 @@
         </section>
       </main>
     </div>
-    <!-- Tutorial: Step 1 -->
-    <!-- <div class="tour-overlay is-hidden" id="rm-tour">
-      <div class="tour-backdrop"></div>
+    <!-- Tutorial overlay (inlined so JS can reuse the DOM node) -->
+    <div class="rm-tour-overlay rm-tour-overlay--hidden" role="dialog" aria-modal="true" aria-label="Product tour">
+      <div class="rm-tour-backdrop"></div>
 
-      <div class="tour-card">
-        <button class="tour-close" type="button" data-tour-skip aria-label="Skip tutorial">
-          ✕
-        </button>
-
-        <p class="tour-eyebrow">Welcome to RuleMandering</p>
-        <h3 class="tour-title">Start with France</h3>
-
-        <p class="tour-text">
-          Let’s walk through one example. In the <strong>Country</strong> menu above the map,
-          pick <strong>France</strong>. Then use the <strong>threshold</strong> and
-          <strong>district magnitude</strong> sliders to see how seats shift.
-        </p>
-
-        <p class="tour-text subtle">
-          You can always change country later – this is just a guided first run.
-        </p>
-
-        <div class="tour-actions">
-          <button type="button" class="tour-btn ghost" data-tour-skip>
+      <div class="rm-tour-card">
+        <div class="rm-tour-header">
+          <span class="rm-tour-step"></span>
+        </div>
+        <h3 class="rm-tour-title"></h3>
+        <p class="rm-tour-text"></p>
+        <div class="rm-tour-actions">
+          <button type="button" class="rm-tour-btn rm-tour-btn--ghost" data-tour-skip>
             Skip tour
           </button>
-          <button type="button" class="tour-btn primary" data-tour-next>
-            Show me the controls
+          <button type="button" class="rm-tour-btn rm-tour-btn--primary" data-tour-next>
+            Next
           </button>
         </div>
       </div>
-    </div> -->
+    </div>
     <button class="fab-to-results">View results ▾</button>
     <script src="scripts/app.js" defer></script>
     <script src="scripts/eu-map.js" defer></script>
+    <script src="scripts/tour.js" defer></script>
   </body>
 </html>

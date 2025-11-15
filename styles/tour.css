@@ -1,0 +1,207 @@
+/* full-screen overlay: darkens everything and holds the card */
+.rm-tour-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9600;
+  pointer-events: auto;
+  opacity: 1;
+  transition: opacity 180ms ease;
+}
+
+.rm-tour-overlay--hidden {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* dark backdrop over the whole page */
+.rm-tour-backdrop {
+  position: absolute;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.55);
+  backdrop-filter: blur(3px);
+}
+
+/* the tour card itself – JS positions it near the target (now on <body>) */
+.rm-tour-card {
+  position: fixed;
+  max-width: min(420px, 100vw - 32px);
+  background: #ffffff;
+  border-radius: 20px;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.45);
+  padding: 16px 18px 14px;
+  pointer-events: auto;
+  animation: rm-tour-pop 200ms ease-out;
+  z-index: 9800; /* above highlight, overlay and rest of UI */
+  transition: transform 220ms cubic-bezier(.2,.9,.3,1), opacity 180ms ease;
+}
+
+/* exit/enter helpers used by JS */
+.rm-tour-card--exit {
+  transform: translateY(8px) scale(0.995);
+  opacity: 0;
+}
+
+.rm-tour-card--enter {
+  transform: translateY(0) scale(1);
+  opacity: 1;
+}
+
+/* base arrow pseudo-element */
+.rm-tour-card::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 0;
+}
+
+/* card below control -> arrow at top, pointing up */
+.rm-tour-card--below::after {
+  top: -8px;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 0 9px 8px 9px;
+  border-style: solid;
+  border-color: transparent transparent #ffffff transparent;
+}
+
+/* card above control -> arrow at bottom, pointing down */
+.rm-tour-card--above::after {
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  border-width: 8px 9px 0 9px;
+  border-style: solid;
+  border-color: #ffffff transparent transparent transparent;
+}
+
+/* card to the RIGHT of control -> arrow on left, pointing left */
+.rm-tour-card--side-right::after {
+  top: 50%;
+  left: -8px;
+  transform: translateY(-50%);
+  border-width: 9px 8px 9px 0;
+  border-style: solid;
+  border-color: transparent #ffffff transparent transparent;
+}
+
+/* cars to the left of control -> arrow on right, pointing right */
+.rm-tour-card--side-left::after {
+  top: 50%;
+  left: 100%;
+  transform: translateY(-50%);
+  border-width: 9px 0 9px 8px;
+  border-style: solid;
+  border-color: transparent transparent transparent #ffffff;
+}
+
+@keyframes rm-tour-pop {
+  from {
+    transform: translate3d(0, 6px, 0);
+    opacity: 0;
+  }
+  to {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+}
+
+/* header + step label */
+.rm-tour-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 4px;
+}
+
+.rm-tour-step {
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #9ca3af;
+}
+
+/* title + text */
+.rm-tour-title {
+  margin: 0 0 6px;
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: #0f172a;
+}
+
+.rm-tour-text {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.45;
+  color: #374151;
+}
+
+/* actions */
+.rm-tour-actions {
+  margin-top: 12px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 8px;
+}
+
+.rm-tour-btn {
+  border-radius: 999px;
+  padding: 6px 14px;
+  font-size: 0.88rem;
+  font-weight: 600;
+  border: 0;
+  cursor: pointer;
+}
+
+.rm-tour-btn--ghost {
+  background: transparent;
+  color: #e5e7eb;
+}
+
+.rm-tour-btn--primary {
+  background: #3956f3;
+  color: #ffffff;
+  box-shadow: 0 8px 24px rgba(57, 86, 243, 0.34);
+}
+
+/* highlighted element: soft glow, sits above dim background but below card */
+.rm-tour-highlight {
+  position: relative;
+  z-index: 9700; /* above overlay, below card */
+  border-radius: 22px;
+  box-shadow:
+    0 0 0 2px #fbbf24,
+    0 0 0 6px rgba(251, 191, 36, 0.35);
+  transition: box-shadow 150ms ease, opacity 120ms ease;
+}
+
+/* toast message shown when user tries to interact during tour */
+.rm-tour-toast {
+  position: fixed;
+  left: 50%;
+  bottom: 20px;
+  transform: translateX(-50%) translateY(8px);
+  padding: 6px 14px;
+  border-radius: 999px;
+  background: rgba(15, 23, 42, 0.9);
+  color: #e5e7eb;
+  font-size: 0.8rem;
+  line-height: 1.3;
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.5);
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 160ms ease, transform 160ms ease;
+  z-index: 9900; /* above everything */
+}
+
+.rm-tour-toast--visible {
+  opacity: 1;
+  transform: translateX(-50%) translateY(0);
+}
+
+/* small screens – ensure card not cropped */
+@media (max-width: 640px) {
+  .rm-tour-card {
+    max-width: min(360px, 100vw - 24px);
+    padding: 14px 16px 12px;
+  }
+}
