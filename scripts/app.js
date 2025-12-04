@@ -593,53 +593,6 @@ document.addEventListener('DOMContentLoaded', () => {
         const legendChips = seatMetric.querySelector('.legend-chips');
         if (legendChips) legendChips.style.display = 'none';
 
-        // // ensure top-list container
-        // let topList = seatMetric.querySelector('.top-list');
-        // if (!topList) {
-        //   topList = document.createElement('div');
-        //   topList.className = 'top-list';
-        //   topList.style.marginTop = '12px';
-        //   seatMetric.appendChild(topList);
-        // }
-
-        // // ensure top-list container (append into .seat-bonus-top if present)
-        // const seatTop = seatMetric.querySelector('.seat-bonus-top') || seatMetric;
-
-        // let topList = seatTop.querySelector('.top-list') || seatMetric.querySelector('.top-list');
-        // if (!topList) {
-        //   topList = document.createElement('div');
-        //   topList.className = 'top-list';
-        //   topList.style.marginTop = '12px';
-        //   seatTop.appendChild(topList);
-        // }
-
-        // // // ensure pager controls
-        // // const oldPager = seatMetric.querySelector('.top-pager');
-        // // if (oldPager) oldPager.remove();
-        // // pager = document.createElement('div');
-        // // pager.className = 'top-pager';
-
-        // // ensure pager controls (append into same top area)
-        // const oldPager = seatTop.querySelector('.top-pager') || seatMetric.querySelector('.top-pager');
-        // if (oldPager) oldPager.remove();
-
-        // pager = document.createElement('div');
-        // pager.className = 'top-pager';
-        // // restore prev/next buttons (SVG) + dots container
-        // pager.innerHTML = `
-        //   <button type="button" class="pager-btn prev" aria-label="Prev page">
-        //     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M15 18l-6-6 6-6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        //   </button>
-        //   <div class="pager-dots" role="tablist" aria-label="Pages"></div>
-        //   <button type="button" class="pager-btn next" aria-label="Next page">
-        //     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M9 6l6 6-6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
-        //   </button>
-        // `;
-        // seatMetric.appendChild(pager);
-
-        // const dotsRoot = pager.querySelector('.pager-dots');
-        // dotsRoot.innerHTML = pages.map((_, idx) => `<button class="dot" data-idx="${idx}" aria-label="Page ${idx+1}"></button>`).join('');
-
         // ensure top-list container — append into .seat-bonus-top if present
         const seatTop = seatMetric.querySelector('.seat-bonus-top') || seatMetric;
 
@@ -892,6 +845,25 @@ document.addEventListener('DOMContentLoaded', () => {
     // muted styling for placeholder (keeps it visually distinct)
     const emptyRows = topList.querySelectorAll('.top-row.empty');
     emptyRows.forEach(r => r.style.color = 'var(--gray-400, #9AA3B3)');
+
+    // legend text defaults
+    const legendIntro = document.querySelector('.legend .legend-intro');
+    const legendUl = document.querySelector('.legend ul');
+    if (legendIntro) {
+      legendIntro.textContent = 'No scenario applied. Adjust controls and click Apply to preview changes.';
+    }
+    // if (legendUl) {
+    //   legendUl.innerHTML =
+    //     '<li>No parties crossed or fell below the threshold.</li>' +
+    //     '<li>Seat distribution unchanged from baseline.</li>' +
+    //     '<li>Wasted votes: 0%; Disproportionality: 0.0 (placeholder).</li>';
+    // }
+    if (legendUl) {
+      legendUl.innerHTML =
+        '<li><span class="dot blue" aria-hidden="true"></span> No parties crossed.</li>' +
+        '<li><span class="dot purple" aria-hidden="true"></span> Seats unchanged.</li>' +
+        '<li><span class="dot red" aria-hidden="true"></span> Wasted: 0% · DI: 0.0</li>';
+    }
   }
 
   // expose for manual testing
@@ -1000,6 +972,17 @@ document.addEventListener('DOMContentLoaded', () => {
       toast.style.pointerEvents = 'none';
     }, 2800);
   }
+
+  // // set legend defaults
+  // const legendIntroEl = document.querySelector('.legend .legend-intro');
+  // const legendListEl = document.querySelector('.legend ul');
+  // if (legendIntroEl && legendListEl) {
+  //   legendIntroEl.textContent = 'No scenario applied. Adjust controls and click Apply to preview changes.';
+  // legendListEl.innerHTML =
+  //     '<li>No parties crossed or fell below the threshold.</li>' +
+  //     '<li>Seat distribution unchanged from baseline.</li>' +
+  //     '<li>Wasted votes: 0%; Disproportionality: 0.0 (placeholder).</li>';
+  // }
 
   // ---------- Apply / validation ----------
   function applyChanges({scroll = false, userTriggered = false} = {}) {
