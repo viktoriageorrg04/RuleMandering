@@ -1,0 +1,133 @@
+{
+  "id": "HR",
+  "parentDivision": null,
+  "districts": null,
+  "seatsTotal": 12,
+  "seatsPercentEU": 1.67,
+  "groupSummary": {
+    "title": "SEATS_BY_GROUP_TITLE",
+    "status": "CONSTITUTIVE",
+    "time": "2024-07-15T17:47:28.506+0200",
+    "groupDistribution": [
+      {
+        "id": "EPP",
+        "seatsTotal": 6,
+        "seatsPercentEU": 0.83
+      },
+      {
+        "id": "SD",
+        "seatsTotal": 4,
+        "seatsPercentEU": 0.56
+      },
+      {
+        "id": "ECR",
+        "seatsTotal": 1,
+        "seatsPercentEU": 0.14
+      },
+      {
+        "id": "GREENSEFA",
+        "seatsTotal": 1,
+        "seatsPercentEU": 0.14
+      }
+    ]
+  },
+  "partySummary": {
+    "breakdownByPartyHeader": {
+      "title": "BREAKDOWN_BY_PARTY_TITLE",
+      "status": "CONSTITUTIVE",
+      "time": "2024-07-16T12:32:42.402+0200"
+    },
+    "resultsByPartyHeader": {
+      "title": "RESULTS_BY_PARTY_TITLE",
+      "status": "OFFICIAL",
+      "time": "2024-07-16T12:32:42.402+0200"
+    },
+    "seatsByParty": [
+      {
+        "id": "HR01",
+        "type": "PARTY",
+        "seatsTotal": 6,
+        "votesPercent": 34.6,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "EPP",
+            "seatsTotal": 6,
+            "seatsPercentEU": 0.83
+          }
+        ]
+      },
+      {
+        "id": "HR02",
+        "type": "COALITION",
+        "seatsTotal": 4,
+        "votesPercent": 25.96,
+        "members": [
+          {
+            "id": "HR08",
+            "seatsTotal": 4,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "SD",
+                "seatsTotal": 4,
+                "seatsPercentEU": 0.56
+              }
+            ]
+          }
+        ],
+        "groupDistribution": [
+          {
+            "id": "SD",
+            "seatsTotal": 4,
+            "seatsPercentEU": 0.56
+          }
+        ]
+      },
+      {
+        "id": "HR03",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 5.61,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "HR05",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 8.82,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "ECR",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "HR06",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 5.92,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "GREENSEFA",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "HR90",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 19.09,
+        "members": null,
+        "groupDistribution": null
+      }
+    ]
+  }
+}

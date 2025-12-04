@@ -1,0 +1,74 @@
+{
+  "id": "MT",
+  "parentDivision": null,
+  "districts": null,
+  "seatsTotal": 6,
+  "seatsPercentEU": 0.83,
+  "groupSummary": {
+    "title": "SEATS_BY_GROUP_TITLE",
+    "status": "CONSTITUTIVE",
+    "time": "2024-07-15T17:47:28.506+0200",
+    "groupDistribution": [
+      {
+        "id": "EPP",
+        "seatsTotal": 3,
+        "seatsPercentEU": 0.42
+      },
+      {
+        "id": "SD",
+        "seatsTotal": 3,
+        "seatsPercentEU": 0.42
+      }
+    ]
+  },
+  "partySummary": {
+    "breakdownByPartyHeader": {
+      "title": "BREAKDOWN_BY_PARTY_TITLE",
+      "status": "CONSTITUTIVE",
+      "time": "2024-07-15T17:47:28.506+0200"
+    },
+    "resultsByPartyHeader": {
+      "title": "RESULTS_BY_PARTY_TITLE",
+      "status": "FINAL",
+      "time": "2024-07-15T18:33:47.274+0200"
+    },
+    "seatsByParty": [
+      {
+        "id": "MT01",
+        "type": "PARTY",
+        "seatsTotal": 3,
+        "votesPercent": 45.26,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "SD",
+            "seatsTotal": 3,
+            "seatsPercentEU": 0.42
+          }
+        ]
+      },
+      {
+        "id": "MT02",
+        "type": "PARTY",
+        "seatsTotal": 3,
+        "votesPercent": 42.02,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "EPP",
+            "seatsTotal": 3,
+            "seatsPercentEU": 0.42
+          }
+        ]
+      },
+      {
+        "id": "MT90",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 12.72,
+        "members": null,
+        "groupDistribution": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,3357 @@
+{
+  "countries": [
+    {
+      "countryId": "BE",
+      "candidates": [
+        {
+          "candidateId": "BE01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "N-VA",
+          "candidateLongName": "Nieuw-Vlaamse Alliantie",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "VB",
+          "candidateLongName": "Vlaams Belang",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Open VLD",
+          "candidateLongName": "Open Vlaamse Liberalen en Democraten",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "CD&V",
+          "candidateLongName": "Christen-Democratisch en Vlaams",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Groen",
+          "candidateLongName": "Groen",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Vooruit",
+          "candidateLongName": "Vooruit",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PVDA",
+          "candidateLongName": "Partij van de Arbeid van België",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PS",
+          "candidateLongName": "Parti Socialiste",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ECOLO",
+          "candidateLongName": "Ecologistes Confédérés pour l'Organisation de Luttes Originales",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "MR",
+          "candidateLongName": "Mouvement Réformateur",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Les Engagés",
+          "candidateLongName": "Les Engagés",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE12",
+          "candidateType": "PARTY",
+          "candidateAcronym": "DéFI",
+          "candidateLongName": "Démocrate Fédéraliste Indépendant",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE13",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PTB",
+          "candidateLongName": "Parti du Travail de Belgique",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE14",
+          "candidateType": "PARTY",
+          "candidateAcronym": "CSP",
+          "candidateLongName": "Christlich Soziale Partei",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE15",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SP",
+          "candidateLongName": "Sozialistische Partei",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE16",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PFF-MR",
+          "candidateLongName": "Partei für Freiheit und Fortschritt",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE17",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ProDG",
+          "candidateLongName": "Pro deutschsprachige Gemeinschaft",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE18",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ECOLO (G.)",
+          "candidateLongName": "Ecologistes Confédérés pour l'Organisation de Luttes Originales (G.)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties F.",
+          "candidateLongName": "Other parties from Dutch-speaking electoral college",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE91",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties W.",
+          "candidateLongName": "Other parties from French-speaking electoral college",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE92",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties G.",
+          "candidateLongName": "Other parties from German-speaking electoral college",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "FBE",
+      "candidates": [
+        {
+          "candidateId": "BE01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "N-VA",
+          "candidateLongName": "Nieuw-Vlaamse Alliantie",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "VB",
+          "candidateLongName": "Vlaams Belang",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Open VLD",
+          "candidateLongName": "Open Vlaamse Liberalen en Democraten",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "CD&V",
+          "candidateLongName": "Christen-Democratisch en Vlaams",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Groen",
+          "candidateLongName": "Groen",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Vooruit",
+          "candidateLongName": "Vooruit",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PVDA",
+          "candidateLongName": "Partij van de Arbeid van België",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties F.",
+          "candidateLongName": "Other parties from Dutch-speaking electoral college",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "GBE",
+      "candidates": [
+        {
+          "candidateId": "BE14",
+          "candidateType": "PARTY",
+          "candidateAcronym": "CSP",
+          "candidateLongName": "Christlich Soziale Partei ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE15",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SP",
+          "candidateLongName": "Sozialistische Partei",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE16",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PFF-MR",
+          "candidateLongName": "Partei für Freiheit und Fortschritt",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE17",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ProDG",
+          "candidateLongName": "Pro deutschsprachige Gemeinschaft ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE18",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ECOLO (G.)",
+          "candidateLongName": "Ecologistes Confédérés pour l'Organisation de Luttes Originales ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE92",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties G.",
+          "candidateLongName": "Other parties from German-speaking electoral college",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "WBE",
+      "candidates": [
+        {
+          "candidateId": "BE08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PS",
+          "candidateLongName": "Parti Socialiste",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ECOLO",
+          "candidateLongName": "Ecologistes Confédérés pour l'Organisation de Luttes Originales",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "MR",
+          "candidateLongName": "Mouvement Réformateur",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Les Engagés",
+          "candidateLongName": "Les Engagés",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE12",
+          "candidateType": "PARTY",
+          "candidateAcronym": "DéFI",
+          "candidateLongName": "Démocrate Fédéraliste Indépendant",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE13",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PTB",
+          "candidateLongName": "Parti du Travail de Belgique",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BE91",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties W.",
+          "candidateLongName": "Other parties from French-speaking electoral college",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "BG",
+      "candidates": [
+        {
+          "candidateId": "BG01",
+          "candidateType": "COALITION",
+          "candidateAcronym": "GERB - SDS/ГЕРБ - СДС ",
+          "candidateLongName": "Coalition Grazhdani za evropeysko razvitie na Balgariya - Sayuz na demokratichnite sili/Граждани за европейско развитие на България - Съюз на демократичните сили",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "BG11",
+            "BG12"
+          ]
+        },
+        {
+          "candidateId": "BG11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "GERB/ГЕРБ",
+          "candidateLongName": "Grazhdani za evropeysko razvitie na Balgariya",
+          "memberOfCoalition": "BG01",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BG12",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SDS/СДС",
+          "candidateLongName": "Sayuz na demokratichnite sili/Съюз на демократичните сили",
+          "memberOfCoalition": "BG01",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BG02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "BSP/БСП",
+          "candidateLongName": "Bulgarska sotsialisticheska partiy/Българска социалистическа партия",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BG03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "DPS/ДПС",
+          "candidateLongName": "Dvizhenie za prava i svobodi/Движение за права и свободи",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BG04",
+          "candidateType": "COALITION",
+          "candidateAcronym": "PP - DB/ПП - ДБ",
+          "candidateLongName": "Coalition Prodalzhavame promyanata – Demokratichna Balgariya/Продължаваме промяната – Демократична България",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "BG14",
+            "BG13"
+          ]
+        },
+        {
+          "candidateId": "BG14",
+          "candidateType": "PARTY",
+          "candidateAcronym": "DSB/ДСБ",
+          "candidateLongName": "Demokratichna Balgariya/Демократична България",
+          "memberOfCoalition": "BG04",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BG13",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PP/ПП",
+          "candidateLongName": "Prodalzhavame promyanata/Продължаваме промяната",
+          "memberOfCoalition": "BG04",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BG05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Vazrazhdane/Възраждане",
+          "candidateLongName": "Vazrazhdane/Възраждане",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BG06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ITN/ИТН",
+          "candidateLongName": "Ima takav narod/Има такъв народ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "BG90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "CZ",
+      "candidates": [
+        {
+          "candidateId": "CZ01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ANO 2011",
+          "candidateLongName": "ANO 2011",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CZ02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Piráti",
+          "candidateLongName": "Česká pirátská strana",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CZ03",
+          "candidateType": "COALITION",
+          "candidateAcronym": "STAN - SLK",
+          "candidateLongName": "Coalition Starostové a osobnosti pro Evropu (Starostové a nezávislí, Starostové pro Liberecký kraj)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "CZ21"
+          ]
+        },
+        {
+          "candidateId": "CZ21",
+          "candidateType": "PARTY",
+          "candidateAcronym": "STAN",
+          "candidateLongName": "Starostové a nezávislí",
+          "memberOfCoalition": "CZ03",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CZ04",
+          "candidateType": "COALITION",
+          "candidateAcronym": "Stačilo!",
+          "candidateLongName": "Coalition Stačilo! (Komunistická strana Čech a Moravy, Česká strana národně sociální, Spojení demokraté – Sdružení nezávislých)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "CZ20",
+            "CZ19"
+          ]
+        },
+        {
+          "candidateId": "CZ20",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Ind.",
+          "candidateLongName": "Independent",
+          "memberOfCoalition": "CZ04",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CZ19",
+          "candidateType": "PARTY",
+          "candidateAcronym": "KSČM",
+          "candidateLongName": "Komunistická strana Čech a Moravy",
+          "memberOfCoalition": "CZ04",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CZ05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SOCDEM ",
+          "candidateLongName": "Sociální Demokracie ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CZ06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Svobodní",
+          "candidateLongName": "Strana Svobodných Občanů",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CZ07",
+          "candidateType": "COALITION",
+          "candidateAcronym": "SPOLU",
+          "candidateLongName": "Coalition SPOLU (Občanská demokratická strana, Křesťanská a demokratická unie – Československá strana lidová, Tradice Odpovědnost Prosperita 09)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "CZ14",
+            "CZ16",
+            "CZ15"
+          ]
+        },
+        {
+          "candidateId": "CZ14",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Coalition SPOLU",
+          "candidateLongName": "Coalition SPOLU",
+          "memberOfCoalition": "CZ07",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CZ16",
+          "candidateType": "PARTY",
+          "candidateAcronym": "KDU-ČSL",
+          "candidateLongName": "Křesťanská a demokratická unie – Československá strana lidová",
+          "memberOfCoalition": "CZ07",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CZ15",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ODS",
+          "candidateLongName": "Občanská demokratická strana",
+          "memberOfCoalition": "CZ07",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CZ08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Zelení",
+          "candidateLongName": "Strana zelených",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CZ09",
+          "candidateType": "COALITION",
+          "candidateAcronym": "Přísaha a Motoristé",
+          "candidateLongName": "Coalition Přísaha a Motoristé (Přísaha – občanské hnutí Roberta Šlachty, AUTO - Motoristé sobě)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "CZ17",
+            "CZ18"
+          ]
+        },
+        {
+          "candidateId": "CZ17",
+          "candidateType": "PARTY",
+          "candidateAcronym": "AUTO",
+          "candidateLongName": "Motoristé sobě",
+          "memberOfCoalition": "CZ09",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CZ18",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Přísaha",
+          "candidateLongName": "Přísaha",
+          "memberOfCoalition": "CZ09",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CZ10",
+          "candidateType": "COALITION",
+          "candidateAcronym": "SPD a Trikolora",
+          "candidateLongName": "Coalition SPD a Trikolora (Svoboda a přímá demokracie, Trikolóra hnutí občanů)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "CZ22"
+          ]
+        },
+        {
+          "candidateId": "CZ22",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SPD",
+          "candidateLongName": "Svoboda a přímá demokracie",
+          "memberOfCoalition": "CZ10",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CZ11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PRO ",
+          "candidateLongName": "Právo Respekt Odbornost -  Jindřicha Rajchla",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CZ90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "DK",
+      "candidates": [
+        {
+          "candidateId": "DK01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "V",
+          "candidateLongName": "Venstre, Danmarks Liberale Parti",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DK02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "S (A)",
+          "candidateLongName": "Socialdemokratiet ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DK03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SF (F)",
+          "candidateLongName": "Socialistisk Folkeparti ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DK04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "DF (O)",
+          "candidateLongName": "Dansk Folkeparti ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DK05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "RV (B)",
+          "candidateLongName": "Radikale Venstre ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DK06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "KF (C)  ",
+          "candidateLongName": "Det Konservative Folkeparti ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DK07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "EL (Ø)",
+          "candidateLongName": "Enhedslisten - De Rød-Grønne",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DK08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ALT (Å)",
+          "candidateLongName": "Alternativet ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DK09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LA (I)",
+          "candidateLongName": "Liberal Alliance ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DK10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "M",
+          "candidateLongName": "Moderaterne ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DK11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "DD (Æ)",
+          "candidateLongName": "Danmarksdemokraterne - Inger Støjberg",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DK90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "DE",
+      "candidates": [
+        {
+          "candidateId": "DE01",
+          "candidateType": "COALITION",
+          "candidateAcronym": "CDU/CSU",
+          "candidateLongName": "Christlich Demokratische Union Deutschlands/Christlich-Soziale Union in Bayern ",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "DE22",
+            "DE21"
+          ]
+        },
+        {
+          "candidateId": "DE22",
+          "candidateType": "PARTY",
+          "candidateAcronym": "CDU",
+          "candidateLongName": "Christlich Demokratische Union Deutschlands",
+          "memberOfCoalition": "DE01",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE21",
+          "candidateType": "PARTY",
+          "candidateAcronym": "CSU",
+          "candidateLongName": "Christlich-Soziale Union in Bayern",
+          "memberOfCoalition": "DE01",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SPD",
+          "candidateLongName": "Sozialdemokratische Partei Deutschlands",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Die Grünen",
+          "candidateLongName": "Bündnis 90/Die Grünen",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "AfD",
+          "candidateLongName": "Alternative für Deutschland",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE05",
+          "candidateType": "COALITION",
+          "candidateAcronym": "Die Linke",
+          "candidateLongName": "Die Linke",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "DE24",
+            "DE23"
+          ]
+        },
+        {
+          "candidateId": "DE24",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Die Linke",
+          "candidateLongName": "Die Linke",
+          "memberOfCoalition": "DE05",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE23",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Ind.",
+          "candidateLongName": "Independent",
+          "memberOfCoalition": "DE05",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "FDP",
+          "candidateLongName": "Freie Demokratische Partei",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "FW",
+          "candidateLongName": "Freie Wähler",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Tierschutzpartei",
+          "candidateLongName": "Partei Mensch Umwelt Tierschutz",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "BSW",
+          "candidateLongName": "Bündnis Sahra Wagenknecht - Für Vernunft und Gerechtigkeit",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Piratenpartei",
+          "candidateLongName": "Piratenpartei Deutschland",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Familie",
+          "candidateLongName": "Familien-Partei Deutschlands                                                               ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE12",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ÖDP ",
+          "candidateLongName": "Ökologisch-Demokratische Partei",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE13",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Die Partei",
+          "candidateLongName": "Partei für Arbeit, Rechtsstaat, Tierschutz, Elitenförderung und basisdemokratische Initiative",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE14",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Volt",
+          "candidateLongName": "Volt Deutschland",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE16",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PdF",
+          "candidateLongName": "Partei des Fortschritts",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "DE90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "EE",
+      "candidates": [
+        {
+          "candidateId": "EE01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ER",
+          "candidateLongName": "Eesti Reformierakond",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EE02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SDE",
+          "candidateLongName": "Sotsiaaldemokraatlik Erakond",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EE03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "KE",
+          "candidateLongName": "Eesti Keskerakond",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EE04",
+          "candidateType": "COALITION",
+          "candidateAcronym": "EKRE",
+          "candidateLongName": "Eesti Konservatiivne Rahvaerakond",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "EE10"
+          ]
+        },
+        {
+          "candidateId": "EE10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Ind.",
+          "candidateLongName": "Independent",
+          "memberOfCoalition": "EE04",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EE05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Isamaa",
+          "candidateLongName": "Isamaa Erakond",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EE06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "E200",
+          "candidateLongName": "Erakond Eesti 200",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EE07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "EER",
+          "candidateLongName": "Erakond Eestimaa Rohelised",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EE08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "EP",
+          "candidateLongName": "Erakond Parempoolsed",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EE09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "KOOS ",
+          "candidateLongName": "KOOS organisatsioon osutab suveräänsusele",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EE90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "IE",
+      "candidates": [
+        {
+          "candidateId": "IE01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "FG",
+          "candidateLongName": "Fine Gael",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IE02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "FF",
+          "candidateLongName": "Fianna Fáil – The Republican Party/Fianna Fáil - An Páirtí Poblachtánach",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IE03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "IND/Neamhspleách",
+          "candidateLongName": "Independent/Neamhspleách",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IE04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SF",
+          "candidateLongName": "Sinn Féin",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IE05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "GP/CG",
+          "candidateLongName": "Green Party/An Comhaontas Glas",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IE06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Lab/LO",
+          "candidateLongName": "The Labour Party/Páirtí an Lucht Oibre",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IE07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PBP-S/D-PSB",
+          "candidateLongName": "People Before Profit–Solidarity/Dlúthpháirtíocht–Pobal Seachas Brabús",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IE08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SD/DS",
+          "candidateLongName": "Social Democrats/Daonlathaithe Sóisialta",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IE09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Aon",
+          "candidateLongName": "Aontú",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IE12",
+          "candidateType": "PARTY",
+          "candidateAcronym": "I4C",
+          "candidateLongName": "Independents 4 Change/Neamhspleáigh ar son an Athraithe ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IE13",
+          "candidateType": "COALITION",
+          "candidateAcronym": "Independent Ireland ",
+          "candidateLongName": "Independent Ireland ",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "IE14"
+          ]
+        },
+        {
+          "candidateId": "IE14",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Ind. IE",
+          "candidateLongName": "Independent",
+          "memberOfCoalition": "IE13",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IE90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "EL",
+      "candidates": [
+        {
+          "candidateId": "EL01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ND/ΝΔ",
+          "candidateLongName": "Néa Dimokratía/Νέα Δημοκρατία",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EL02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SYRΙΖΑ/ΣΥΡΙΖΑ",
+          "candidateLongName": "Sinaspismós Rizospastikís Aristerás/Συνασπισμός Ριζοσπαστικής Αριστεράς",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EL03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PASOK/ΠΑΣΟΚ",
+          "candidateLongName": "PASOK – Kínima Allagís/ΠΑΣΟΚ – Κίνημα Αλλαγής",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EL04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "KKE",
+          "candidateLongName": "Kommounistikó Kómma Elládas/Κομμουνιστικό Κόμμα Ελλάδας",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EL05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "EL/EΛ",
+          "candidateLongName": "Ellinikí Lýsi/Ελληνική Λύση",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EL06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "MeRA25/ΜέΡΑ25",
+          "candidateLongName": "Μétopo Evropaikís Realistikís Anypakoís/Μέτωπο Ευρωπαϊκής Ρεαλιστικής Ανυπακοής",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EL07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PE/ΠE",
+          "candidateLongName": "Plefsi Eleftherias/Πλεύση Ελευθερίας",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EL08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "NIKI/NIKH",
+          "candidateLongName": "Dimokratikó Patriotikó Kínima “Níki”/Δημοκρατικό Πατριωτικό Κίνημα “Νίκη”",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EL09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "NE.A.",
+          "candidateLongName": "Néa Aristerá/Νέα Αριστερά ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EL10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Dimokrátes/Δημοκράτες",
+          "candidateLongName": "Dimokrátes/Δημοκράτες",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EL11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Foni Logikis/Φωνή λογικής",
+          "candidateLongName": "Foni Logikis/Φωνή λογικής",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EL12",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Kosmos/Kόσμος",
+          "candidateLongName": "Kosmos/Kόσμος",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "EL90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "ES",
+      "candidates": [
+        {
+          "candidateId": "ES01",
+          "candidateType": "COALITION",
+          "candidateAcronym": "PSOE ",
+          "candidateLongName": "Partido Socialista Obrero Español ",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "ES21",
+            "ES22"
+          ]
+        },
+        {
+          "candidateId": "ES21",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PSOE",
+          "candidateLongName": "Partido Socialista Obrero Español",
+          "memberOfCoalition": "ES01",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "ES22",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PSC- PSOE",
+          "candidateLongName": "Partit dels Socialistes de Catalunya",
+          "memberOfCoalition": "ES01",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "ES02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PP",
+          "candidateLongName": "Partido Popular",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "ES03",
+          "candidateType": "COALITION",
+          "candidateAcronym": "Sumar",
+          "candidateLongName": "Coalition Sumar (Movimiento Sumar, Catalunya en Comú, Compromís, Izquierda Unida, Más Madrid, Verdes Equo, Chunta Aragonesista, Iniciativa del Pueblo Andaluz, Nueva Canarias - Bloque Canarista)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "ES19",
+            "ES20"
+          ]
+        },
+        {
+          "candidateId": "ES19",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Compromís",
+          "candidateLongName": "Compromís",
+          "memberOfCoalition": "ES03",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "ES20",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SMR",
+          "candidateLongName": "Movimiento Sumar",
+          "memberOfCoalition": "ES03",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "ES04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Podemos",
+          "candidateLongName": "Podemos",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "ES05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Vox",
+          "candidateLongName": "Vox",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "ES06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Junts UE",
+          "candidateLongName": "Coalition Junts i Lliures per Europa (Junts, Demòcrates de Catalunya, Moviment d'Esquerres de Catalunya, et al.)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "ES07",
+          "candidateType": "COALITION",
+          "candidateAcronym": "Ahora Repúblicas",
+          "candidateLongName": "Coalition Ahora Repúblicas (Esquerra Republicana de Catalunya, Euskal Herria Bildu, Bloque Nacionalista Galego, Ara Més, et al.)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "ES16",
+            "ES18",
+            "ES17"
+          ]
+        },
+        {
+          "candidateId": "ES16",
+          "candidateType": "PARTY",
+          "candidateAcronym": "BNG",
+          "candidateLongName": "Bloque Nacionalista Galego",
+          "memberOfCoalition": "ES07",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "ES18",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ERC",
+          "candidateLongName": "Esquerra Republicana de Catalunya",
+          "memberOfCoalition": "ES07",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "ES17",
+          "candidateType": "PARTY",
+          "candidateAcronym": "EH BILDU",
+          "candidateLongName": "Euskal Herria Bildu",
+          "memberOfCoalition": "ES07",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "ES08",
+          "candidateType": "COALITION",
+          "candidateAcronym": "CEUS",
+          "candidateLongName": "Coalition CEUS (Euzko Alderdi Jeltzalea - Partido Nacionalista Vasco, Coalición Canaria, El Pi - Proposta per les Illes Balears, Agrupación Atarrabia - Atarrabia Taldea, Geroa Socialverdes de Navarra en Europa - Geroa Nafarroako Sozialberdeak Europan)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "ES15"
+          ]
+        },
+        {
+          "candidateId": "ES15",
+          "candidateType": "PARTY",
+          "candidateAcronym": "EAJ – PNV",
+          "candidateLongName": "Euzko Alderdi Jeltzalea - Partido Nacionalista Vasco",
+          "memberOfCoalition": "ES08",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "ES11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SALF",
+          "candidateLongName": "Se Acabó la Fiesta",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "ES90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "FR",
+      "candidates": [
+        {
+          "candidateId": "FR01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "RN",
+          "candidateLongName": "Rassemblement national",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR02",
+          "candidateType": "COALITION",
+          "candidateAcronym": "Besoin d'Europe",
+          "candidateLongName": "Coalition Besoin d'Europe (Renaissance, Modem, Horizons, Parti Radical, Union des démocrates et indépendants)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "FR17",
+            "FR19",
+            "FR18",
+            "FR20",
+            "FR21"
+          ]
+        },
+        {
+          "candidateId": "FR17",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Horizons",
+          "candidateLongName": "Horizons",
+          "memberOfCoalition": "FR02",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR19",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Ind.",
+          "candidateLongName": "Independant",
+          "memberOfCoalition": "FR02",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR18",
+          "candidateType": "PARTY",
+          "candidateAcronym": "MoDem",
+          "candidateLongName": "MoDem",
+          "memberOfCoalition": "FR02",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR20",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Renaissance",
+          "candidateLongName": "Renaissance",
+          "memberOfCoalition": "FR02",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR21",
+          "candidateType": "PARTY",
+          "candidateAcronym": "UDI",
+          "candidateLongName": "Union des démocrates et indépendants",
+          "memberOfCoalition": "FR02",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LE - EELV",
+          "candidateLongName": "Les Écologistes - Europe Ecologie Les Verts",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LR",
+          "candidateLongName": "Les Républicains",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LFI",
+          "candidateLongName": "La France Insoumise",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR06",
+          "candidateType": "COALITION",
+          "candidateAcronym": "Réveiller l'Europe",
+          "candidateLongName": "Coalition Réveiller l'Europe (Parti socialiste, Place publique)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "FR24",
+            "FR23"
+          ]
+        },
+        {
+          "candidateId": "FR24",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PS",
+          "candidateLongName": "Parti socialiste",
+          "memberOfCoalition": "FR06",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR23",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Place publique",
+          "candidateLongName": "Place publique",
+          "memberOfCoalition": "FR06",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Gauche Unie",
+          "candidateLongName": "Coalition Gauche Unie (Parti communiste français, Gauche républicaine et socialiste)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR08",
+          "candidateType": "COALITION",
+          "candidateAcronym": "La France fière",
+          "candidateLongName": "Coalition La France fière (Reconquête!, Centre national des indépendants et paysans)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "FR15",
+            "FR22",
+            "FR14",
+            "FR16"
+          ]
+        },
+        {
+          "candidateId": "FR15",
+          "candidateType": "PARTY",
+          "candidateAcronym": "DVD",
+          "candidateLongName": "Divers Droite",
+          "memberOfCoalition": "FR08",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR22",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Independent",
+          "candidateLongName": "Independent",
+          "memberOfCoalition": "FR08",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR14",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Mouvement conservateur",
+          "candidateLongName": "Mouvement conservateur",
+          "memberOfCoalition": "FR08",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR16",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Reconquête!",
+          "candidateLongName": "Reconquête!",
+          "memberOfCoalition": "FR08",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "AR",
+          "candidateLongName": "Alliance Rurale",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PA",
+          "candidateLongName": "Parti Animaliste",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "UPR",
+          "candidateLongName": "Union Populaire Républicaine",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR12",
+          "candidateType": "PARTY",
+          "candidateAcronym": "L'Europe ça suffit",
+          "candidateLongName": "Coalition L'Europe ça suffit (Les Patriotes, Via, la voie du peuple)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR13",
+          "candidateType": "PARTY",
+          "candidateAcronym": "NPA",
+          "candidateLongName": "Nouveau Parti Anticapitaliste",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FR90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "IT",
+      "candidates": [
+        {
+          "candidateId": "IT01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Lega Salvini Premier",
+          "candidateLongName": "Lega Salvini Premier",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IT02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PD",
+          "candidateLongName": "Partito Democratico",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IT03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "M5S",
+          "candidateLongName": "Movimento Cinque Stelle",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IT04",
+          "candidateType": "COALITION",
+          "candidateAcronym": "FI – NM",
+          "candidateLongName": "Coalition Forza italia - Noi Moderati (Forza Italia, Noi Moderati)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "IT13"
+          ]
+        },
+        {
+          "candidateId": "IT13",
+          "candidateType": "PARTY",
+          "candidateAcronym": "FI",
+          "candidateLongName": "Forza Italia",
+          "memberOfCoalition": "IT04",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IT05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "FdI",
+          "candidateLongName": "Fratelli d'Italia",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IT06",
+          "candidateType": "COALITION",
+          "candidateAcronym": "Alleanza Verdi e Sinistra ",
+          "candidateLongName": "Coalition Alleanza Verdi e Sinistra (Europa Verde, Sinistra Italiana)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "IT15",
+            "IT14",
+            "IT16"
+          ]
+        },
+        {
+          "candidateId": "IT15",
+          "candidateType": "PARTY",
+          "candidateAcronym": "AVS",
+          "candidateLongName": "AVS",
+          "memberOfCoalition": "IT06",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IT14",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Europa Verde",
+          "candidateLongName": "Europa Verde",
+          "memberOfCoalition": "IT06",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IT16",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Ind.",
+          "candidateLongName": "Independent",
+          "memberOfCoalition": "IT06",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IT07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Azione – Siamo Europei ",
+          "candidateLongName": "Coalition Azione – Siamo Europei (Azione, NOS , Popolari Europeisti e Riformatori, Partito Repubblicano Italiano, Movimento Repubblicani Europei,  Team K, et al)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IT08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SVP",
+          "candidateLongName": "Südtiroler Volkspartei (Popolare Sudtirolese)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IT09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Democrazia sovrana popolare ",
+          "candidateLongName": "Coalition Democrazia sovrana popolare (Partito Comunista, Ancora Italia sovrana e popolare)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IT10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Pace Terra Dignità ",
+          "candidateLongName": "Coalition Pace Terra Dignità (MERA25 Italia, Movimento equità territoriale, Partito della Rifondazione Comunista, Lìberos Rispetados Uguales )",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IT11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Stati Uniti d'Europa",
+          "candidateLongName": "Coalition Stati Uniti d'Europa (+ Europa, Italia Viva, Liberali Democratici Europei, Partito Socialista Italiano,Radicali Italiani, L’Italia c’è)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IT12",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Libertà ",
+          "candidateLongName": "Coalition Libertà (Sud Chiama Nord, Movimento per l'Italexit, Sicilia Vera,  I civici in movimento – con Pirozzi, Grande Nord, Popolo Veneto, Capitano Ultimo,  et al.)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "IT90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "CY",
+      "candidates": [
+        {
+          "candidateId": "CY01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "DISY/ΔΗΣΥ",
+          "candidateLongName": "Dimokratikós Sinagermós/Δημοκρατικός Συναγερμός",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CY02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "AKEL/ΑΚΕΛ",
+          "candidateLongName": "Anorthotikó Kómma Ergazómenou Laoú/Ανορθωτικό Κόμμα Εργαζόμενου Λαού",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CY03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "DIKO/ΔΗΚΟ",
+          "candidateLongName": "Dimokratikó Kómma/Δημοκρατικό Κόμμα",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CY04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "EDEK/ΕΔΕΚ",
+          "candidateLongName": "EDEK Sosialistikó Kómma/ΕΔΕΚ Σοσιαλιστικό Κόμμα",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CY05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ELAM/ΕΛΑΜ",
+          "candidateLongName": "Ethnikó Laikó Métopo/Εθνικό Λαϊκό Μέτωπο",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CY10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Fidias/Φειδίας",
+          "candidateLongName": "Independent (Fidias Panayiotou/Φειδίας Παναγιώτου)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "CY90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "LV",
+      "candidates": [
+        {
+          "candidateId": "LV01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "JV ",
+          "candidateLongName": "Jaunā Vienotība ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LV02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "S/SDP",
+          "candidateLongName": "Sociāldemokrātiskā partija 'Saskaņa'",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LV03",
+          "candidateType": "COALITION",
+          "candidateAcronym": "NA ",
+          "candidateLongName": "Nacionālā apvienība 'Visu Latvijai!'-'Tēvzemei un Brīvībai/LNNK'",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "LV15"
+          ]
+        },
+        {
+          "candidateId": "LV15",
+          "candidateType": "PARTY",
+          "candidateAcronym": "TB/LNNK",
+          "candidateLongName": "Tēvzemei un Brīvībai/LNNK",
+          "memberOfCoalition": "LV03",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LV05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LA",
+          "candidateLongName": "Latvijas attīstībai",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LV06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ZZS ",
+          "candidateLongName": "Coalition Zaļo un Zemnieku savienība (Latvijas Zemnieku savienība, Latvijas Sociāldemokrātiskā strādnieku partija, Latvijai un Ventspilij)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LV07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "AS ",
+          "candidateLongName": "Coalition Apvienotais Saraksts (Latvijas Zaļā Partija, Latvijas Reģionu apvienība, Liepājas Partija)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LV08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "JKP",
+          "candidateLongName": "Jaunā konservatīvā partija",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LV09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "P",
+          "candidateLongName": "Progresīvie ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LV10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LPV",
+          "candidateLongName": "Latvija pirmajā vietā ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LV11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ST!",
+          "candidateLongName": "Stabilitātei!",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LV12",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SV",
+          "candidateLongName": "Coalition Suverēnā vara (Suverēnā vara, Partija 'Vienoti Latvijai')",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LV13",
+          "candidateType": "PARTY",
+          "candidateAcronym": "AJ",
+          "candidateLongName": "Apvienība Jaunlatvieši",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LV14",
+          "candidateType": "PARTY",
+          "candidateAcronym": "CP",
+          "candidateLongName": "Coalition Centra partija (Centra partija, Latvijas Krievu savienība)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LV90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "LT",
+      "candidates": [
+        {
+          "candidateId": "LT01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "TS-LKD",
+          "candidateLongName": "Tėvynės Sąjunga – Lietuvos Krikščionys Demokratai",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LT02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LSDP",
+          "candidateLongName": "Lietuvos Socialdemokratų Partija",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LT03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LVŽS",
+          "candidateLongName": "Lietuvos Valstiečių ir Žaliųjų Sąjunga",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LT04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "DP",
+          "candidateLongName": "Darbo Partija",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LT05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LS",
+          "candidateLongName": "Liberalų Sąjūdis",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LT06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LLRA-KŠS",
+          "candidateLongName": "Lietuvos lenkų rinkimų akcija – Krikščioniškų šeimų sąjunga",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LT07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LP",
+          "candidateLongName": "Laisvės partija",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LT08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LRP ",
+          "candidateLongName": "Lietuvos Regionų partija",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LT09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "DSVL",
+          "candidateLongName": "Demokratų sąjunga „Vardan Lietuvos“",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LT10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "NS",
+          "candidateLongName": "Nacionalinis susivienijimas",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LT11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LT",
+          "candidateLongName": "Laisvė ir Teisingumas",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LT12",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LCP",
+          "candidateLongName": "Tautos ir Teisingumo Sąjunga (centristai, tautininkai)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LT13",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LŽP",
+          "candidateLongName": "Lietuvos žaliųjų partija ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LT90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "LU",
+      "candidates": [
+        {
+          "candidateId": "LU01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "DP/PD",
+          "candidateLongName": "Demokratesch Partei/Parti démocratique/Demokratische Partei",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LU02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "CSV/PCS",
+          "candidateLongName": "Chrëschtlech Sozial Vollekspartei/Parti populaire chrétien-social/Christlich Soziale Volkspartei",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LU03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Déi Gréng/Les Verts",
+          "candidateLongName": "Déi Gréng/Les Verts/Die Grünen",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LU04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LSAP/POSL",
+          "candidateLongName": "Lëtzebuerger Sozialistesch Aarbechterpartei/Parti ouvrier socialiste luxembourgeois/Luxemburger Sozialistische Arbeiterpartei",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LU05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ADR/PADR",
+          "candidateLongName": "Alternativ Demokratesch Reformpartei/Parti réformiste d'alternative démocratique/Alternative Demokratische Reformpartei",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LU06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Piraten",
+          "candidateLongName": "Piratepartei Lëtzebuerg/Piratenpartei Luxemburg/Parti pirate du Luxembourg",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LU07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Déi Lénk/La Gauche",
+          "candidateLongName": "Déi Lénk/La Gauche/Die Linke",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LU08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "KPL/PCL",
+          "candidateLongName": "Kommunistesch Partei vu Lëtzebuerg/Parti Communiste Luxembourgeois/Kommunistische Partei Luxemburgs",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LU09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Volt",
+          "candidateLongName": "Volt Lëtzebuerg/Volt Luxembourg/Volt Luxemburg",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LU10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Fokus",
+          "candidateLongName": "Fokus ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LU11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "DK/LC",
+          "candidateLongName": "Déi Konservativ/Les Conservateurs/Die Konservativen",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "LU90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "HU",
+      "candidates": [
+        {
+          "candidateId": "HU01",
+          "candidateType": "COALITION",
+          "candidateAcronym": "Fidesz-KDNP",
+          "candidateLongName": "Coalition Fidesz – Magyar Polgári Szövetség - Kereszténydemokrata Néppárt",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "HU12",
+            "HU13"
+          ]
+        },
+        {
+          "candidateId": "HU12",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Fidesz-KDNP",
+          "candidateLongName": "Fidesz-KDNP",
+          "memberOfCoalition": "HU01",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HU13",
+          "candidateType": "PARTY",
+          "candidateAcronym": "KDNP",
+          "candidateLongName": "Kereszténydemokrata Néppárt",
+          "memberOfCoalition": "HU01",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HU02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Momentum",
+          "candidateLongName": "Momentum Mozgalom",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HU03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Jobbik",
+          "candidateLongName": "Jobbik - Konzervatívok",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HU04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Mi Hazánk",
+          "candidateLongName": "Mi Hazánk Mozgalom",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HU05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "MKKP ",
+          "candidateLongName": "Magyar Kétfarkú Kutyapárt",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HU06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "LMP - Zöldek",
+          "candidateLongName": "Magyarország Zöld Pártja",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HU07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "MMN",
+          "candidateLongName": "Mindenki Magyarországa Néppárt",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HU08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "TISZA",
+          "candidateLongName": "Tisztelet és Szabadság Pártja",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HU09",
+          "candidateType": "COALITION",
+          "candidateAcronym": "DK-MSZP-P",
+          "candidateLongName": "Coalition DK-MSZP-P (Demokratikus Koalíció, Magyar Szocialista Párt, Párbeszéd-Zöldek)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "HU14"
+          ]
+        },
+        {
+          "candidateId": "HU14",
+          "candidateType": "PARTY",
+          "candidateAcronym": "DK",
+          "candidateLongName": "Demokratikus Koalíció",
+          "memberOfCoalition": "HU09",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HU10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "2RK",
+          "candidateLongName": "Második Reformkor",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HU11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Memo",
+          "candidateLongName": "Megoldás Mozgalom",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HU90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "MT",
+      "candidates": [
+        {
+          "candidateId": "MT01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PL/LP",
+          "candidateLongName": "Partit Laburista/Labour Party",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "MT02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PN/NP",
+          "candidateLongName": "Partit Nazzjonalista/Nationalist Party",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "MT90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "NL",
+      "candidates": [
+        {
+          "candidateId": "NL01",
+          "candidateType": "COALITION",
+          "candidateAcronym": "GL - PvdA",
+          "candidateLongName": "Coalition GL - PvdA (GroenLinks, PvdA) ",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "NL16",
+            "NL15"
+          ]
+        },
+        {
+          "candidateId": "NL16",
+          "candidateType": "PARTY",
+          "candidateAcronym": "GL",
+          "candidateLongName": "GroenLinks",
+          "memberOfCoalition": "NL01",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "NL15",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PvdA",
+          "candidateLongName": "Partij van de Arbeid",
+          "memberOfCoalition": "NL01",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "NL02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "VVD",
+          "candidateLongName": "Volkspartij voor Vrijheid en Democratie",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "NL03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "CDA",
+          "candidateLongName": "Christen-Democratisch Appèl",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "NL04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "FvD",
+          "candidateLongName": "Forum voor Democratie",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "NL05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "D66",
+          "candidateLongName": "Democraten 66",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "NL06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "CU",
+          "candidateLongName": "ChristenUnie",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "NL07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SGP",
+          "candidateLongName": "Staatkundig Gereformeerde Partij",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "NL08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PvdD",
+          "candidateLongName": "Partij voor de Dieren",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "NL09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PVV",
+          "candidateLongName": "Partij voor de Vrijheid",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "NL10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SP",
+          "candidateLongName": "Socialistische Partij",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "NL11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Volt",
+          "candidateLongName": "Volt Nederland",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "NL12",
+          "candidateType": "PARTY",
+          "candidateAcronym": "JA21",
+          "candidateLongName": "Juiste Antwoord 2021",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "NL13",
+          "candidateType": "PARTY",
+          "candidateAcronym": "NSC",
+          "candidateLongName": "Nieuw Sociaal Contract",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "NL14",
+          "candidateType": "PARTY",
+          "candidateAcronym": "BBB",
+          "candidateLongName": "BoerBurgerBeweging",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "NL90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "AT",
+      "candidates": [
+        {
+          "candidateId": "AT01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ÖVP",
+          "candidateLongName": "Österreichische Volkspartei",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "AT02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SPÖ",
+          "candidateLongName": "Sozialdemokratische Partei Österreichs",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "AT03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "FPÖ",
+          "candidateLongName": "Die Freiheitliche Partei Österreichs",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "AT04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "GRÜNE",
+          "candidateLongName": "Die Grünen – Die Grüne Alternative",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "AT05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "NEOS",
+          "candidateLongName": "NEOS – Das neue Europa ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "AT06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "KPÖ",
+          "candidateLongName": "Kommunistische Partei Österreichs – KPÖ Plus",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "AT90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "PL",
+      "candidates": [
+        {
+          "candidateId": "PL01",
+          "candidateType": "COALITION",
+          "candidateAcronym": "PiS",
+          "candidateLongName": "Prawo i Sprawiedliwość (Prawo i Sprawiedliwość, Suwerenna Polska)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "PL11",
+            "PL10"
+          ]
+        },
+        {
+          "candidateId": "PL11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PiS",
+          "candidateLongName": "Prawo i Sprawiedliwość",
+          "memberOfCoalition": "PL01",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PL10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SP",
+          "candidateLongName": "Suwerenna Polska",
+          "memberOfCoalition": "PL01",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PL02",
+          "candidateType": "COALITION",
+          "candidateAcronym": "KO",
+          "candidateLongName": "Koalicja Obywatelska (Platforma Obywatelska, Nowoczesna, Inicjatywa Polska, Partia Zieloni)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "PL08",
+            "PL07",
+            "PL09"
+          ]
+        },
+        {
+          "candidateId": "PL08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Ind.",
+          "candidateLongName": "Independent",
+          "memberOfCoalition": "PL02",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PL07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "iPL",
+          "candidateLongName": "Inicjatywa Polska",
+          "memberOfCoalition": "PL02",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PL09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PO",
+          "candidateLongName": "Platforma Obywatelska",
+          "memberOfCoalition": "PL02",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PL03",
+          "candidateType": "COALITION",
+          "candidateAcronym": "Lewica",
+          "candidateLongName": "Coalition Lewica (Nowa Lewica, Lewica Razem, Unia Pracy)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "PL16"
+          ]
+        },
+        {
+          "candidateId": "PL16",
+          "candidateType": "PARTY",
+          "candidateAcronym": "NL",
+          "candidateLongName": "Nowa Lewica",
+          "memberOfCoalition": "PL03",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PL04",
+          "candidateType": "COALITION",
+          "candidateAcronym": "Konfederacja ",
+          "candidateLongName": "Konfederacja Wolność i Niepodległość (Konfederacja Korony Polskiej, Ruch Narodowy, Nowa Nadzieja, Polska Jest Jedna, Wolnościowcy)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "PL13",
+            "PL12"
+          ]
+        },
+        {
+          "candidateId": "PL13",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Konfederacja",
+          "candidateLongName": "Konfederacja",
+          "memberOfCoalition": "PL04",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PL12",
+          "candidateType": "PARTY",
+          "candidateAcronym": "KKP",
+          "candidateLongName": "Konfederacja Korony Polskiej",
+          "memberOfCoalition": "PL04",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PL05",
+          "candidateType": "COALITION",
+          "candidateAcronym": "Trzecia Droga",
+          "candidateLongName": "Coalition Trzecia Droga Polska 2050 Szymona Hołowni - Polskie Stronnictwo Ludowe (Polskie Stronnictwo Ludowe, Polska2050, Unia Europejskich Demokratów, Wolnościowcy)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "PL14",
+            "PL15"
+          ]
+        },
+        {
+          "candidateId": "PL14",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Polska 2050",
+          "candidateLongName": "Polska 2050",
+          "memberOfCoalition": "PL05",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PL15",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PSL",
+          "candidateLongName": "Polskie Stronnictwo Ludowe",
+          "memberOfCoalition": "PL05",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PL06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "BS",
+          "candidateLongName": "Bezpartyjni Samorządowcy",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PL90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "PT",
+      "candidates": [
+        {
+          "candidateId": "PT01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PS",
+          "candidateLongName": "Partido Socialista",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PT02",
+          "candidateType": "COALITION",
+          "candidateAcronym": "AD",
+          "candidateLongName": "Aliança Democrática (Partido Social Democrata, Centro Democrático Social-Partido Popular, Partido Popular Monárquico)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "PT11",
+            "PT09",
+            "PT10"
+          ]
+        },
+        {
+          "candidateId": "PT11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "CDS-PP",
+          "candidateLongName": "Centro Democrático Social-Partido Popular",
+          "memberOfCoalition": "PT02",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PT09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Ind.",
+          "candidateLongName": "Independent",
+          "memberOfCoalition": "PT02",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PT10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PSD",
+          "candidateLongName": "Partido Social Democrata",
+          "memberOfCoalition": "PT02",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PT03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "BE",
+          "candidateLongName": "Bloco de Esquerda",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PT04",
+          "candidateType": "COALITION",
+          "candidateAcronym": "CDU",
+          "candidateLongName": "Coligação Democrática Unitária (Partido Comunista Português, Partido Ecologista “Os Verdes”) ",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "PT12"
+          ]
+        },
+        {
+          "candidateId": "PT12",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PCP",
+          "candidateLongName": "Partido Comunista Português",
+          "memberOfCoalition": "PT04",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PT05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PAN",
+          "candidateLongName": "Pessoas-Animais-Natureza",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PT06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "L",
+          "candidateLongName": "LIVRE",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PT07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "IL",
+          "candidateLongName": "Iniciativa Liberal",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PT08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "CH",
+          "candidateLongName": "CHEGA",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "PT90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "RO",
+      "candidates": [
+        {
+          "candidateId": "RO01",
+          "candidateType": "COALITION",
+          "candidateAcronym": "PSD - PNL",
+          "candidateLongName": "Alianța PSD - PNL (Partidul Social Democrat, Partidul Național Liberal)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "RO16",
+            "RO15"
+          ]
+        },
+        {
+          "candidateId": "RO16",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PNL",
+          "candidateLongName": "Partidul Național Liberal",
+          "memberOfCoalition": "RO01",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "RO15",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PSD",
+          "candidateLongName": "Partidul Social Democrat",
+          "memberOfCoalition": "RO01",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "RO03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "UDMR/RMDSZ",
+          "candidateLongName": "Uniunea Democrată Maghiară din România/Romániai Magyar Demokrata Szövetség",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "RO04",
+          "candidateType": "COALITION",
+          "candidateAcronym": "AUR",
+          "candidateLongName": "Alianța pentru Unirea Românilor (Alianța pentru Unirea Românilor, Partidul Național Conservator Român, Partidul Români Pentru România)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "RO18",
+            "RO17"
+          ]
+        },
+        {
+          "candidateId": "RO18",
+          "candidateType": "PARTY",
+          "candidateAcronym": "AUR",
+          "candidateLongName": "Alianța pentru Unirea Românilor",
+          "memberOfCoalition": "RO04",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "RO17",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PNCR",
+          "candidateLongName": "Partidul Național Conservator Român",
+          "memberOfCoalition": "RO04",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "RO06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SOS",
+          "candidateLongName": "SOS România",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "RO07",
+          "candidateType": "COALITION",
+          "candidateAcronym": "Alianța Dreapta Unită",
+          "candidateLongName": "Alianța Dreapta Unită (Uniunea Salvați România, Partidul Mișcarea Populară, Forța Dreptei)",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "RO20",
+            "RO19"
+          ]
+        },
+        {
+          "candidateId": "RO20",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PMP",
+          "candidateLongName": "Partidul Mișcarea Populară",
+          "memberOfCoalition": "RO07",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "RO19",
+          "candidateType": "PARTY",
+          "candidateAcronym": "USR",
+          "candidateLongName": "Uniunea Salvați România",
+          "memberOfCoalition": "RO07",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "RO08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ȘTEFĂNUȚĂ NICOLAE-BOGDĂNEL",
+          "candidateLongName": "ȘTEFĂNUȚĂ NICOLAE-BOGDĂNEL",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "RO90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "SI",
+      "candidates": [
+        {
+          "candidateId": "SI01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SDS",
+          "candidateLongName": "Slovenska demokratska stranka",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SI02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SLS ",
+          "candidateLongName": "Slovenska ljudska stranka ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SI03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SD",
+          "candidateLongName": "Socialni demokrati",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SI04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "N.Si",
+          "candidateLongName": "Nova Slovenija – Krščanski demokrati",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SI05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Levica",
+          "candidateLongName": "Stranka Levica",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SI06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Svoboda!",
+          "candidateLongName": "Gibanje Svoboda",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SI07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Vesna",
+          "candidateLongName": "Vesna - zelena stranka ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SI08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Resni.ca",
+          "candidateLongName": "Državljansko gibanje Resni.ca ",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SI09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "DeSUS - DD",
+          "candidateLongName": "Coalition DeSUS - DD (Demokratična stranka upokojencev Slovenije, Dobra država)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SI10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ZS",
+          "candidateLongName": "Zeleni Slovenije",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SI90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "SK",
+      "candidates": [
+        {
+          "candidateId": "SK01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Smer",
+          "candidateLongName": "Smer – sociálna demokracia",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SK02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "ĽSNS",
+          "candidateLongName": "Kotlebovci - Ľudová strana naše Slovensko",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SK03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SaS",
+          "candidateLongName": "Sloboda a Solidarita",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SK04",
+          "candidateType": "COALITION",
+          "candidateAcronym": "PS",
+          "candidateLongName": "Progresívne Slovensko",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "SK14",
+            "SK13"
+          ]
+        },
+        {
+          "candidateId": "SK14",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Ind.",
+          "candidateLongName": "Independent",
+          "memberOfCoalition": "SK04",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SK13",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PS",
+          "candidateLongName": "Progresívne Slovensko",
+          "memberOfCoalition": "SK04",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SK05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SNS",
+          "candidateLongName": "Slovenská národná strana",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SK06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "KDH",
+          "candidateLongName": "Kresťanskodemokratické hnutie",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SK07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Aliancia",
+          "candidateLongName": "Maďarská Aliancia/Magyar Szövetség",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SK08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Hlas",
+          "candidateLongName": "Hlas – sociálna demokracia",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SK09",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Republika",
+          "candidateLongName": "Republika",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SK10",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Demokrati",
+          "candidateLongName": "Demokrati",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SK11",
+          "candidateType": "PARTY",
+          "candidateAcronym": "S-ZL",
+          "candidateLongName": "Coalition S-ZL (Slovensko, Za ľudí)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SK12",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Zdravý rozum",
+          "candidateLongName": "Zdravý rozum",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SK90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "FI",
+      "candidates": [
+        {
+          "candidateId": "FI01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "KOK",
+          "candidateLongName": "Kansallinen Kokoomus/Samlingspartiet",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FI02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "VIHR",
+          "candidateLongName": "Vihreä liitto/Gröna Förbundet",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FI03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SDP",
+          "candidateLongName": "Suomen Sosialidemokraattinen Puolue/Finlands Socialdemokratiska Parti",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FI04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "PS",
+          "candidateLongName": "Perussuomalaiset/Sannfinländarna",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FI05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "KESK",
+          "candidateLongName": "Suomen Keskusta/Centern i Finland",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FI06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "VAS",
+          "candidateLongName": "Vasemmistoliitto/Vänsterförbundet",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FI07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SFP/RKP",
+          "candidateLongName": "Svenska folkpartiet i Finland/Suomen ruotsalainen kansanpuolue",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FI08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "KD - LIIK",
+          "candidateLongName": "Suomen Kristillisdemokraatit - Liike Nyt/Finlands Kristdemokrater - Rörelse.nu",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "FI90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "SE",
+      "candidates": [
+        {
+          "candidateId": "SE01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "S",
+          "candidateLongName": "Socialdemokraterna",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SE02",
+          "candidateType": "PARTY",
+          "candidateAcronym": "M",
+          "candidateLongName": "Moderaterna",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SE03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SD",
+          "candidateLongName": "Sverigedemokraterna",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SE04",
+          "candidateType": "PARTY",
+          "candidateAcronym": "MP",
+          "candidateLongName": "Miljöpartiet de gröna",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SE05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "C",
+          "candidateLongName": "Centerpartiet",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SE06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "KD",
+          "candidateLongName": "Kristdemokraterna",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SE07",
+          "candidateType": "PARTY",
+          "candidateAcronym": "V",
+          "candidateLongName": "Vänsterpartiet",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SE08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "L",
+          "candidateLongName": "Liberalerna",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "SE90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    },
+    {
+      "countryId": "HR",
+      "candidates": [
+        {
+          "candidateId": "HR01",
+          "candidateType": "PARTY",
+          "candidateAcronym": "HDZ",
+          "candidateLongName": "Hrvatska demokratska zajednica",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HR02",
+          "candidateType": "COALITION",
+          "candidateAcronym": "Koalicija 'SDP'",
+          "candidateLongName": "Koalicija 'SDP' (Socijaldemokratska partija Hrvatske, Centar, Dalija Orešković I Ljudi S Imenom I Prezimenom, Građansko-Liberalni Savez, Hrvatska seljačka stranka) ",
+          "memberOfCoalition": null,
+          "coalitionMembers": [
+            "HR08"
+          ]
+        },
+        {
+          "candidateId": "HR08",
+          "candidateType": "PARTY",
+          "candidateAcronym": "SDP",
+          "candidateLongName": "SDP",
+          "memberOfCoalition": "HR02",
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HR03",
+          "candidateType": "PARTY",
+          "candidateAcronym": "IDS-DDI",
+          "candidateLongName": "Coalition Istarski demokratski sabor - Dieta democratica Istriana (Demokrati, Hrvatska Narodna Stranka - Liberalni Demokrati, Hrvatska socijalno-liberalna stranka, Istarski demokratski sabor - Dieta democratica Istriana, Istarska Stranka Umirovljenika - Partito Istriano Dei Pensionati, Nezavisna Platforma Sjevera, Narodna stranka - Reformisti, Primorsko Goranski Savez , Lista Za Rijeku, Socijaldemokrati, Samostalna demokratska srpska stranka, Unija Kvarnera)",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HR05",
+          "candidateType": "PARTY",
+          "candidateAcronym": "DP",
+          "candidateLongName": "Domovinski pokret",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HR06",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Možemo!",
+          "candidateLongName": "Možemo! – Politička platforma",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        },
+        {
+          "candidateId": "HR90",
+          "candidateType": "PARTY",
+          "candidateAcronym": "Other parties",
+          "candidateLongName": "Other parties",
+          "memberOfCoalition": null,
+          "coalitionMembers": null
+        }
+      ]
+    }
+  ]
+}

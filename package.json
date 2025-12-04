@@ -1,0 +1,24 @@
+{
+  "name": "rulemandering",
+  "version": "1.0.0",
+  "description": "Interactive EU electoral fairness simulator that lets users manipulate electoral parameters (thresholds, formulas, and district magnitudes) to visualize their impact on proportionality.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/viktoriageorrg04/RuleMandering.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/viktoriageorrg04/RuleMandering/issues"
+  },
+  "homepage": "https://github.com/viktoriageorrg04/RuleMandering#readme",
+  "dependencies": {
+    "csv-parser": "^3.2.0"
+  }
+}

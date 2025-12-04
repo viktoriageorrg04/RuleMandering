@@ -1,0 +1,1254 @@
+{
+  "groups": [
+    {
+      "groupId": "EPP",
+      "translations": [
+        {
+          "languageId": "DE",
+          "groupAcronym": "EVP",
+          "groupLongName": "Fraktion der Europäischen Volkspartei (Christdemokraten)"
+        },
+        {
+          "languageId": "FI",
+          "groupAcronym": "EPP",
+          "groupLongName": "Euroopan kansanpuolueen ryhmä (kristillisdemokraatit)"
+        },
+        {
+          "languageId": "SV",
+          "groupAcronym": "EPP",
+          "groupLongName": "Europeiska folkpartiets grupp (kristdemokrater)"
+        },
+        {
+          "languageId": "PT",
+          "groupAcronym": "PPE",
+          "groupLongName": "Grupo do Partido Popular Europeu (Democratas-Cristãos)"
+        },
+        {
+          "languageId": "BG",
+          "groupAcronym": "ЕНП",
+          "groupLongName": "Група на Европейската народна партия (Християндемократи)"
+        },
+        {
+          "languageId": "EL",
+          "groupAcronym": "ΕΛΚ",
+          "groupLongName": "Κoιvoβoυλευτική Ομάδα τoυ Ευρωπαϊκoύ Λαϊκoύ Κόμματoς (Χριστιαvoδημoκράτες)"
+        },
+        {
+          "languageId": "MT",
+          "groupAcronym": "PPE",
+          "groupLongName": "Grupp tal-Partit Popolari Ewropew (Demokristjani)"
+        },
+        {
+          "languageId": "LT",
+          "groupAcronym": "ELP",
+          "groupLongName": "Europos liaudies partijos (krikščionių demokratų) frakcija"
+        },
+        {
+          "languageId": "EN",
+          "groupAcronym": "EPP",
+          "groupLongName": "Group of the European People's Party (Christian Democrats)"
+        },
+        {
+          "languageId": "HR",
+          "groupAcronym": "EPP",
+          "groupLongName": "Klub zastupnika Europske pučke stranke (kršćanski demokrati)"
+        },
+        {
+          "languageId": "LV",
+          "groupAcronym": "ETP",
+          "groupLongName": "Eiropas Tautas partijas (Kristīgie demokrāti) grupa"
+        },
+        {
+          "languageId": "IT",
+          "groupAcronym": "PPE",
+          "groupLongName": "Gruppo del Partito popolare europeo (Democratici cristiani)"
+        },
+        {
+          "languageId": "FR",
+          "groupAcronym": "PPE",
+          "groupLongName": "Groupe du Parti populaire européen (Démocrates-Chrétiens)"
+        },
+        {
+          "languageId": "HU",
+          "groupAcronym": "EPP",
+          "groupLongName": "Európai Néppárt (Kereszténydemokraták) képviselőcsoport"
+        },
+        {
+          "languageId": "ES",
+          "groupAcronym": "PPE",
+          "groupLongName": "Grupo del Partido Popular Europeo (Demócrata-Cristianos)"
+        },
+        {
+          "languageId": "ET",
+          "groupAcronym": "ERP",
+          "groupLongName": "Euroopa Rahvapartei (kristlike demokraatide) fraktsioon"
+        },
+        {
+          "languageId": "CS",
+          "groupAcronym": "ELS",
+          "groupLongName": "Poslanecký klub Evropské lidové strany (Křesťanských demokratů)"
+        },
+        {
+          "languageId": "SK",
+          "groupAcronym": "EĽS",
+          "groupLongName": "Poslanecký klub Európskej ľudovej strany (Kresťanských demokratov)"
+        },
+        {
+          "languageId": "SL",
+          "groupAcronym": "ELS",
+          "groupLongName": "Poslanska skupina Evropske ljudske stranke (Krščanskih demokratov)"
+        },
+        {
+          "languageId": "GA",
+          "groupAcronym": "PPE",
+          "groupLongName": "Grúpa Pháirtí an Phobail Eorpaigh (Na Daonlathaithe Críostaí)"
+        },
+        {
+          "languageId": "PL",
+          "groupAcronym": "EPL",
+          "groupLongName": "Grupa Europejskiej Partii Ludowej (Chrześcijańscy Demokraci)"
+        },
+        {
+          "languageId": "DA",
+          "groupAcronym": "EPP",
+          "groupLongName": "Det Europæiske Folkepartis Gruppe (Kristelige Demokrater)"
+        },
+        {
+          "languageId": "RO",
+          "groupAcronym": "PPE",
+          "groupLongName": "Grupul Partidului Popular European (Creștin Democrat)"
+        },
+        {
+          "languageId": "NL",
+          "groupAcronym": "EVP",
+          "groupLongName": "Fractie van de Europese Volkspartij (christendemocraten)"
+        }
+      ]
+    },
+    {
+      "groupId": "SD",
+      "translations": [
+        {
+          "languageId": "DE",
+          "groupAcronym": "S&D",
+          "groupLongName": "Fraktion der Progressiven Allianz der Sozialdemokraten im Europäischen Parlament"
+        },
+        {
+          "languageId": "FI",
+          "groupAcronym": "S&D",
+          "groupLongName": "Euroopan parlamentin sosialistien ja demokraattien ryhmä"
+        },
+        {
+          "languageId": "SV",
+          "groupAcronym": "S&D",
+          "groupLongName": "Gruppen Progressiva förbundet av Socialdemokrater i Europaparlamentet"
+        },
+        {
+          "languageId": "PT",
+          "groupAcronym": "S&D",
+          "groupLongName": "Grupo da Aliança Progressista dos Socialistas e Democratas no Parlamento Europeu"
+        },
+        {
+          "languageId": "BG",
+          "groupAcronym": "S&D",
+          "groupLongName": "Група на Прогресивния алианс на социалистите и демократите в Европейския парламент"
+        },
+        {
+          "languageId": "EL",
+          "groupAcronym": "S&D",
+          "groupLongName": "Ομάδα της Προοδευτικής Συμμαχίας των Σοσιαλιστών και Δημοκρατών στο Ευρωπαϊκό Κοινοβούλιο"
+        },
+        {
+          "languageId": "MT",
+          "groupAcronym": "S&D",
+          "groupLongName": "Grupp tal-Alleanza Progressiva tas-Soċjalisti u d-Demokratiċi fil-Parlament Ewropew"
+        },
+        {
+          "languageId": "LT",
+          "groupAcronym": "S&D",
+          "groupLongName": "Europos Parlamento socialistų ir demokratų pažangiojo aljanso frakcija"
+        },
+        {
+          "languageId": "EN",
+          "groupAcronym": "S&D",
+          "groupLongName": "Group of the Progressive Alliance of Socialists and Democrats in the European Parliament"
+        },
+        {
+          "languageId": "HR",
+          "groupAcronym": "S&D",
+          "groupLongName": "Klub zastupnika Progresivnog saveza socijalista i demokrata u Europskom parlamentu"
+        },
+        {
+          "languageId": "LV",
+          "groupAcronym": "S&D",
+          "groupLongName": "Eiropas Parlamenta sociālistu un demokrātu progresīvās alianses grupa"
+        },
+        {
+          "languageId": "IT",
+          "groupAcronym": "S&D",
+          "groupLongName": "Gruppo dell'Alleanza progressista di Socialisti e Democratici al Parlamento Europeo"
+        },
+        {
+          "languageId": "FR",
+          "groupAcronym": "S&D",
+          "groupLongName": "Groupe de l'Alliance Progressiste des Socialistes et Démocrates au Parlement européen"
+        },
+        {
+          "languageId": "HU",
+          "groupAcronym": "S&D",
+          "groupLongName": "Szocialisták és Demokraták Progresszív Szövetsége az Európai Parlamentben képviselőcsoport"
+        },
+        {
+          "languageId": "ES",
+          "groupAcronym": "S&D",
+          "groupLongName": "Grupo de la Alianza Progresista de Socialistas y Demócratas en el Parlamento Europeo"
+        },
+        {
+          "languageId": "ET",
+          "groupAcronym": "S&D",
+          "groupLongName": "Sotsiaaldemokraatide ja demokraatide fraktsioon Euroopa Parlamendis"
+        },
+        {
+          "languageId": "CS",
+          "groupAcronym": "S&D",
+          "groupLongName": "Skupina progresivní aliance socialistů a demokratů v Evropském parlamentu"
+        },
+        {
+          "languageId": "SK",
+          "groupAcronym": "S&D",
+          "groupLongName": "Skupina progresívnej aliancie socialistov a demokratov v Európskom parlamente"
+        },
+        {
+          "languageId": "SL",
+          "groupAcronym": "S&D",
+          "groupLongName": "Skupina naprednega zavezništva socialistov in demokratov v Evropskem parlamentu"
+        },
+        {
+          "languageId": "GA",
+          "groupAcronym": "S&D",
+          "groupLongName": "An Grúpa d'Aontas Forchéimnitheach na Sóisialaithe agus na nDaonlathaithe i bParlaimint na hEorpa"
+        },
+        {
+          "languageId": "PL",
+          "groupAcronym": "S&D",
+          "groupLongName": "Grupa Postępowego Sojuszu Socjalistów i Demokratów w Parlamencie Europejskim"
+        },
+        {
+          "languageId": "DA",
+          "groupAcronym": "S&D",
+          "groupLongName": "Gruppen for Det Progressive Forbund af Socialdemokrater i Europa-Parlamentet"
+        },
+        {
+          "languageId": "RO",
+          "groupAcronym": "S&D",
+          "groupLongName": "Grupul Alianței Progresiste a Socialiștilor si Democraților din Parlamentul European"
+        },
+        {
+          "languageId": "NL",
+          "groupAcronym": "S&D",
+          "groupLongName": "Fractie van de Progressieve Alliantie van Socialisten en Democraten in het Europees Parlement"
+        }
+      ]
+    },
+    {
+      "groupId": "ECR",
+      "translations": [
+        {
+          "languageId": "DE",
+          "groupAcronym": "EKR",
+          "groupLongName": "Fraktion der Europäischen Konservativen und Reformer"
+        },
+        {
+          "languageId": "FI",
+          "groupAcronym": "EKR",
+          "groupLongName": "Euroopan konservatiivit ja reformistit"
+        },
+        {
+          "languageId": "SV",
+          "groupAcronym": "ECR",
+          "groupLongName": "Gruppen Europeiska konservativa och reformister"
+        },
+        {
+          "languageId": "PT",
+          "groupAcronym": "ECR",
+          "groupLongName": "Grupo dos Conservadores e Reformistas Europeus"
+        },
+        {
+          "languageId": "BG",
+          "groupAcronym": "ЕКР",
+          "groupLongName": "Европейски консерватори и реформисти"
+        },
+        {
+          "languageId": "EL",
+          "groupAcronym": "ΕΣΜ",
+          "groupLongName": "Ομάδα των Ευρωπαίων Συντηρητικών και Μεταρρυθμιστών"
+        },
+        {
+          "languageId": "MT",
+          "groupAcronym": "ECR",
+          "groupLongName": "Grupp tal-Konservattivi u r-Riformisti Ewropej"
+        },
+        {
+          "languageId": "LT",
+          "groupAcronym": "EKR",
+          "groupLongName": "Europos konservatorių ir reformuotojų frakcija"
+        },
+        {
+          "languageId": "EN",
+          "groupAcronym": "ECR",
+          "groupLongName": "European Conservatives and Reformists Group"
+        },
+        {
+          "languageId": "HR",
+          "groupAcronym": "ECR",
+          "groupLongName": "Europski konzervativci i reformisti"
+        },
+        {
+          "languageId": "LV",
+          "groupAcronym": "EKR",
+          "groupLongName": "Eiropas Konservatīvo un reformistu grupa"
+        },
+        {
+          "languageId": "IT",
+          "groupAcronym": "ECR",
+          "groupLongName": "Gruppo dei Conservatori e Riformisti europei"
+        },
+        {
+          "languageId": "FR",
+          "groupAcronym": "ECR",
+          "groupLongName": "Groupe des Conservateurs et Réformistes européens"
+        },
+        {
+          "languageId": "HU",
+          "groupAcronym": "ECR",
+          "groupLongName": "Európai Konzervatívok és Reformerek képviselőcsoport"
+        },
+        {
+          "languageId": "ES",
+          "groupAcronym": "CRE",
+          "groupLongName": "Grupo de los Conservadores y Reformistas Europeos"
+        },
+        {
+          "languageId": "ET",
+          "groupAcronym": "ECR",
+          "groupLongName": "Euroopa Konservatiivide ja Reformistide fraktsioon"
+        },
+        {
+          "languageId": "CS",
+          "groupAcronym": "ECR",
+          "groupLongName": "Skupina Evropských konzervativců a reformistů"
+        },
+        {
+          "languageId": "SK",
+          "groupAcronym": "EKR",
+          "groupLongName": "Európski konzervatívci a reformisti"
+        },
+        {
+          "languageId": "SL",
+          "groupAcronym": "ECR",
+          "groupLongName": "Skupina Evropskih konservativcev in reformistov"
+        },
+        {
+          "languageId": "GA",
+          "groupAcronym": "ECR",
+          "groupLongName": "An Grúpa do Choimeádaigh agus Leasaitheoirí na hEorpa"
+        },
+        {
+          "languageId": "PL",
+          "groupAcronym": "EKR",
+          "groupLongName": "Europejscy Konserwatyści i Reformatorzy"
+        },
+        {
+          "languageId": "DA",
+          "groupAcronym": "EKR",
+          "groupLongName": "De Europæiske Konservative og Reformister"
+        },
+        {
+          "languageId": "RO",
+          "groupAcronym": "CRE",
+          "groupLongName": "Grupul Conservatorilor și Reformiștilor Europeni"
+        },
+        {
+          "languageId": "NL",
+          "groupAcronym": "ECR",
+          "groupLongName": "Fractie Europese Conservatieven en Hervormers"
+        }
+      ]
+    },
+    {
+      "groupId": "Renew",
+      "translations": [
+        {
+          "languageId": "DE",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Renew Europe Group"
+        },
+        {
+          "languageId": "FI",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Uudistuva Eurooppa -ryhmä"
+        },
+        {
+          "languageId": "SV",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Gruppen Renew Europe"
+        },
+        {
+          "languageId": "PT",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Grupo Renew Europe"
+        },
+        {
+          "languageId": "BG",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Група \"Обнови Европа\""
+        },
+        {
+          "languageId": "EL",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Renew Europe group"
+        },
+        {
+          "languageId": "MT",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Grupp Renew Europe"
+        },
+        {
+          "languageId": "LT",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Frakcija „Atnaujinkime Europą“ („Renew Europe“)"
+        },
+        {
+          "languageId": "EN",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Renew Europe Group"
+        },
+        {
+          "languageId": "HR",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Klub zastupnika Renew Europe"
+        },
+        {
+          "languageId": "LV",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Grupa Renew Europe"
+        },
+        {
+          "languageId": "IT",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Gruppo Renew Europe"
+        },
+        {
+          "languageId": "FR",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Groupe Renew Europe"
+        },
+        {
+          "languageId": "HU",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Renew Europe képviselőcsoport"
+        },
+        {
+          "languageId": "ES",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Grupo Renew Europe"
+        },
+        {
+          "languageId": "ET",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Renew Europe Group"
+        },
+        {
+          "languageId": "CS",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Skupina Renew Europe"
+        },
+        {
+          "languageId": "SK",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Skupina Renew Europe"
+        },
+        {
+          "languageId": "SL",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Skupina Renew Europe"
+        },
+        {
+          "languageId": "GA",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "An Grúpa Renew Europe"
+        },
+        {
+          "languageId": "PL",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Grupa Renew Europe"
+        },
+        {
+          "languageId": "DA",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Gruppen Renew Europe"
+        },
+        {
+          "languageId": "RO",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Grupul Renew Europe"
+        },
+        {
+          "languageId": "NL",
+          "groupAcronym": "Renew Europe",
+          "groupLongName": "Fractie Renew Europe"
+        }
+      ]
+    },
+    {
+      "groupId": "Theleft",
+      "translations": [
+        {
+          "languageId": "DE",
+          "groupAcronym": "The Left",
+          "groupLongName": "Fraktion Die Linke im Europäischen Parlament - GUE/NGL"
+        },
+        {
+          "languageId": "FI",
+          "groupAcronym": "The Left",
+          "groupLongName": "Euroopan parlamentin vasemmistoryhmä - GUE/NGL"
+        },
+        {
+          "languageId": "SV",
+          "groupAcronym": "The Left",
+          "groupLongName": "Vänstergruppen i Europaparlamentet - GUE/NGL"
+        },
+        {
+          "languageId": "PT",
+          "groupAcronym": "The Left",
+          "groupLongName": "Grupo da Esquerda no Parlamento Europeu - GUE/NGL"
+        },
+        {
+          "languageId": "BG",
+          "groupAcronym": "The Left",
+          "groupLongName": "Група на левицата в Европейския парламент - GUE/NGL"
+        },
+        {
+          "languageId": "EL",
+          "groupAcronym": "The Left",
+          "groupLongName": "Ομάδα της Αριστεράς στο Ευρωπαϊκό Κοινοβούλιο - GUE/NGL"
+        },
+        {
+          "languageId": "MT",
+          "groupAcronym": "The Left",
+          "groupLongName": "Grupp tax-Xellug fil-Parlament Ewropew - GUE/NGL"
+        },
+        {
+          "languageId": "LT",
+          "groupAcronym": "The Left",
+          "groupLongName": "Europos Parlamento kairiųjų frakcija - GUE/NGL"
+        },
+        {
+          "languageId": "EN",
+          "groupAcronym": "The Left",
+          "groupLongName": "The Left group in the European Parliament - GUE/NGL"
+        },
+        {
+          "languageId": "HR",
+          "groupAcronym": "The Left",
+          "groupLongName": "Klub zastupnika Ljevice u Europskom parlamentu - GUE/NGL"
+        },
+        {
+          "languageId": "LV",
+          "groupAcronym": "The Left",
+          "groupLongName": "Kreiso spēku grupa Eiropas Parlamentā - GUE/NGL"
+        },
+        {
+          "languageId": "IT",
+          "groupAcronym": "The Left",
+          "groupLongName": "Il gruppo della Sinistra al Parlamento europeo - GUE/NGL"
+        },
+        {
+          "languageId": "FR",
+          "groupAcronym": "The Left",
+          "groupLongName": "Le groupe de la gauche au Parlement européen - GUE/NGL"
+        },
+        {
+          "languageId": "HU",
+          "groupAcronym": "The Left",
+          "groupLongName": "Baloldal az Európai Parlamentben képviselőcsoport - GUE/NGL"
+        },
+        {
+          "languageId": "ES",
+          "groupAcronym": "The Left",
+          "groupLongName": "Grupo de la Izquierda en el Parlamento Europeo - GUE/NGL "
+        },
+        {
+          "languageId": "ET",
+          "groupAcronym": "The Left",
+          "groupLongName": "Euroopa Parlamendi Vasakpoolsete fraktsioon - GUE/NGL"
+        },
+        {
+          "languageId": "CS",
+          "groupAcronym": "The Left",
+          "groupLongName": "Levice v Evropském parlamentu - GUE/NGL"
+        },
+        {
+          "languageId": "SK",
+          "groupAcronym": "The Left",
+          "groupLongName": "Skupina ľavice v Európskom parlamente - GUE/NGL"
+        },
+        {
+          "languageId": "SL",
+          "groupAcronym": "The Left",
+          "groupLongName": "Skupina Levice v Evropskem parlamentu − GUE/NGL"
+        },
+        {
+          "languageId": "GA",
+          "groupAcronym": "The Left",
+          "groupLongName": "Grúpa na Clé i bParlaimint na hEorpa - GUE/NGL"
+        },
+        {
+          "languageId": "PL",
+          "groupAcronym": "The Left",
+          "groupLongName": "Grupa Lewicy w Parlamencie Europejskim - GUE/NGL"
+        },
+        {
+          "languageId": "DA",
+          "groupAcronym": "The Left",
+          "groupLongName": "Venstrefløjsgruppen i Europa-Parlamentet - GUE/NGL"
+        },
+        {
+          "languageId": "RO",
+          "groupAcronym": "The Left",
+          "groupLongName": "Grupul Stângii din Parlamentul European - GUE/NGL"
+        },
+        {
+          "languageId": "NL",
+          "groupAcronym": "The Left",
+          "groupLongName": "Linkse Fractie in het Europees Parlement - GUE/NGL"
+        }
+      ]
+    },
+    {
+      "groupId": "GREENSEFA",
+      "translations": [
+        {
+          "languageId": "DE",
+          "groupAcronym": "Grüne/EFA",
+          "groupLongName": "Fraktion der Grünen / Freie Europäische Allianz"
+        },
+        {
+          "languageId": "FI",
+          "groupAcronym": "Vihreät/EVA",
+          "groupLongName": "Vihreät / Euroopan vapaa allianssi -ryhmä"
+        },
+        {
+          "languageId": "SV",
+          "groupAcronym": "Gröna/EFA",
+          "groupLongName": "Gruppen De gröna/Europeiska fria alliansen"
+        },
+        {
+          "languageId": "PT",
+          "groupAcronym": "Verdes/ALE",
+          "groupLongName": "Grupo dos Verdes/Aliança Livre Europeia"
+        },
+        {
+          "languageId": "BG",
+          "groupAcronym": "Зелените/ECA",
+          "groupLongName": "Група на Зелените/Европейски свободен алианс"
+        },
+        {
+          "languageId": "EL",
+          "groupAcronym": "Verts/ALE",
+          "groupLongName": "Ομάδα τωv Πρασίvωv / Ευρωπαϊκή Ελεύθερη Συμμαχία"
+        },
+        {
+          "languageId": "MT",
+          "groupAcronym": "Ħodor/AĦE",
+          "groupLongName": "Grupp tal-Ħodor/Alleanza Ħielsa Ewropea"
+        },
+        {
+          "languageId": "LT",
+          "groupAcronym": "Žalieji/ELA",
+          "groupLongName": "Žaliųjų frakcija/Europos laisvasis aljansas"
+        },
+        {
+          "languageId": "EN",
+          "groupAcronym": "Greens/EFA",
+          "groupLongName": "Group of the Greens/European Free Alliance"
+        },
+        {
+          "languageId": "HR",
+          "groupAcronym": "Zeleni/ESS",
+          "groupLongName": "Klub zastupnika Zelenih/Europskog slobodnog saveza"
+        },
+        {
+          "languageId": "LV",
+          "groupAcronym": "Zaļie/EBA",
+          "groupLongName": "Zaļo un Eiropas Brīvās apvienības grupa"
+        },
+        {
+          "languageId": "IT",
+          "groupAcronym": "Verts/ALE",
+          "groupLongName": "Gruppo dei Verdi/Alleanza libera europea"
+        },
+        {
+          "languageId": "FR",
+          "groupAcronym": "Verts/ALE",
+          "groupLongName": "Groupe des Verts/Alliance libre européenne"
+        },
+        {
+          "languageId": "HU",
+          "groupAcronym": "Zöldek/ESS",
+          "groupLongName": "Zöldek/Európai Szabad Szövetség képviselőcsoport"
+        },
+        {
+          "languageId": "ES",
+          "groupAcronym": "Verdes/ALE",
+          "groupLongName": "Grupo de los Verdes/Alianza Libre Europea"
+        },
+        {
+          "languageId": "ET",
+          "groupAcronym": "Rohelised/EVF",
+          "groupLongName": "Roheliste / Euroopa Vabaliidu fraktsioon"
+        },
+        {
+          "languageId": "CS",
+          "groupAcronym": "Zelení/ESA",
+          "groupLongName": "Skupina Zelených/Evropské svobodné aliance"
+        },
+        {
+          "languageId": "SK",
+          "groupAcronym": "Zelení/ESA",
+          "groupLongName": "Skupina zelených/Európska slobodná aliancia"
+        },
+        {
+          "languageId": "SL",
+          "groupAcronym": "Zeleni/ESZ",
+          "groupLongName": "Skupina Zelenih/Evropske svobodne zveze"
+        },
+        {
+          "languageId": "GA",
+          "groupAcronym": "Na Glasaigh/SCE",
+          "groupLongName": "An Grúpa Glas/Grúpa na Saor-Chomhghuaillíochta Eorpaí"
+        },
+        {
+          "languageId": "PL",
+          "groupAcronym": "Zieloni/WSE",
+          "groupLongName": "Grupa Zielonych / Wolne Przymierze Europejskie"
+        },
+        {
+          "languageId": "DA",
+          "groupAcronym": "Grønne/EFA",
+          "groupLongName": "Gruppen De Grønne/Den Europæiske Fri Alliance"
+        },
+        {
+          "languageId": "RO",
+          "groupAcronym": "Verts/ALE",
+          "groupLongName": "Grupul Verzilor/Alianța Liberă Europeană"
+        },
+        {
+          "languageId": "NL",
+          "groupAcronym": "Groenen/EVA",
+          "groupLongName": "Fractie De Groenen/Vrije Europese Alliantie"
+        }
+      ]
+    },
+    {
+      "groupId": "PfE",
+      "translations": [
+        {
+          "languageId": "DE",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "FI",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "SV",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "PT",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "BG",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "EL",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "MT",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "LT",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "EN",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "HR",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "LV",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "IT",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "FR",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "HU",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "ES",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "ET",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "CS",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "SK",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "SL",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "GA",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "PL",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "DA",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "RO",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        },
+        {
+          "languageId": "NL",
+          "groupAcronym": "PfE",
+          "groupLongName": "Patriots for Europe"
+        }
+      ]
+    },
+    {
+      "groupId": "ESN",
+      "translations": [
+        {
+          "languageId": "DE",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "FI",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "SV",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "PT",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "BG",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "EL",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "MT",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "LT",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "EN",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "HR",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "LV",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "IT",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "FR",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "HU",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "ES",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "ET",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "CS",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "SK",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "SL",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "GA",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "PL",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "DA",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "RO",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        },
+        {
+          "languageId": "NL",
+          "groupAcronym": "ESN",
+          "groupLongName": "Europe of Sovereign Nations"
+        }
+      ]
+    },
+    {
+      "groupId": "NI",
+      "translations": [
+        {
+          "languageId": "DE",
+          "groupAcronym": "NI",
+          "groupLongName": "Fraktionslos"
+        },
+        {
+          "languageId": "FI",
+          "groupAcronym": "NI",
+          "groupLongName": "Sitoutumattomat"
+        },
+        {
+          "languageId": "SV",
+          "groupAcronym": "NI",
+          "groupLongName": "Grupplösa"
+        },
+        {
+          "languageId": "PT",
+          "groupAcronym": "NI",
+          "groupLongName": "Não Inscritos"
+        },
+        {
+          "languageId": "BG",
+          "groupAcronym": "НЧ",
+          "groupLongName": "Независими членове"
+        },
+        {
+          "languageId": "EL",
+          "groupAcronym": "NI",
+          "groupLongName": "Μη Εγγεγραμμένοι"
+        },
+        {
+          "languageId": "MT",
+          "groupAcronym": "NI",
+          "groupLongName": "Membri mhux affiljati"
+        },
+        {
+          "languageId": "LT",
+          "groupAcronym": "NI",
+          "groupLongName": "Nepriklausomi nariai"
+        },
+        {
+          "languageId": "EN",
+          "groupAcronym": "NI",
+          "groupLongName": "Non-attached Members"
+        },
+        {
+          "languageId": "HR",
+          "groupAcronym": "NI",
+          "groupLongName": "Nezavisni zastupnici"
+        },
+        {
+          "languageId": "LV",
+          "groupAcronym": "NI",
+          "groupLongName": "Pie politiskajām grupām nepiederošie deputāti"
+        },
+        {
+          "languageId": "IT",
+          "groupAcronym": "NI",
+          "groupLongName": "Non iscritti"
+        },
+        {
+          "languageId": "FR",
+          "groupAcronym": "NI",
+          "groupLongName": "Non-inscrits"
+        },
+        {
+          "languageId": "HU",
+          "groupAcronym": "NI",
+          "groupLongName": "független képviselők"
+        },
+        {
+          "languageId": "ES",
+          "groupAcronym": "NI",
+          "groupLongName": "No inscritos"
+        },
+        {
+          "languageId": "ET",
+          "groupAcronym": "NI",
+          "groupLongName": "Fraktsioonilise kuuluvuseta parlamendiliikmed"
+        },
+        {
+          "languageId": "CS",
+          "groupAcronym": "NI",
+          "groupLongName": "Nezařazení poslanci"
+        },
+        {
+          "languageId": "SK",
+          "groupAcronym": "NI",
+          "groupLongName": "Nezaradení poslanci"
+        },
+        {
+          "languageId": "SL",
+          "groupAcronym": "NI",
+          "groupLongName": "Samostojni poslanci"
+        },
+        {
+          "languageId": "GA",
+          "groupAcronym": "NI",
+          "groupLongName": "Feisirí Neamhcheangailte"
+        },
+        {
+          "languageId": "PL",
+          "groupAcronym": "NI",
+          "groupLongName": "Niezrzeszeni"
+        },
+        {
+          "languageId": "DA",
+          "groupAcronym": "NI",
+          "groupLongName": "Løsgængere"
+        },
+        {
+          "languageId": "RO",
+          "groupAcronym": "NI",
+          "groupLongName": "Deputați neafiliați"
+        },
+        {
+          "languageId": "NL",
+          "groupAcronym": "NI",
+          "groupLongName": "Niet-fractiegebonden leden"
+        }
+      ]
+    },
+    {
+      "groupId": "Others",
+      "translations": [
+        {
+          "languageId": "GA",
+          "groupAcronym": "Feisirí Eile",
+          "groupLongName": "Feisirí nuathofa nach mbaineann le grúpa polaitiúil den Pharlaimint amach"
+        },
+        {
+          "languageId": "BG",
+          "groupAcronym": "Други членове",
+          "groupLongName": "Новоизбрани членове, които не принадлежат към политическа група на Парламента с изтичащ мандат"
+        },
+        {
+          "languageId": "ES",
+          "groupAcronym": "Otros",
+          "groupLongName": "Nuevos diputados electos que no pertenecen a un grupo político del Parlamento saliente"
+        },
+        {
+          "languageId": "CS",
+          "groupAcronym": "Ostatní",
+          "groupLongName": "Nově zvolení poslanci, kteří nepatří k žádné z politických skupin bývalého Parlamentu ani k nezařazeným poslancům"
+        },
+        {
+          "languageId": "DA",
+          "groupAcronym": "Øvrige",
+          "groupLongName": "Nyvalgte medlemmer, der ikke tilhører en politisk gruppe i det afgående parlament"
+        },
+        {
+          "languageId": "DE",
+          "groupAcronym": "Sonstige",
+          "groupLongName": "Neue Mitglieder, die keiner Fraktion des scheidenden Parlaments angehören"
+        },
+        {
+          "languageId": "ET",
+          "groupAcronym": "Muud",
+          "groupLongName": "Uued parlamendiliikmed, kes ei kuulu ühessegi ametist lahkuva parlamendikoosseisu fraktsiooni"
+        },
+        {
+          "languageId": "EL",
+          "groupAcronym": "Λοιποί",
+          "groupLongName": "Νεοεκλεγέντες που δεν ανήκουν σε πολιτική ομάδα του απερχόμενου Κοινοβουλίου"
+        },
+        {
+          "languageId": "EN",
+          "groupAcronym": "Others",
+          "groupLongName": "Newly elected Members not allied to any of the political groups set up in the outgoing Parliament"
+        },
+        {
+          "languageId": "FR",
+          "groupAcronym": "Autres",
+          "groupLongName": "Nouveaux élus sans appartenance à un groupe politique du Parlement sortant"
+        },
+        {
+          "languageId": "HR",
+          "groupAcronym": "Ostali",
+          "groupLongName": "Novoizabrani zastupnici koji ne pripadaju nijednom klubu zastupnika u Parlamentu pred kraj njegova saziva"
+        },
+        {
+          "languageId": "IT",
+          "groupAcronym": "Altri",
+          "groupLongName": "Neoeletti senza appartenenza a un gruppo politico del Parlamento uscente"
+        },
+        {
+          "languageId": "LV",
+          "groupAcronym": "Citi",
+          "groupLongName": "Jaunievēlēti deputāti, kas nepieder ne pie vienas no iepriekšējā Parlamenta sasaukuma politiskajām grupām"
+        },
+        {
+          "languageId": "LT",
+          "groupAcronym": "Kiti",
+          "groupLongName": "Išrinkti nauji Parlamento nariai, nepriklausantys jokiai buvusios kadencijos Parlamento frakcijai"
+        },
+        {
+          "languageId": "HU",
+          "groupAcronym": "Egyéb képviselők",
+          "groupLongName": "Újonnan megválasztott képviselők, akik a leköszönő Parlament egyik képviselőcsoportjához sem tartoznak"
+        },
+        {
+          "languageId": "MT",
+          "groupAcronym": "Oħrajn",
+          "groupLongName": "Membri eletti ġodda bla appartenenza għal xi Grupp politiku tal-Parlament  preċedenti"
+        },
+        {
+          "languageId": "NL",
+          "groupAcronym": "Overigen",
+          "groupLongName": "Nieuw gekozen leden die niet tot een fractie van het aftredend Parlement behoren"
+        },
+        {
+          "languageId": "PL",
+          "groupAcronym": "Inni",
+          "groupLongName": "Nowo wybrani posłowie nieprzynależący do żadnej z grup politycznych ustępującego Parlamentu"
+        },
+        {
+          "languageId": "PT",
+          "groupAcronym": "Outros",
+          "groupLongName": "Deputados recém-eleitos não filiados em qualquer dos grupos políticos do Parlamento cessante"
+        },
+        {
+          "languageId": "RO",
+          "groupAcronym": "Alții",
+          "groupLongName": "Deputați nou-aleși care nu fac parte din niciun grup politic al Parlamentului care își încheie mandatul"
+        },
+        {
+          "languageId": "SK",
+          "groupAcronym": "Iní",
+          "groupLongName": "Novozvolení poslanci, ktorí nepatria do nijakej politickej skupiny bývalého Parlamentu"
+        },
+        {
+          "languageId": "SL",
+          "groupAcronym": "Drugi",
+          "groupLongName": "Novoizvoljeni poslanci, ki ne pripadajo nobeni politični skupini v Parlamentu z iztekajočim se mandatom"
+        },
+        {
+          "languageId": "FI",
+          "groupAcronym": "Muut",
+          "groupLongName": "Uudet jäsenet, jotka eivät kuulu mihinkään kautensa päättävän parlamentin poliittiseen ryhmään"
+        },
+        {
+          "languageId": "SV",
+          "groupAcronym": "Övriga",
+          "groupLongName": "Nyvalda ledamöter som inte tillhör någon politisk grupp i det avgående parlamentet"
+        }
+      ]
+    }
+  ]
+}

@@ -15,35 +15,35 @@
 .below-map .card{
   width:100%;
   box-sizing:border-box;
-  padding:18px 22px;
+  /* padding:18px 60px; */
+  padding:24px 36px;
   border-radius:18px;
   background:#fff;
   box-shadow:var(--shadow);
 }
 
-.metric-grid{
-  display:grid;
-  grid-template-columns: repeat(3,minmax(0,1fr));
-  gap:22px 26px;
-  align-items:end;
-}
-.metric{display:grid;gap:10px;text-align:center;justify-items:center}
-.metric .label{font-weight:600;color:var(--gray-1000)}
+/* make each metric lay out vertically but left-aligned so labels/values line up */
+/* .metric{
+  display:flex;
+  flex-direction:column;
+  gap:10px;
+  text-align:left;
+  align-items:flex-start;
+  justify-content:center;
+} */
+.metric .label{ font-weight:600; color:var(--gray-1000); text-align:left; }
 
-.metrics-card .metric-title,
+/* .metrics-card .metric-title,
 .kpi-block .kpi-title,
 .metrics h4 {
   font-size: .95rem;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-}
+} */
 
 /* seat bonus */
-.stackbar{
-  width:100%; max-width:420px; height:14px; border-radius:999px;
-  background:var(--gray-200); overflow:hidden; display:flex;
-}
+.stackbar{ display: none !important; }
 .stackbar .seg{height:100%}
 .stackbar .seg.red   { background:#EF5C67 }
 .stackbar .seg.green { background:#2BC48A }
@@ -85,6 +85,7 @@
 .kpi .num{font-size:1.8rem;font-weight:700;color:#EF5C67;line-height:1}
 .di .note{font-size:.85rem;color:var(--gray-600)}
 
+/* methods card in control panel */
 .control-panel .methods-card{
   margin-top:16px;
   padding:16px 18px;
@@ -93,7 +94,6 @@
   box-shadow:var(--shadow);
 }
 
-/* collapsible header */
 .methods-card .collapse-toggle{
   appearance:none; border:0; background:transparent;
   width:100%; display:flex; align-items:center; justify-content:space-between;
@@ -168,6 +168,275 @@
   display: none;
   cursor: pointer;
 }
+
+.metric.seat-bonus > :not(.top-list) {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+/* container for the rows */
+.metric.seat-bonus .top-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 12px;
+  --rm-row-h: 56px;
+  min-height: calc(var(--rm-row-h) * 3);
+  transition: min-height .25s ease;
+}
+
+/* align list rows into fixed columns so names always start at same x */
+.top-list .top-row{
+  display: grid;
+  grid-template-columns: 12px minmax(320px, 1fr) 120px 88px 80px;
+  column-gap: 16px;
+  align-items: start;
+  padding: 10px 0;
+  border-bottom: 1px solid rgba(15,23,42,0.03);
+}
+
+.top-list .top-row.header{
+  display: grid;
+  grid-template-columns: 12px minmax(220px, 1fr) 88px 64px 56px;
+  column-gap: 16px;
+  align-items: center;
+  padding: 8px 0 12px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(15,23,42,0.06);
+  color: #6B7280;
+  font-weight: 700;
+  font-size: .78rem;
+  text-transform: uppercase;
+  letter-spacing: .09em;
+}
+
+.top-list .top-row.header .name-wrap.header-label,
+.top-list .top-row.header .votes.header-label,
+.top-list .top-row.header .bonus.header-label,
+.top-list .top-row.header .allocated.header-label {
+  display: block;
+  color: inherit;
+  font-weight: inherit;
+}
+
+.top-list .top-row.header .votes,
+.top-list .top-row.header .bonus,
+.top-list .top-row.header .allocated {
+  text-align: right;
+  color: #6B7280;
+  font-weight: 700;
+}
+
+.top-list .top-row .votes { grid-column: 3 / 4; text-align: right; color:#64748b; }
+.top-list .top-row .votes .votes-prev { color:#9AA3B3; font-weight:500; font-size:0.86rem; margin-right:6px; }
+.top-list .top-row .votes .votes-arrow { color:#BCC6D1; margin:0 6px; font-weight:600; }
+.top-list .top-row .votes .votes-new  { color:#111827; font-weight:700; font-size:0.95rem; }
+.top-list .top-row .votes { white-space:nowrap; }
+.top-list .top-row .bonus{ grid-column: 4 / 5; text-align: right; font-weight:700; }
+.top-list .top-row .allocated{ grid-column: 5 / 6; text-align: right; color:#475569; }
+
+.top-list .top-row.header .dot,
+.top-list .top-row.header .header-dot {
+  width: 12px;
+  height: 12px;
+  visibility: hidden;
+}
+
+.top-list .top-row.header .bonus,
+.top-list .top-row.header .allocated {
+  text-align: right;
+}
+
+/* keep the two-line clamp and wrapping for long names */
+.top-list .top-row .party-name {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+
+  overflow: hidden;
+  white-space: normal;
+
+  text-overflow: ellipsis;
+  word-break: break-word;
+  overflow-wrap: anywhere;
+  
+  line-height: 1.18rem;
+  max-height: calc(1.18rem * 2);
+  font-weight: 600;
+
+  padding-left: 2px;
+}
+
+/* pager */
+.metric.seat-bonus .top-pager {
+  margin-top: 8px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  position: relative;
+  z-index: 5;
+}
+
+/* pager buttons */
+.metric.seat-bonus .pager-btn {
+  display: none !important;
+}
+.metric.seat-bonus .pager-btn:hover {
+  background: #94a3b8;
+  transform: scale(1.15);
+}
+
+/* dots */
+.metric.seat-bonus .pager-dots {
+  display: flex;
+  gap: 4px;
+}
+
+.metric.seat-bonus .pager-dots .dot {
+  width: 8px;
+  height: 8px;
+  aspect-ratio: 1 / 1;
+  border-radius: 50%;
+  background: #d5deea;
+  border: none;
+  padding: 0;
+  display: inline-block;
+  flex: 0 0 auto;
+  cursor: pointer;
+}
+
+.metric.seat-bonus .pager-dots .dot.active {
+  background: #9aa4b8;
+}
+
+/* SVG gauge styling (strong visible blue ring + top arc) */
+.metric .gauge {
+  transform: none !important;
+  position: relative;
+  display: inline-block;
+  width: var(--size,110px);
+  height: var(--size,110px);
+}
+.metric .gauge .gauge-svg {
+  width: var(--size,110px);
+  height: var(--size,110px);
+  display: block;
+}
+.metric .gauge .g-bg {
+  stroke: rgba(78,110,243,0.16);
+  vector-effect: non-scaling-stroke;
+}
+.metric .gauge .g-arc {
+  stroke: #4E6EF3;
+  stroke-linecap: round;
+  vector-effect: non-scaling-stroke;
+  transform-origin: 50% 50%;
+  transform: rotate(-90deg);
+}
+
+/* center the numeric label on top of the svg (animateCount uses the span) */
+.metric .gauge > span {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+  font-weight: 700;
+  color: #4E6EF3;
+  font-size: 1.15rem;
+  pointer-events: none;
+}
+
+/* ensure old pseudo elements or background gradients don't interfere */
+/* .gauge::before, .gauge::after { display: none !important; } */
+
+/* KPI circle */
+.kpi {
+  display:grid; place-items:center;
+  width:110px; height:110px; border-radius:50%;
+  background: rgba(239,92,103,.12);
+}
+.kpi .num { font-size:1.8rem; font-weight:700; color:#EF5C67; line-height:1; }
+
+/* Seat-bonus card split into top (table) + bottom (visuals) */
+.metric.seat-bonus {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: stretch;
+}
+
+/* top: table + pager container (stretches full width) */
+.metric.seat-bonus .seat-bonus-top {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+/* rows container (JS writes .top-list here) */
+.metric.seat-bonus .top-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 12px;
+  --rm-row-h: 56px;
+  min-height: calc(var(--rm-row-h) * 3);
+}
+
+/* bottom: centered visuals (wasted + DI) */
+.metric.seat-bonus .seat-bonus-bottom {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 120px;
+  margin-top: 18px;
+  width: 100%;
+}
+
+/* each bottom metric column */
+.metric.seat-bonus .seat-bonus-bottom .metric {
+  display:flex;
+  flex-direction:column;
+  align-items:center;
+  text-align:center;
+  width: auto;
+}
+/* .metric.seat-bonus .seat-bonus-bottom .metric .label { text-align:center; } */
+.metric.seat-bonus .seat-bonus-bottom .metric .label {
+  margin-bottom: 16px;
+  display: block;
+}
+
+/* fixed visual widths */
+.metric.seat-bonus .metric.wasted,
+.metric.seat-bonus .metric.di {
+  width: 160px;
+  margin: 0;
+}
+
+/* pager (keeps existing look) */
+.metric.seat-bonus .top-pager {
+  margin-top: 8px;
+  width: 100%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  gap:10px;
+  padding:6px 0;
+}
+
+/* small helper for labels */
+.metric .label { font-size:.95rem; white-space:nowrap; }
+
 @media (max-width: 1600px){
   .fab-to-results{ display: inline-flex; align-items: center; gap: 8px; }
 }

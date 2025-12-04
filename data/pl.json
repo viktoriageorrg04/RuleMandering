@@ -1,0 +1,284 @@
+{
+  "id": "PL",
+  "parentDivision": null,
+  "districts": null,
+  "seatsTotal": 53,
+  "seatsPercentEU": 7.36,
+  "groupSummary": {
+    "title": "SEATS_BY_GROUP_TITLE",
+    "status": "CONSTITUTIVE",
+    "time": "2024-07-16T13:26:18.131+0200",
+    "groupDistribution": [
+      {
+        "id": "ECR",
+        "seatsTotal": 20,
+        "seatsPercentEU": 2.78
+      },
+      {
+        "id": "EPP",
+        "seatsTotal": 23,
+        "seatsPercentEU": 3.19
+      },
+      {
+        "id": "SD",
+        "seatsTotal": 3,
+        "seatsPercentEU": 0.42
+      },
+      {
+        "id": "NI",
+        "seatsTotal": 3,
+        "seatsPercentEU": 0.42
+      },
+      {
+        "id": "ESN",
+        "seatsTotal": 3,
+        "seatsPercentEU": 0.42
+      },
+      {
+        "id": "Renew",
+        "seatsTotal": 1,
+        "seatsPercentEU": 0.14
+      }
+    ]
+  },
+  "partySummary": {
+    "breakdownByPartyHeader": {
+      "title": "BREAKDOWN_BY_PARTY_TITLE",
+      "status": "CONSTITUTIVE",
+      "time": "2024-07-16T13:26:18.131+0200"
+    },
+    "resultsByPartyHeader": {
+      "title": "RESULTS_BY_PARTY_TITLE",
+      "status": "OFFICIAL",
+      "time": "2024-07-16T12:32:42.402+0200"
+    },
+    "seatsByParty": [
+      {
+        "id": "PL01",
+        "type": "COALITION",
+        "seatsTotal": 20,
+        "votesPercent": 36.16,
+        "members": [
+          {
+            "id": "PL11",
+            "seatsTotal": 18,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "ECR",
+                "seatsTotal": 18,
+                "seatsPercentEU": 2.5
+              }
+            ]
+          },
+          {
+            "id": "PL10",
+            "seatsTotal": 2,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "ECR",
+                "seatsTotal": 2,
+                "seatsPercentEU": 0.28
+              }
+            ]
+          }
+        ],
+        "groupDistribution": [
+          {
+            "id": "ECR",
+            "seatsTotal": 20,
+            "seatsPercentEU": 2.78
+          }
+        ]
+      },
+      {
+        "id": "PL02",
+        "type": "COALITION",
+        "seatsTotal": 21,
+        "votesPercent": 37.06,
+        "members": [
+          {
+            "id": "PL08",
+            "seatsTotal": 3,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "EPP",
+                "seatsTotal": 3,
+                "seatsPercentEU": 0.42
+              }
+            ]
+          },
+          {
+            "id": "PL07",
+            "seatsTotal": 1,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "EPP",
+                "seatsTotal": 1,
+                "seatsPercentEU": 0.14
+              }
+            ]
+          },
+          {
+            "id": "PL09",
+            "seatsTotal": 17,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "EPP",
+                "seatsTotal": 17,
+                "seatsPercentEU": 2.36
+              }
+            ]
+          }
+        ],
+        "groupDistribution": [
+          {
+            "id": "EPP",
+            "seatsTotal": 21,
+            "seatsPercentEU": 2.92
+          }
+        ]
+      },
+      {
+        "id": "PL03",
+        "type": "COALITION",
+        "seatsTotal": 3,
+        "votesPercent": 6.3,
+        "members": [
+          {
+            "id": "PL16",
+            "seatsTotal": 3,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "SD",
+                "seatsTotal": 3,
+                "seatsPercentEU": 0.42
+              }
+            ]
+          }
+        ],
+        "groupDistribution": [
+          {
+            "id": "SD",
+            "seatsTotal": 3,
+            "seatsPercentEU": 0.42
+          }
+        ]
+      },
+      {
+        "id": "PL04",
+        "type": "COALITION",
+        "seatsTotal": 6,
+        "votesPercent": 12.08,
+        "members": [
+          {
+            "id": "PL13",
+            "seatsTotal": 5,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "NI",
+                "seatsTotal": 2,
+                "seatsPercentEU": 0.28
+              },
+              {
+                "id": "ESN",
+                "seatsTotal": 3,
+                "seatsPercentEU": 0.42
+              }
+            ]
+          },
+          {
+            "id": "PL12",
+            "seatsTotal": 1,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "NI",
+                "seatsTotal": 1,
+                "seatsPercentEU": 0.14
+              }
+            ]
+          }
+        ],
+        "groupDistribution": [
+          {
+            "id": "NI",
+            "seatsTotal": 3,
+            "seatsPercentEU": 0.42
+          },
+          {
+            "id": "ESN",
+            "seatsTotal": 3,
+            "seatsPercentEU": 0.42
+          }
+        ]
+      },
+      {
+        "id": "PL05",
+        "type": "COALITION",
+        "seatsTotal": 3,
+        "votesPercent": 6.91,
+        "members": [
+          {
+            "id": "PL14",
+            "seatsTotal": 1,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "Renew",
+                "seatsTotal": 1,
+                "seatsPercentEU": 0.14
+              }
+            ]
+          },
+          {
+            "id": "PL15",
+            "seatsTotal": 2,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "EPP",
+                "seatsTotal": 2,
+                "seatsPercentEU": 0.28
+              }
+            ]
+          }
+        ],
+        "groupDistribution": [
+          {
+            "id": "Renew",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          },
+          {
+            "id": "EPP",
+            "seatsTotal": 2,
+            "seatsPercentEU": 0.28
+          }
+        ]
+      },
+      {
+        "id": "PL06",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 0.93,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "PL90",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 0.56,
+        "members": null,
+        "groupDistribution": null
+      }
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "title": "EU_HEMICYCLE_TITLE",
+  "status": "CONSTITUTIVE",
+  "time": "2024-07-23T11:07:43.042+0200",
+  "seatsTotal": 720,
+  "groupDistribution": [
+    {
+      "id": "EPP",
+      "seatsTotal": 188,
+      "seatsPercentEU": 26.11
+    },
+    {
+      "id": "SD",
+      "seatsTotal": 136,
+      "seatsPercentEU": 18.89
+    },
+    {
+      "id": "ECR",
+      "seatsTotal": 78,
+      "seatsPercentEU": 10.83
+    },
+    {
+      "id": "Renew",
+      "seatsTotal": 77,
+      "seatsPercentEU": 10.69
+    },
+    {
+      "id": "Theleft",
+      "seatsTotal": 46,
+      "seatsPercentEU": 6.39
+    },
+    {
+      "id": "GREENSEFA",
+      "seatsTotal": 53,
+      "seatsPercentEU": 7.36
+    },
+    {
+      "id": "PfE",
+      "seatsTotal": 84,
+      "seatsPercentEU": 11.67
+    },
+    {
+      "id": "ESN",
+      "seatsTotal": 25,
+      "seatsPercentEU": 3.47
+    },
+    {
+      "id": "NI",
+      "seatsTotal": 33,
+      "seatsPercentEU": 4.58
+    }
+  ]
+}

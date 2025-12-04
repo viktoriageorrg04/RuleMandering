@@ -1,0 +1,313 @@
+{
+  "id": "BE",
+  "parentDivision": null,
+  "districts": [
+    "FBE",
+    "GBE",
+    "WBE"
+  ],
+  "seatsTotal": 22,
+  "seatsPercentEU": 3.06,
+  "groupSummary": {
+    "title": "SEATS_BY_GROUP_TITLE",
+    "status": "CONSTITUTIVE",
+    "time": "2024-07-23T11:07:43.042+0200",
+    "groupDistribution": [
+      {
+        "id": "EPP",
+        "seatsTotal": 3,
+        "seatsPercentEU": 0.42
+      },
+      {
+        "id": "SD",
+        "seatsTotal": 4,
+        "seatsPercentEU": 0.56
+      },
+      {
+        "id": "ECR",
+        "seatsTotal": 3,
+        "seatsPercentEU": 0.42
+      },
+      {
+        "id": "Renew",
+        "seatsTotal": 5,
+        "seatsPercentEU": 0.69
+      },
+      {
+        "id": "Theleft",
+        "seatsTotal": 2,
+        "seatsPercentEU": 0.28
+      },
+      {
+        "id": "GREENSEFA",
+        "seatsTotal": 2,
+        "seatsPercentEU": 0.28
+      },
+      {
+        "id": "PfE",
+        "seatsTotal": 3,
+        "seatsPercentEU": 0.42
+      }
+    ]
+  },
+  "partySummary": {
+    "breakdownByPartyHeader": {
+      "title": "BREAKDOWN_BY_PARTY_TITLE",
+      "status": "CONSTITUTIVE",
+      "time": "2024-07-23T11:07:43.042+0200"
+    },
+    "resultsByPartyHeader": {
+      "title": "RESULTS_BY_PARTY_TITLE",
+      "status": "OFFICIAL",
+      "time": "2024-07-16T09:44:51.099+0200"
+    },
+    "seatsByParty": [
+      {
+        "id": "BE01",
+        "type": "PARTY",
+        "seatsTotal": 3,
+        "votesPercent": 13.97,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "ECR",
+            "seatsTotal": 3,
+            "seatsPercentEU": 0.42
+          }
+        ]
+      },
+      {
+        "id": "BE02",
+        "type": "PARTY",
+        "seatsTotal": 3,
+        "votesPercent": 14.5,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "PfE",
+            "seatsTotal": 3,
+            "seatsPercentEU": 0.42
+          }
+        ]
+      },
+      {
+        "id": "BE03",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 5.76,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "Renew",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "BE04",
+        "type": "PARTY",
+        "seatsTotal": 2,
+        "votesPercent": 8.34,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "EPP",
+            "seatsTotal": 2,
+            "seatsPercentEU": 0.28
+          }
+        ]
+      },
+      {
+        "id": "BE05",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 6.32,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "GREENSEFA",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "BE06",
+        "type": "PARTY",
+        "seatsTotal": 2,
+        "votesPercent": 7.99,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "SD",
+            "seatsTotal": 2,
+            "seatsPercentEU": 0.28
+          }
+        ]
+      },
+      {
+        "id": "BE07",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 5.13,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "Theleft",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "BE08",
+        "type": "PARTY",
+        "seatsTotal": 2,
+        "votesPercent": 7.43,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "SD",
+            "seatsTotal": 2,
+            "seatsPercentEU": 0.28
+          }
+        ]
+      },
+      {
+        "id": "BE09",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 3.64,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "GREENSEFA",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "BE10",
+        "type": "PARTY",
+        "seatsTotal": 3,
+        "votesPercent": 12.62,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "Renew",
+            "seatsTotal": 3,
+            "seatsPercentEU": 0.42
+          }
+        ]
+      },
+      {
+        "id": "BE11",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 5.17,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "Renew",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "BE12",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 1.05,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "BE13",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 5.57,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "Theleft",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "BE14",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 0.21,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "EPP",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "BE15",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 0.07,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "BE16",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 0.08,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "BE17",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 0.1,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "BE18",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 0.07,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "BE90",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 1.2,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "BE91",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 0.71,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "BE92",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 0.07,
+        "members": null,
+        "groupDistribution": null
+      }
+    ]
+  }
+}

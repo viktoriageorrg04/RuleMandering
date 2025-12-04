@@ -1,0 +1,219 @@
+{
+  "id": "DK",
+  "parentDivision": null,
+  "districts": null,
+  "seatsTotal": 15,
+  "seatsPercentEU": 2.08,
+  "groupSummary": {
+    "title": "SEATS_BY_GROUP_TITLE",
+    "status": "CONSTITUTIVE",
+    "time": "2024-07-23T11:07:43.042+0200",
+    "groupDistribution": [
+      {
+        "id": "EPP",
+        "seatsTotal": 2,
+        "seatsPercentEU": 0.28
+      },
+      {
+        "id": "SD",
+        "seatsTotal": 3,
+        "seatsPercentEU": 0.42
+      },
+      {
+        "id": "ECR",
+        "seatsTotal": 1,
+        "seatsPercentEU": 0.14
+      },
+      {
+        "id": "Renew",
+        "seatsTotal": 4,
+        "seatsPercentEU": 0.56
+      },
+      {
+        "id": "Theleft",
+        "seatsTotal": 1,
+        "seatsPercentEU": 0.14
+      },
+      {
+        "id": "GREENSEFA",
+        "seatsTotal": 3,
+        "seatsPercentEU": 0.42
+      },
+      {
+        "id": "PfE",
+        "seatsTotal": 1,
+        "seatsPercentEU": 0.14
+      }
+    ]
+  },
+  "partySummary": {
+    "breakdownByPartyHeader": {
+      "title": "BREAKDOWN_BY_PARTY_TITLE",
+      "status": "CONSTITUTIVE",
+      "time": "2024-07-23T11:07:43.042+0200"
+    },
+    "resultsByPartyHeader": {
+      "title": "RESULTS_BY_PARTY_TITLE",
+      "status": "OFFICIAL",
+      "time": "2024-07-15T17:47:28.506+0200"
+    },
+    "seatsByParty": [
+      {
+        "id": "DK01",
+        "type": "PARTY",
+        "seatsTotal": 2,
+        "votesPercent": 14.72,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "Renew",
+            "seatsTotal": 2,
+            "seatsPercentEU": 0.28
+          }
+        ]
+      },
+      {
+        "id": "DK02",
+        "type": "PARTY",
+        "seatsTotal": 3,
+        "votesPercent": 15.57,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "SD",
+            "seatsTotal": 3,
+            "seatsPercentEU": 0.42
+          }
+        ]
+      },
+      {
+        "id": "DK03",
+        "type": "PARTY",
+        "seatsTotal": 3,
+        "votesPercent": 17.42,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "GREENSEFA",
+            "seatsTotal": 3,
+            "seatsPercentEU": 0.42
+          }
+        ]
+      },
+      {
+        "id": "DK04",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 6.37,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "PfE",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "DK05",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 7.08,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "Renew",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "DK06",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 8.84,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "EPP",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "DK07",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 7.04,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "Theleft",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "DK08",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 2.66,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "DK09",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 6.95,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "EPP",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "DK10",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 5.95,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "Renew",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "DK11",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 7.39,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "ECR",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "DK90",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 0.0,
+        "members": null,
+        "groupDistribution": null
+      }
+    ]
+  }
+}

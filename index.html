@@ -58,7 +58,7 @@
               <span class="switch-label">Compare</span>
             </label>
           </div>
-          <button class="sign-in" type="button">Sign in</button>
+          <!-- <button class="sign-in" type="button">Sign in</button> -->
         </div>
       </header>
 
@@ -84,7 +84,7 @@
                         stroke-linejoin="round" stroke-linecap="round"/>
                     </svg>
                   </span>
-                  <span class="text">Formula 1</span>
+                  <span class="text">D’Hondt</span>
                 </label>
                 <label class="formula">
                   <input type="radio" name="formula" />
@@ -94,7 +94,7 @@
                         stroke-linejoin="round" stroke-linecap="round"/>
                     </svg>
                   </span>
-                  <span class="text">Formula 2</span>
+                  <span class="text">Sainte-Laguë</span>
                 </label>
                 <label class="formula">
                   <input type="radio" name="formula" />
@@ -104,7 +104,7 @@
                         stroke-linejoin="round" stroke-linecap="round"/>
                     </svg>
                   </span>
-                  <span class="text">Formula 3</span>
+                  <span class="text">Hare Quota</span>
                 </label>
               </div>
             </div>
@@ -180,7 +180,7 @@
               <div><h2>MAP VIEW</h2></div>
               <div class="map-actions">
                 <button class="btn ghost" type="button">Download</button>
-                <button class="btn ghost" type="button">Share</button>
+                <!-- <button class="btn ghost" type="button">Share</button> -->
               </div>
             </div>
 
@@ -210,29 +210,35 @@
               <div class="metric-grid">
                 <div class="metric seat-bonus">
                   <span class="label">Seat bonus</span>
-                  <div class="stackbar">
-                    <span class="seg red"   style="width:35%"></span>
-                    <span class="seg green" style="width:25%"></span>
-                    <span class="seg purple"style="width:20%"></span>
-                    <span class="seg gray"  style="width:20%"></span>
-                  </div>
-                  <div class="legend-chips">
-                    <span class="chip red">Party 1 · +n</span>
-                    <span class="chip green">Party 3 · +x</span>
-                    <span class="chip purple">Party 2 · −m</span>
-                  </div>
-                </div>
 
-                <div class="metric wasted">
-                  <span class="label">Wasted votes</span>
-                  <div class="gauge" style="--v:25"><span>25%</span></div>
-                </div>
+                  <!-- Top section: table + pager -->
+                  <div class="seat-bonus-top">
+                    <div class="stackbar">
+                      <span class="seg red"   style="width:35%"></span>
+                      <span class="seg green" style="width:25%"></span>
+                      <span class="seg purple"style="width:20%"></span>
+                      <span class="seg gray"  style="width:20%"></span>
+                    </div>
+                    <div class="legend-chips">
+                      <span class="chip red">Party 1 · +n</span>
+                      <span class="chip green">Party 3 · +x</span>
+                      <span class="chip purple">Party 2 · −m</span>
+                    </div>
+                  </div>
 
-                <div class="metric di">
-                  <span class="label">Disproportionality Index</span>
-                  <div class="kpi"><span class="num">5.8</span></div>
-                  <div class="note">Gallagher LSq</div>
-                </div>
+                  <!-- Bottom section: centered visuals -->
+                  <div class="seat-bonus-bottom">
+                    <div class="metric wasted">
+                      <span class="label">Wasted votes</span>
+                      <div class="gauge" style="--v:25"><span>25%</span></div>
+                    </div>
+
+                    <div class="metric di">
+                      <span class="label">Disproportionality Index</span>
+                      <div class="kpi"><span class="num">5.8</span></div>
+                    </div>
+                  </div>
+                </div>  
               </div>
             </div>
           </div>
@@ -260,6 +266,8 @@
       </div>
     </div>
     <button class="fab-to-results">View results ▾</button>
+    <script src="scripts/data-loader.js"></script>
+    <script src="scripts/ep-engine.js"></script>
     <script src="scripts/app.js" defer></script>
     <script src="scripts/eu-map.js" defer></script>
     <script src="scripts/tour.js" defer></script>
