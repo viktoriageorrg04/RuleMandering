@@ -356,6 +356,9 @@ document.addEventListener('DOMContentLoaded', () => {
   
   const countryDD  = document.querySelector('.select-control.pill .dropdown[data-dropdown="country"]');
   countryDD && Dropdowns.wire(countryDD,  euCountries, { enableSearch:true  });
+  
+  // Show default empty table before the first Apply
+  renderEmptyMetricsPlaceholder();
 
   // ---------- legend render (only on Apply) ----------
   const sliderEls = Array.from(document.querySelectorAll('.control-card .slider-row input'));
@@ -505,6 +508,31 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // compute stats
     const { wastedPct, gallagher } = computeWastedAndGallagher(parties, allocatedSeats, magnitude || 1);
+
+    // --- update "What changed here?" text with data-driven bullets ---
+    (function updateChangeCard() {
+      const intro = document.querySelector('.legend-intro');
+      const ul = document.querySelector('.legend ul');
+      if (!ul) return;
+
+      // find top winner and top loser by seat bonus
+      const bonusMap = (engineResult.seatBonus) ? engineResult.seatBonus : {};
+      const entries = ordered.map(p => ({ id: p.id, name: (PARTY_NAMES[p.id]||p.name||p.id), bonus: (bonusMap[p.id]||0) }));
+      const sortedByBonus = entries.slice().sort((a,b) => b.bonus - a.bonus);
+      const topWinner = sortedByBonus.find(e => e.bonus > 0) || null;
+      const topLoser  = sortedByBonus.slice().reverse().find(e => e.bonus < 0) || null;
+
+      if (intro) {
+        intro.textContent = `Key changes under Threshold ${Math.round(wastedPct) ? Math.round(wastedPct) : (readState().threshold+'%')} and ${Math.max(1, Math.round(magnitude||1))}-seat districts.`;
+      }
+
+      const bullets = [];
+      if (topWinner) bullets.push(`<li><span class="dot blue"></span> ${topWinner.name} gained ${topWinner.bonus > 0 ? `+${topWinner.bonus}` : topWinner.bonus} seats.</li>`);
+      if (topLoser)  bullets.push(`<li><span class="dot purple"></span> ${topLoser.name} lost ${topLoser.bonus < 0 ? Math.abs(topLoser.bonus) : topLoser.bonus} seats.</li>`);
+      bullets.push(`<li><span class="dot red"></span> Wasted votes ≈ ${Math.round(wastedPct)}% — this affects small parties below the threshold.</li>`);
+
+      ul.innerHTML = bullets.join('\n');
+    })();
 
     // ensure all gauge elements receive the current value (prevents stale UI)
     const v = Math.max(0, Math.min(100, Math.round(wastedPct)));
@@ -790,6 +818,80 @@ document.addEventListener('DOMContentLoaded', () => {
         keepalive: true
       }).catch(e => console.debug('[APP] local log receiver not reachable:', e && e.message));
     } catch (e) { /* ignore */ }
+  }
+
+  // --- show a default "empty" placeholder UI before any data is applied ---
+  function renderEmptyMetricsPlaceholder() {
+    const seatMetric = document.querySelector('.metric.seat-bonus');
+    if (!seatMetric) return;
+    const seatTop = seatMetric.querySelector('.seat-bonus-top') || seatMetric;
+    let topList = seatTop.querySelector('.top-list');
+    if (!topList) {
+      topList = document.createElement('div');
+      topList.className = 'top-list';
+      topList.style.marginTop = '12px';
+      seatTop.appendChild(topList);
+    }
+
+    const header = `
+      <div class="top-row header">
+        <div class="header-dot"></div>
+        <div class="name-wrap header-label">PARTY</div>
+        <div class="votes header-label">% VOTES</div>
+        <div class="bonus header-label">BONUS</div>
+        <div class="allocated header-label">SEATS</div>
+      </div>`;
+
+    const emptyRow = `
+      <div class="top-row empty">
+        <div class="dot" aria-hidden="true"></div>
+        <div class="name-wrap"><div class="party-name">—</div></div>
+        <div class="votes"><span class="votes-new">—</span></div>
+        <div class="bonus">/</div>
+        <div class="allocated">/</div>
+      </div>`;
+
+    topList.innerHTML = header + emptyRow;
+
+    // ensure pager exists and show a single dot
+    let pager = seatTop.querySelector('.top-pager');
+    if (!pager) {
+      pager = document.createElement('div');
+      pager.className = 'top-pager';
+      seatTop.appendChild(pager);
+    }
+    pager.innerHTML = `<div class="pager-dots"><div class="dot"></div></div>`;
+
+    // set wasted gauge text to 0% and DI to 0.0
+    const wastedSpan = document.querySelector('.metric.wasted .gauge span') || document.querySelector('.metric.wasted .kpi .num');
+    if (wastedSpan) wastedSpan.textContent = '0%';
+    const diNum = document.querySelector('.metric.di .kpi .num') || document.querySelector('.metric.dispro .num');
+    if (diNum) diNum.textContent = '0.0';
+
+    // rebuild gauge SVGs (if the gauge is rendered by JS) so arc is empty
+    document.querySelectorAll('.metric.wasted .gauge, .gauge').forEach(g => {
+      const size = 110;
+      const thick = 12;
+      const cx = size / 2;
+      const r = (size - thick) / 2;
+      const c = +(2 * Math.PI * r).toFixed(2);
+      const dashOffset = c; // full offset => 0% visible
+      g.innerHTML = `
+        <svg class="gauge-svg" width="${size}" height="${size}" viewBox="0 0 ${size} ${size}" aria-hidden="true" focusable="false">
+          <circle class="g-bg" cx="${cx}" cy="${cx}" r="${r}" stroke-width="${thick}" fill="none"/>
+          <circle class="g-arc" cx="${cx}" cy="${cx}" r="${r}"
+            stroke-width="${thick}"
+            stroke-dasharray="${c} ${c}"
+            stroke-dashoffset="${dashOffset}"
+            fill="none" />
+        </svg>
+        <span>0%</span>
+      `;
+    });
+
+    // muted styling for placeholder (keeps it visually distinct)
+    const emptyRows = topList.querySelectorAll('.top-row.empty');
+    emptyRows.forEach(r => r.style.color = 'var(--gray-400, #9AA3B3)');
   }
 
   // expose for manual testing

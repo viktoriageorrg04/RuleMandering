@@ -179,7 +179,7 @@
 }
 
 /* container for the rows */
-.metric.seat-bonus .top-list {
+/* .metric.seat-bonus .top-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -187,7 +187,7 @@
   --rm-row-h: 56px;
   min-height: calc(var(--rm-row-h) * 3);
   transition: min-height .25s ease;
-}
+} */
 
 /* align list rows into fixed columns so names always start at same x */
 .top-list .top-row{
@@ -199,9 +199,15 @@
   border-bottom: 1px solid rgba(15,23,42,0.03);
 }
 
+.top-list .top-row.empty { color: var(--gray-400, #9AA3B3); }
+.top-list .top-row.empty .party-name { font-weight: 600; color: var(--gray-400, #9AA3B3); }
+.top-list .top-row.empty .votes,
+.top-list .top-row.empty .bonus,
+.top-list .top-row.empty .allocated { color: var(--gray-400, #9AA3B3); }
+
 .top-list .top-row.header{
   display: grid;
-  grid-template-columns: 12px minmax(220px, 1fr) 88px 64px 56px;
+  grid-template-columns: 12px minmax(320px, 1fr) 120px 88px 80px;
   column-gap: 16px;
   align-items: center;
   padding: 8px 0 12px;
@@ -232,12 +238,17 @@
 }
 
 .top-list .top-row .votes { grid-column: 3 / 4; text-align: right; color:#64748b; }
-.top-list .top-row .votes .votes-prev { color:#9AA3B3; font-weight:500; font-size:0.86rem; margin-right:6px; }
+/* .top-list .top-row .votes .votes-prev { color:#9AA3B3; font-weight:500; font-size:0.86rem; margin-right:6px; }
 .top-list .top-row .votes .votes-arrow { color:#BCC6D1; margin:0 6px; font-weight:600; }
-.top-list .top-row .votes .votes-new  { color:#111827; font-weight:700; font-size:0.95rem; }
+.top-list .top-row .votes .votes-new  { color:#111827; font-weight:700; font-size:0.95rem; } */
 .top-list .top-row .votes { white-space:nowrap; }
 .top-list .top-row .bonus{ grid-column: 4 / 5; text-align: right; font-weight:700; }
 .top-list .top-row .allocated{ grid-column: 5 / 6; text-align: right; color:#475569; }
+
+.top-list .top-row .votes .votes-prev,
+.top-list .top-row .votes .votes-arrow {
+  display: none !important;
+}
 
 .top-list .top-row.header .dot,
 .top-list .top-row.header .header-dot {
@@ -372,7 +383,23 @@
   flex-direction: column;
   gap: 20px;
   align-items: stretch;
+  --rm-row-h: 56px;
+  /* --col-dot: 12px;
+  --col-name-min: 320px;
+  --col-votes: 120px;
+  --col-bonus: 88px;
+  --col-seats: 80px;
+  --col-gap: 16px; */
 }
+/* .metric.seat-bonus {
+  --rm-row-h: 56px;
+  --col-dot: 12px;
+  --col-name-min: 320px;
+  --col-votes: 120px;
+  --col-bonus: 88px;
+  --col-seats: 80px;
+  --col-gap: 16px;
+} */
 
 /* top: table + pager container (stretches full width) */
 .metric.seat-bonus .seat-bonus-top {
@@ -382,14 +409,28 @@
 }
 
 /* rows container (JS writes .top-list here) */
-.metric.seat-bonus .top-list {
+/* .metric.seat-bonus .top-list {
   display: flex;
   flex-direction: column;
   gap: 8px;
   padding-bottom: 12px;
   --rm-row-h: 56px;
   min-height: calc(var(--rm-row-h) * 3);
+} */
+.metric.seat-bonus .top-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding-bottom: 12px;
+  --rm-row-h: 56px;
+  /* min-height: calc(var(--rm-row-h) * 3); */
+  min-height: calc(var(--rm-row-h) * 3 + 20px);
+  transition: min-height .25s ease;
 }
+
+/* .metric.seat-bonus .top-list {
+  min-height: unset !important;
+} */
 
 /* bottom: centered visuals (wasted + DI) */
 .metric.seat-bonus .seat-bonus-bottom {
