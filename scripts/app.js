@@ -147,7 +147,7 @@ document.addEventListener('DOMContentLoaded', () => {
       } catch (err) {
         console.error('[APP] Failed to load ep2024_processed.json', err);
         setStatus(false);
-        showErrorToast('Country data not loaded yet. Try again in a moment.');
+        console.warn('[APP] EP data not loaded — continuing without data. User can try Apply later.');
       }
     }
 
@@ -852,12 +852,6 @@ document.addEventListener('DOMContentLoaded', () => {
     if (legendIntro) {
       legendIntro.textContent = 'No scenario applied. Adjust controls and click Apply to preview changes.';
     }
-    // if (legendUl) {
-    //   legendUl.innerHTML =
-    //     '<li>No parties crossed or fell below the threshold.</li>' +
-    //     '<li>Seat distribution unchanged from baseline.</li>' +
-    //     '<li>Wasted votes: 0%; Disproportionality: 0.0 (placeholder).</li>';
-    // }
     if (legendUl) {
       legendUl.innerHTML =
         '<li><span class="dot blue" aria-hidden="true"></span> No parties crossed.</li>' +
@@ -973,17 +967,6 @@ document.addEventListener('DOMContentLoaded', () => {
     }, 2800);
   }
 
-  // // set legend defaults
-  // const legendIntroEl = document.querySelector('.legend .legend-intro');
-  // const legendListEl = document.querySelector('.legend ul');
-  // if (legendIntroEl && legendListEl) {
-  //   legendIntroEl.textContent = 'No scenario applied. Adjust controls and click Apply to preview changes.';
-  // legendListEl.innerHTML =
-  //     '<li>No parties crossed or fell below the threshold.</li>' +
-  //     '<li>Seat distribution unchanged from baseline.</li>' +
-  //     '<li>Wasted votes: 0%; Disproportionality: 0.0 (placeholder).</li>';
-  // }
-
   // ---------- Apply / validation ----------
   function applyChanges({scroll = false, userTriggered = false} = {}) {
     // read UI state and update legend immediately
@@ -1019,7 +1002,7 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('[APP] cData lookup result:', cData ? (cData.name || cData.countryCode || 'object') : null);
 
     if (!cData) {
-      showErrorToast('Country data not loaded yet. Try again in a moment.');
+      // showErrorToast('Country data not loaded yet. Try again in a moment.');
       // POST a short dev log so you see in IDE why it failed
       try {
         fetch('http://127.0.0.1:9999/log', {
@@ -1087,11 +1070,33 @@ document.addEventListener('DOMContentLoaded', () => {
           body: JSON.stringify(payload)
         }).catch(e => console.debug('[APP] local log receiver not reachable:', e && e.message));
       } catch (e) { /* ignore */ }
+
+      // dispatch global event for other listeners (e.g. map)
+      try {
+        const selectedCountryCode = window.CurrentCountryCode
+          || (typeof EU_CODES !== 'undefined' && EU_CODES[s.country])
+          || s.country;
+
+        window.dispatchEvent(new CustomEvent('rm:apply', {
+          detail: { selectedCountry: selectedCountryCode, state: s }
+        }));
+      } catch (err) {
+        console.debug('[APP] rm:apply dispatch failed', err && err.message);
+      }
     }
   }
 
   // Apply button: render + reveal FAB with bounce
   applyBtn?.addEventListener('click', (e)=>{ e.preventDefault(); applyChanges({scroll:false, userTriggered:true}); });
+
+  // document.querySelector(".action.apply").addEventListener("click", () => {
+  //   const selectedCountry = window.CurrentCountryCode;
+  //   const state = collectUIState();
+
+  //   window.dispatchEvent(new CustomEvent("rm:apply", {
+  //     detail: { selectedCountry, state }
+  //   }));
+  // });
 
   document.addEventListener('click', (e) => {
     // ignore clicks that occur immediately after a toggle click (debounce)
@@ -1104,6 +1109,86 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // initial legend render without revealing the FAB
   applyChanges({scroll:false, userTriggered:false});
+
+  // // Simple info button wiring (click to open; outside click closes)
+  // document.querySelectorAll('.info-btn').forEach(btn => {
+  //   const popup = btn.parentElement.querySelector('.info-popup');
+  //   if (!popup) return;
+
+  //   btn.addEventListener('click', e => {
+  //     e.stopPropagation();
+  //     const open = popup.classList.contains('is-open');
+
+  //     // close other popups
+  //     document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
+
+  //     // toggle this one
+  //     if (!open) popup.classList.add('is-open');
+  //   });
+  // });
+
+  // // close popups when clicking anywhere else
+  // document.addEventListener('click', () => {
+  //   document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
+  // });
+
+  // // close on Escape for accessibility
+  // document.addEventListener('keydown', (e) => {
+  //   if (e.key === 'Escape') {
+  //     document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
+  //   }
+  // });
+
+  // close popups when clicking anywhere else
+  document.addEventListener('click', () => {
+    document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
+  });
+
+  // close on Escape for accessibility
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
+    }
+  });
+
+  // // Info popup toggles for control headings
+  // (function wireInfoButtons() {
+  //   function closeAllInfos() {
+  //     document.querySelectorAll('.info-popup[aria-hidden="false"]').forEach(p => {
+  //       p.setAttribute('aria-hidden', 'true');
+  //       p.classList.remove('is-open');
+  //     });
+  //     document.querySelectorAll('.info-btn[aria-expanded="true"]').forEach(b => b.setAttribute('aria-expanded', 'false'));
+  //   }
+
+  //   document.addEventListener('click', (ev) => {
+  //     const btn = ev.target.closest('.info-btn');
+  //     if (btn) {
+  //       const id = btn.getAttribute('data-info');
+  //       const popup = document.getElementById('info-' + id);
+  //       if (!popup) return;
+  //       const isOpen = popup.getAttribute('aria-hidden') === 'false';
+  //       closeAllInfos();
+  //       if (!isOpen) {
+  //         popup.setAttribute('aria-hidden', 'false');
+  //         popup.classList.add('is-open');
+  //         btn.setAttribute('aria-expanded', 'true');
+  //       }
+  //       ev.stopPropagation();
+  //       return;
+  //     }
+
+  //     // click outside → close
+  //     if (!ev.target.closest('.info-popup')) {
+  //       closeAllInfos();
+  //     }
+  //   }, true);
+
+  //   // close on ESC key
+  //   document.addEventListener('keydown', (e) => {
+  //     if (e.key === 'Escape') closeAllInfos();
+  //   });
+  // })();
 
   // ---------- methods accordion ----------
   const methodsCard = document.querySelector('.methods-card');
