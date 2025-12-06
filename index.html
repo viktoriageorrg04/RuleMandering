@@ -40,23 +40,11 @@
                 </div>
               </div>
             </label>
-            <!-- <label class="select-control pill">
-              <span class="sr-only">Scenario</span>
-              <div class="dropdown" data-dropdown="scenario">
-                <button class="dropdown-toggle" aria-haspopup="listbox" aria-expanded="false">
-                  <span class="dropdown-label">Scenario</span>
-                  <span class="dropdown-caret" aria-hidden="true">▾</span>
-                </button>
-                <div class="dropdown-menu" role="listbox" tabindex="-1" aria-label="Scenario list">
-                  <div class="dropdown-list" role="presentation"></div>
-                </div>
-              </div>
-            </label> -->
-            <label class="switch compare-control" title="Compare mode">
+            <!-- <label class="switch compare-control" title="Compare mode">
               <input type="checkbox" id="compareToggle" />
               <span class="switch-track"><span class="switch-thumb"></span></span>
               <span class="switch-label">Compare</span>
-            </label>
+            </label> -->
           </div>
           <!-- <button class="sign-in" type="button">Sign in</button> -->
         </div>
@@ -190,22 +178,41 @@
                 <li>
                   <div class="m-title">Seat bonus</div>
                   <p class="m-text">
-                    Difference between seat share and vote share per party:
-                    <span class="math chip">B<sub>i</sub> = <i>s</i><sub>i</sub> − <i>v</i><sub>i</sub></span>
-                    <span class="m-muted">(percentage points).</span>
+                    Difference between a party’s seat share and vote share:
+                    <span class="math chip">
+                      B<sub>i</sub> = s<sub>i</sub> − v<sub>i</sub>
+                    </span>
+                    <span class="m-muted">(in percentage points).</span>
                   </p>
                 </li>
+
                 <li>
                   <div class="m-title">Wasted votes</div>
                   <p class="m-text">
-                    Below-threshold votes plus surplus above quota:
-                    <span class="math block">W = Σ&nbsp;<i>v</i><sub>lost</sub> + Σ&nbsp;max(0,&nbsp;<i>v</i><sub>i</sub> − <i>q</i>)</span>
+                    All votes cast for parties that receive no seats under the scenario:
+                    <span class="math block">
+                      W = Σ&nbsp;v<sub>i</sub> &nbsp;&nbsp; for all parties where seats<sub>i</sub> = 0
+                    </span>
+                    <span class="m-muted">Displayed as a percentage of total valid votes.</span>
                   </p>
                 </li>
+                
                 <li>
                   <div class="m-title">Disproportionality (Gallagher LSq)</div>
                   <p class="m-text">
-                    <span class="math block">LSq = √(½&nbsp;Σ(<i>s</i><sub>i</sub> − <i>v</i><sub>i</sub>)<sup>2</sup>)</span>
+                    <span class="math block">LSq = √(½&nbsp;Σ(s<sub>i</sub> − v<sub>i</sub>)²)</span>
+                    <span class="m-muted">(lower = more proportional).</span>
+                  </p>
+                </li>
+
+                <li class="method-note">
+                  <p class="m-text m-muted">
+                    <strong>Implementation note.</strong>
+                    District magnitude and seat-allocation formulas only serve to generate these metrics.
+                    Mode&nbsp;1 uses the base seats per district, Mode&nbsp;2 takes the slider value,
+                    and Mode&nbsp;3 scales the base by the slider. D’Hondt and Sainte-Laguë use
+                    different divisor series, while the “Hare” option allocates seats proportional
+                    to raw votes.
                   </p>
                 </li>
               </ul>

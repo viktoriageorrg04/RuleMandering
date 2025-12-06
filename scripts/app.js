@@ -431,8 +431,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const meta = document.querySelector('.map-meta');
     const intro = document.querySelector('.legend-intro');
     if (meta){
+      // const parts = [
+      //   s.country,
+      //   `<span class="meta-accent">Threshold ${s.threshold}%</span>`,
+      //   s.formula,
+      //   `District magnitude ${s.dmMag}${s.dmMode?` (${s.dmMode})`:''}`
+      // ];
       const parts = [
-        s.country,
+        s.country || '<span class="meta-muted">Country</span>',
         `<span class="meta-accent">Threshold ${s.threshold}%</span>`,
         s.formula,
         `District magnitude ${s.dmMag}${s.dmMode?` (${s.dmMode})`:''}`
