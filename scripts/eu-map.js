@@ -3,7 +3,7 @@
 
   const NAME_TO_ID = {
     Austria:'AT', Belgium:'BE', Bulgaria:'BG', Croatia:'HR', Cyprus:'CY',
-    'Czechia (Czech Republic)':'CZ', Denmark:'DK', Estonia:'EE', Finland:'FI',
+    'Czechia':'CZ', Denmark:'DK', Estonia:'EE', Finland:'FI',
     France:'FR', Germany:'DE', Greece:'GR', Hungary:'HU', Ireland:'IE', Italy:'IT',
     Latvia:'LV', Lithuania:'LT', Luxembourg:'LU', Malta:'MT', Netherlands:'NL',
     Poland:'PL', Portugal:'PT', Romania:'RO', Slovakia:'SK', Slovenia:'SI',

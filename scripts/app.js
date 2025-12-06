@@ -22,6 +22,39 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // View Results pill (FAB)
   const viewFab = document.querySelector('.fab-to-results');
+  let allowFab = true;
+  let fabAutoHidden = false;
+
+  // Download button (disabled until a successful Apply)
+  const downloadBtn = document.querySelector('.map-actions .btn.ghost');
+  if (downloadBtn) {
+    downloadBtn.classList.add('is-disabled');
+    downloadBtn.setAttribute('aria-disabled', 'true');
+  }
+  // prevent clicks on the download control while it's disabled and show a toast
+  const mapActions = document.querySelector('.map-actions');
+  if (mapActions) {
+    mapActions.addEventListener('click', (ev) => {
+      const btn = ev.target.closest('.btn.ghost');
+      if (!btn) return;
+      // If the download button is disabled, show an error toast instead of letting the click pass through
+      if (btn === downloadBtn && (downloadBtn.classList.contains('is-disabled') || downloadBtn.getAttribute('aria-disabled') === 'true')) {
+        ev.preventDefault();
+        ev.stopPropagation();
+        showErrorToast('No results to download — click Apply first.');
+      }
+    });
+  }
+
+  window.addEventListener('scroll', () => {
+    if (!viewFab || fabAutoHidden) return;
+
+    // user scrolled meaningfully
+    if (window.scrollY > 80) {
+      viewFab.classList.add('is-hidden');
+      fabAutoHidden = true;
+    }
+  });
 
   (function injectFabStyles(){
     const css = `
@@ -382,8 +415,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
   function readState(){
     const thr = thresholdSlider ? Number(thresholdSlider.value) : 0;
+    const rawCountry = currentCountry();
+    const country = (rawCountry === 'Country' || rawCountry === '') ? '' : rawCountry;
     return {
-      country:  currentCountry(),
+      country:  country,
       // scenario: currentScenario(),
       threshold: thr,
       formula:  currentFormula(),
@@ -866,10 +901,12 @@ document.addEventListener('DOMContentLoaded', () => {
   const jumpToResults = () => document.querySelector('#results')?.scrollIntoView({behavior:'smooth', block:'start'});
 
   function showFabAttention(){
-    if (!viewFab) return;
-    viewFab.classList.remove('is-hidden');
-    viewFab.classList.remove('is-bounce'); void viewFab.offsetWidth;
-    viewFab.classList.add('is-bounce');
+      if (!allowFab) return;
+      if (!viewFab) return;
+      fabAutoHidden = false;
+      viewFab.classList.remove('is-hidden');
+      viewFab.classList.remove('is-bounce'); void viewFab.offsetWidth;
+      viewFab.classList.add('is-bounce');
   }
 
   // scroll helper: jump a bit further past the top of #results
@@ -1002,6 +1039,36 @@ document.addEventListener('DOMContentLoaded', () => {
     console.log('[APP] cData lookup result:', cData ? (cData.name || cData.countryCode || 'object') : null);
 
     if (!cData) {
+      // show a user-facing toast only when the user explicitly clicked Apply
+      if (userTriggered) {
+        if (!s.country) {
+          showErrorToast('Please select a country and click Apply.');
+          allowFab = false;
+          if (viewFab) viewFab.classList.add('is-hidden');
+        } else {
+          showErrorToast('Country data not available. Try again in a moment.');
+          // if (viewFab) viewFab.classList.add('is-hidden');
+        }
+      }
+
+      // if (!cData) {
+      //     allowFab = false;
+      //     viewFab.classList.add('is-hidden');
+
+      //     if (!s.country) {
+      //         showErrorToast('Please select a country and click Apply.');
+      //     }
+      //     return;
+      // }
+
+      // keep the View FAB hidden when we can't proceed
+      if (viewFab) viewFab.classList.add('is-hidden');
+
+      if (downloadBtn) {
+        downloadBtn.classList.add('is-disabled');
+        downloadBtn.setAttribute('aria-disabled', 'true');
+      }
+
       // showErrorToast('Country data not loaded yet. Try again in a moment.');
       // POST a short dev log so you see in IDE why it failed
       try {
@@ -1017,6 +1084,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (!window.EPEngine || typeof window.EPEngine.computeScenario !== 'function') {
       showErrorToast('Engine not ready. Try reloading the page.');
+      if (viewFab) viewFab.classList.add('is-hidden');
+      if (downloadBtn) {
+        downloadBtn.classList.add('is-disabled');
+        downloadBtn.setAttribute('aria-disabled', 'true');
+      }
       console.warn('[APP] EPEngine missing or not ready', !!window.EPEngine);
       try {
         fetch('http://127.0.0.1:9999/log', {
@@ -1036,6 +1108,11 @@ document.addEventListener('DOMContentLoaded', () => {
     } catch (err) {
       console.error('[APP] computeScenario threw', err);
       showErrorToast('Computation failed. See console.');
+      if (viewFab) viewFab.classList.add('is-hidden');
+      if (downloadBtn) {
+        downloadBtn.classList.add('is-disabled');
+        downloadBtn.setAttribute('aria-disabled', 'true');
+      }
       try {
         fetch('http://127.0.0.1:9999/log', {
           method: 'POST',
@@ -1047,10 +1124,17 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     if (result) {
+      allowFab = true;
+
       // UI updates
       renderMetrics(result);
       if (typeof renderMap === 'function') renderMap(result);
       renderLegend(s);
+
+      if (downloadBtn) {
+        downloadBtn.classList.remove('is-disabled');
+        downloadBtn.removeAttribute('aria-disabled');
+      }
 
       // send detailed metrics to IDE log-receiver
       try {
@@ -1110,35 +1194,6 @@ document.addEventListener('DOMContentLoaded', () => {
   // initial legend render without revealing the FAB
   applyChanges({scroll:false, userTriggered:false});
 
-  // // Simple info button wiring (click to open; outside click closes)
-  // document.querySelectorAll('.info-btn').forEach(btn => {
-  //   const popup = btn.parentElement.querySelector('.info-popup');
-  //   if (!popup) return;
-
-  //   btn.addEventListener('click', e => {
-  //     e.stopPropagation();
-  //     const open = popup.classList.contains('is-open');
-
-  //     // close other popups
-  //     document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
-
-  //     // toggle this one
-  //     if (!open) popup.classList.add('is-open');
-  //   });
-  // });
-
-  // // close popups when clicking anywhere else
-  // document.addEventListener('click', () => {
-  //   document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
-  // });
-
-  // // close on Escape for accessibility
-  // document.addEventListener('keydown', (e) => {
-  //   if (e.key === 'Escape') {
-  //     document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
-  //   }
-  // });
-
   // close popups when clicking anywhere else
   document.addEventListener('click', () => {
     document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
@@ -1150,45 +1205,6 @@ document.addEventListener('DOMContentLoaded', () => {
       document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
     }
   });
-
-  // // Info popup toggles for control headings
-  // (function wireInfoButtons() {
-  //   function closeAllInfos() {
-  //     document.querySelectorAll('.info-popup[aria-hidden="false"]').forEach(p => {
-  //       p.setAttribute('aria-hidden', 'true');
-  //       p.classList.remove('is-open');
-  //     });
-  //     document.querySelectorAll('.info-btn[aria-expanded="true"]').forEach(b => b.setAttribute('aria-expanded', 'false'));
-  //   }
-
-  //   document.addEventListener('click', (ev) => {
-  //     const btn = ev.target.closest('.info-btn');
-  //     if (btn) {
-  //       const id = btn.getAttribute('data-info');
-  //       const popup = document.getElementById('info-' + id);
-  //       if (!popup) return;
-  //       const isOpen = popup.getAttribute('aria-hidden') === 'false';
-  //       closeAllInfos();
-  //       if (!isOpen) {
-  //         popup.setAttribute('aria-hidden', 'false');
-  //         popup.classList.add('is-open');
-  //         btn.setAttribute('aria-expanded', 'true');
-  //       }
-  //       ev.stopPropagation();
-  //       return;
-  //     }
-
-  //     // click outside → close
-  //     if (!ev.target.closest('.info-popup')) {
-  //       closeAllInfos();
-  //     }
-  //   }, true);
-
-  //   // close on ESC key
-  //   document.addEventListener('keydown', (e) => {
-  //     if (e.key === 'Escape') closeAllInfos();
-  //   });
-  // })();
 
   // ---------- methods accordion ----------
   const methodsCard = document.querySelector('.methods-card');

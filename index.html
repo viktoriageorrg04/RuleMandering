@@ -145,8 +145,11 @@
 
                   <div id="info-dm" class="info-popup" role="dialog" aria-hidden="true">
                     <div class="info-popup-inner">
-                      <strong>District magnitude</strong>
-                      <p>The number of seats allocated per district. Lower magnitudes make results less proportional and increase the impact of thresholds and local swings.</p>
+                      <!-- <strong>District magnitude</strong>
+                      <p>Seats per district. Lower → less proportional, more volatile.</p> -->
+                      <strong>Mode 1:</strong> <p>Same seats everywhere.</p>
+                      <strong>Mode 2:</strong> <p>Scaled by population.</p>
+                      <strong>Mode 3:</strong> <p>Fewer, larger districts (more proportional).</p>
                     </div>
                   </div>
                 </div>
@@ -308,5 +311,6 @@
     <script src="scripts/eu-map.js" defer></script>
     <script src="scripts/tour.js" defer></script>
     <script src="scripts/compare-mode.js" defer></script>
+    <script src="scripts/download-pdf.js" defer></script>
   </body>
 </html>
