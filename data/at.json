@@ -1,0 +1,139 @@
+{
+  "id": "AT",
+  "parentDivision": null,
+  "districts": null,
+  "seatsTotal": 20,
+  "seatsPercentEU": 2.78,
+  "groupSummary": {
+    "title": "SEATS_BY_GROUP_TITLE",
+    "status": "CONSTITUTIVE",
+    "time": "2024-07-23T11:07:43.042+0200",
+    "groupDistribution": [
+      {
+        "id": "EPP",
+        "seatsTotal": 5,
+        "seatsPercentEU": 0.69
+      },
+      {
+        "id": "SD",
+        "seatsTotal": 5,
+        "seatsPercentEU": 0.69
+      },
+      {
+        "id": "Renew",
+        "seatsTotal": 2,
+        "seatsPercentEU": 0.28
+      },
+      {
+        "id": "GREENSEFA",
+        "seatsTotal": 2,
+        "seatsPercentEU": 0.28
+      },
+      {
+        "id": "PfE",
+        "seatsTotal": 6,
+        "seatsPercentEU": 0.83
+      }
+    ]
+  },
+  "partySummary": {
+    "breakdownByPartyHeader": {
+      "title": "BREAKDOWN_BY_PARTY_TITLE",
+      "status": "CONSTITUTIVE",
+      "time": "2024-07-23T11:07:43.042+0200"
+    },
+    "resultsByPartyHeader": {
+      "title": "RESULTS_BY_PARTY_TITLE",
+      "status": "OFFICIAL",
+      "time": "2024-07-08T12:51:07.167+0200"
+    },
+    "seatsByParty": [
+      {
+        "id": "AT01",
+        "type": "PARTY",
+        "seatsTotal": 5,
+        "votesPercent": 24.52,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "EPP",
+            "seatsTotal": 5,
+            "seatsPercentEU": 0.69
+          }
+        ]
+      },
+      {
+        "id": "AT02",
+        "type": "PARTY",
+        "seatsTotal": 5,
+        "votesPercent": 23.22,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "SD",
+            "seatsTotal": 5,
+            "seatsPercentEU": 0.69
+          }
+        ]
+      },
+      {
+        "id": "AT03",
+        "type": "PARTY",
+        "seatsTotal": 6,
+        "votesPercent": 25.36,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "PfE",
+            "seatsTotal": 6,
+            "seatsPercentEU": 0.83
+          }
+        ]
+      },
+      {
+        "id": "AT04",
+        "type": "PARTY",
+        "seatsTotal": 2,
+        "votesPercent": 11.08,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "GREENSEFA",
+            "seatsTotal": 2,
+            "seatsPercentEU": 0.28
+          }
+        ]
+      },
+      {
+        "id": "AT05",
+        "type": "PARTY",
+        "seatsTotal": 2,
+        "votesPercent": 10.14,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "Renew",
+            "seatsTotal": 2,
+            "seatsPercentEU": 0.28
+          }
+        ]
+      },
+      {
+        "id": "AT06",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 2.96,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "AT90",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 2.72,
+        "members": null,
+        "groupDistribution": null
+      }
+    ]
+  }
+}

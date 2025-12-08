@@ -1,0 +1,314 @@
+{
+  "id": "CZ",
+  "parentDivision": null,
+  "districts": null,
+  "seatsTotal": 21,
+  "seatsPercentEU": 2.92,
+  "groupSummary": {
+    "title": "SEATS_BY_GROUP_TITLE",
+    "status": "CONSTITUTIVE",
+    "time": "2024-07-23T11:07:43.042+0200",
+    "groupDistribution": [
+      {
+        "id": "EPP",
+        "seatsTotal": 5,
+        "seatsPercentEU": 0.69
+      },
+      {
+        "id": "ECR",
+        "seatsTotal": 3,
+        "seatsPercentEU": 0.42
+      },
+      {
+        "id": "GREENSEFA",
+        "seatsTotal": 1,
+        "seatsPercentEU": 0.14
+      },
+      {
+        "id": "PfE",
+        "seatsTotal": 9,
+        "seatsPercentEU": 1.25
+      },
+      {
+        "id": "ESN",
+        "seatsTotal": 1,
+        "seatsPercentEU": 0.14
+      },
+      {
+        "id": "NI",
+        "seatsTotal": 2,
+        "seatsPercentEU": 0.28
+      }
+    ]
+  },
+  "partySummary": {
+    "breakdownByPartyHeader": {
+      "title": "BREAKDOWN_BY_PARTY_TITLE",
+      "status": "CONSTITUTIVE",
+      "time": "2024-07-23T11:07:43.042+0200"
+    },
+    "resultsByPartyHeader": {
+      "title": "RESULTS_BY_PARTY_TITLE",
+      "status": "OFFICIAL",
+      "time": "2024-07-16T12:32:42.402+0200"
+    },
+    "seatsByParty": [
+      {
+        "id": "CZ01",
+        "type": "PARTY",
+        "seatsTotal": 7,
+        "votesPercent": 26.14,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "PfE",
+            "seatsTotal": 7,
+            "seatsPercentEU": 0.97
+          }
+        ]
+      },
+      {
+        "id": "CZ02",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 6.2,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "GREENSEFA",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "CZ03",
+        "type": "COALITION",
+        "seatsTotal": 2,
+        "votesPercent": 8.7,
+        "members": [
+          {
+            "id": "CZ21",
+            "seatsTotal": 2,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "EPP",
+                "seatsTotal": 2,
+                "seatsPercentEU": 0.28
+              }
+            ]
+          }
+        ],
+        "groupDistribution": [
+          {
+            "id": "EPP",
+            "seatsTotal": 2,
+            "seatsPercentEU": 0.28
+          }
+        ]
+      },
+      {
+        "id": "CZ04",
+        "type": "COALITION",
+        "seatsTotal": 2,
+        "votesPercent": 9.56,
+        "members": [
+          {
+            "id": "CZ20",
+            "seatsTotal": 1,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "NI",
+                "seatsTotal": 1,
+                "seatsPercentEU": 0.14
+              }
+            ]
+          },
+          {
+            "id": "CZ19",
+            "seatsTotal": 1,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "NI",
+                "seatsTotal": 1,
+                "seatsPercentEU": 0.14
+              }
+            ]
+          }
+        ],
+        "groupDistribution": [
+          {
+            "id": "NI",
+            "seatsTotal": 2,
+            "seatsPercentEU": 0.28
+          }
+        ]
+      },
+      {
+        "id": "CZ05",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 1.86,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "CZ06",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 1.76,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "CZ07",
+        "type": "COALITION",
+        "seatsTotal": 6,
+        "votesPercent": 22.27,
+        "members": [
+          {
+            "id": "CZ14",
+            "seatsTotal": 2,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "EPP",
+                "seatsTotal": 2,
+                "seatsPercentEU": 0.28
+              }
+            ]
+          },
+          {
+            "id": "CZ16",
+            "seatsTotal": 1,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "EPP",
+                "seatsTotal": 1,
+                "seatsPercentEU": 0.14
+              }
+            ]
+          },
+          {
+            "id": "CZ15",
+            "seatsTotal": 3,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "ECR",
+                "seatsTotal": 3,
+                "seatsPercentEU": 0.42
+              }
+            ]
+          }
+        ],
+        "groupDistribution": [
+          {
+            "id": "EPP",
+            "seatsTotal": 3,
+            "seatsPercentEU": 0.42
+          },
+          {
+            "id": "ECR",
+            "seatsTotal": 3,
+            "seatsPercentEU": 0.42
+          }
+        ]
+      },
+      {
+        "id": "CZ08",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 1.55,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "CZ09",
+        "type": "COALITION",
+        "seatsTotal": 2,
+        "votesPercent": 10.26,
+        "members": [
+          {
+            "id": "CZ17",
+            "seatsTotal": 1,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "PfE",
+                "seatsTotal": 1,
+                "seatsPercentEU": 0.14
+              }
+            ]
+          },
+          {
+            "id": "CZ18",
+            "seatsTotal": 1,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "PfE",
+                "seatsTotal": 1,
+                "seatsPercentEU": 0.14
+              }
+            ]
+          }
+        ],
+        "groupDistribution": [
+          {
+            "id": "PfE",
+            "seatsTotal": 2,
+            "seatsPercentEU": 0.28
+          }
+        ]
+      },
+      {
+        "id": "CZ10",
+        "type": "COALITION",
+        "seatsTotal": 1,
+        "votesPercent": 5.73,
+        "members": [
+          {
+            "id": "CZ22",
+            "seatsTotal": 1,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "ESN",
+                "seatsTotal": 1,
+                "seatsPercentEU": 0.14
+              }
+            ]
+          }
+        ],
+        "groupDistribution": [
+          {
+            "id": "ESN",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "CZ11",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 2.15,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "CZ90",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 3.82,
+        "members": null,
+        "groupDistribution": null
+      }
+    ]
+  }
+}

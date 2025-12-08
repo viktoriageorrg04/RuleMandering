@@ -20,16 +20,23 @@
         "Change the threshold, formula and district magnitude to explore how different rules reshape parties’ seat shares.",
       selector: ".control-panel .control-card"
     },
-    {
-      id: "compare",
-      title: "Step 3 · Optional compare mode",
-      text:
-        "Turn on Compare to keep the baseline visible, so you can contrast your new scenario against the original.",
-      selector: ".compare-control"
-    },
+    // {
+    //   id: "compare",
+    //   title: "Step 3 · Optional compare mode",
+    //   text:
+    //     "Turn on Compare to keep the baseline visible, so you can contrast your new scenario against the original.",
+    //   selector: ".compare-control"
+    // },
+    // {
+    //   id: "apply",
+    //   title: "Step 4 · Apply your scenario",
+    //   text:
+    //     "Click Apply when ready to update the map and metrics with your chosen settings.",
+    //   selector: ".action.apply, #applyBtn, [data-action='apply']"
+    // }
     {
       id: "apply",
-      title: "Step 4 · Apply your scenario",
+      title: "Step 3 · Apply your scenario",
       text:
         "Click Apply when ready to update the map and metrics with your chosen settings.",
       selector: ".action.apply, #applyBtn, [data-action='apply']"
@@ -349,13 +356,22 @@
     }
 
     // smooth scroll back to where the user started the tour
+    // try {
+    //   window.scrollTo({
+    //     top: initialScrollY,
+    //     behavior: "smooth"
+    //   });
+    // } catch {
+    //   window.scrollTo(0, initialScrollY);
+    // }
+    // smooth scroll back to the top when the tour finishes
     try {
       window.scrollTo({
-        top: initialScrollY,
+        top: 0,
         behavior: "smooth"
       });
     } catch {
-      window.scrollTo(0, initialScrollY);
+      window.scrollTo(0, 0);
     }
 
     // remove overlay and card from DOM so nothing blocks clicks

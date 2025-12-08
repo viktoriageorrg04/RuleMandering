@@ -1,0 +1,198 @@
+{
+  "id": "IE",
+  "parentDivision": null,
+  "districts": null,
+  "seatsTotal": 14,
+  "seatsPercentEU": 1.94,
+  "groupSummary": {
+    "title": "SEATS_BY_GROUP_TITLE",
+    "status": "CONSTITUTIVE",
+    "time": "2024-07-15T17:47:28.506+0200",
+    "groupDistribution": [
+      {
+        "id": "EPP",
+        "seatsTotal": 4,
+        "seatsPercentEU": 0.56
+      },
+      {
+        "id": "SD",
+        "seatsTotal": 1,
+        "seatsPercentEU": 0.14
+      },
+      {
+        "id": "Renew",
+        "seatsTotal": 6,
+        "seatsPercentEU": 0.83
+      },
+      {
+        "id": "Theleft",
+        "seatsTotal": 3,
+        "seatsPercentEU": 0.42
+      }
+    ]
+  },
+  "partySummary": {
+    "breakdownByPartyHeader": {
+      "title": "BREAKDOWN_BY_PARTY_TITLE",
+      "status": "CONSTITUTIVE",
+      "time": "2024-07-16T12:32:42.402+0200"
+    },
+    "resultsByPartyHeader": {
+      "title": "RESULTS_BY_PARTY_TITLE",
+      "status": "FINAL",
+      "time": "2024-07-16T12:32:42.402+0200"
+    },
+    "seatsByParty": [
+      {
+        "id": "IE01",
+        "type": "PARTY",
+        "seatsTotal": 4,
+        "votesPercent": 20.79,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "EPP",
+            "seatsTotal": 4,
+            "seatsPercentEU": 0.56
+          }
+        ]
+      },
+      {
+        "id": "IE02",
+        "type": "PARTY",
+        "seatsTotal": 4,
+        "votesPercent": 20.44,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "Renew",
+            "seatsTotal": 4,
+            "seatsPercentEU": 0.56
+          }
+        ]
+      },
+      {
+        "id": "IE03",
+        "type": "PARTY",
+        "seatsTotal": 2,
+        "votesPercent": 13.97,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "Renew",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          },
+          {
+            "id": "Theleft",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "IE04",
+        "type": "PARTY",
+        "seatsTotal": 2,
+        "votesPercent": 11.14,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "Theleft",
+            "seatsTotal": 2,
+            "seatsPercentEU": 0.28
+          }
+        ]
+      },
+      {
+        "id": "IE05",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 5.36,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "IE06",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 3.38,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "SD",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "IE07",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 1.82,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "IE08",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 2.95,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "IE09",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 3.76,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "IE12",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 4.58,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "IE13",
+        "type": "COALITION",
+        "seatsTotal": 1,
+        "votesPercent": 6.23,
+        "members": [
+          {
+            "id": "IE14",
+            "seatsTotal": 1,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "Renew",
+                "seatsTotal": 1,
+                "seatsPercentEU": 0.14
+              }
+            ]
+          }
+        ],
+        "groupDistribution": [
+          {
+            "id": "Renew",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "IE90",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 5.58,
+        "members": null,
+        "groupDistribution": null
+      }
+    ]
+  }
+}

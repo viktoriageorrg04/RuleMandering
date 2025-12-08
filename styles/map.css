@@ -82,6 +82,9 @@
   transform-origin: 50% 50%;
 }
 
+/* pointer cursor on countries */
+svg#eu-map .eu-country { cursor: pointer; }
+
 /* remove decorative circles over the map */
 .map::before,.map::after{ content:none !important }
 
@@ -93,6 +96,11 @@
   color:var(--gray-1000); font-size:.92rem; font-weight:500;
 }
 .map-meta .meta-sep{ opacity:.38; color:var(--gray-600); margin:0 2px }
+
+body.compare-active .map svg {
+  transition: filter 0.4s ease;
+  filter: saturate(1.25);
+}
 
 /* legend card */
 /* .legend{

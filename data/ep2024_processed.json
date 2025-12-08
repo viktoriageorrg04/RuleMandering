@@ -1,0 +1,2767 @@
+{
+  "AT": {
+    "name": "AT",
+    "countryCode": "AT",
+    "year": 2024,
+    "totalSeats": 20,
+    "totalVotes": 99.99999999999999,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 20,
+        "parties": [
+          {
+            "id": "AT01",
+            "name": "AT01",
+            "epGroup": "EPP",
+            "voteShare": 24.52,
+            "votes": 24.52,
+            "seats": 5
+          },
+          {
+            "id": "AT02",
+            "name": "AT02",
+            "epGroup": "SD",
+            "voteShare": 23.22,
+            "votes": 23.22,
+            "seats": 5
+          },
+          {
+            "id": "AT03",
+            "name": "AT03",
+            "epGroup": "PfE",
+            "voteShare": 25.36,
+            "votes": 25.36,
+            "seats": 6
+          },
+          {
+            "id": "AT04",
+            "name": "AT04",
+            "epGroup": "GREENSEFA",
+            "voteShare": 11.08,
+            "votes": 11.08,
+            "seats": 2
+          },
+          {
+            "id": "AT05",
+            "name": "AT05",
+            "epGroup": "Renew",
+            "voteShare": 10.14,
+            "votes": 10.14,
+            "seats": 2
+          },
+          {
+            "id": "AT06",
+            "name": "AT06",
+            "epGroup": null,
+            "voteShare": 2.96,
+            "votes": 2.96,
+            "seats": 0
+          },
+          {
+            "id": "AT90",
+            "name": "AT90",
+            "epGroup": null,
+            "voteShare": 2.72,
+            "votes": 2.72,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "BE": {
+    "name": "BE",
+    "countryCode": "BE",
+    "year": 2024,
+    "totalSeats": 22,
+    "totalVotes": 99.99999999999997,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 22,
+        "parties": [
+          {
+            "id": "BE01",
+            "name": "BE01",
+            "epGroup": "ECR",
+            "voteShare": 13.97,
+            "votes": 13.97,
+            "seats": 3
+          },
+          {
+            "id": "BE02",
+            "name": "BE02",
+            "epGroup": "PfE",
+            "voteShare": 14.5,
+            "votes": 14.5,
+            "seats": 3
+          },
+          {
+            "id": "BE03",
+            "name": "BE03",
+            "epGroup": "Renew",
+            "voteShare": 5.76,
+            "votes": 5.76,
+            "seats": 1
+          },
+          {
+            "id": "BE04",
+            "name": "BE04",
+            "epGroup": "EPP",
+            "voteShare": 8.34,
+            "votes": 8.34,
+            "seats": 2
+          },
+          {
+            "id": "BE05",
+            "name": "BE05",
+            "epGroup": "GREENSEFA",
+            "voteShare": 6.32,
+            "votes": 6.32,
+            "seats": 1
+          },
+          {
+            "id": "BE06",
+            "name": "BE06",
+            "epGroup": "SD",
+            "voteShare": 7.99,
+            "votes": 7.99,
+            "seats": 2
+          },
+          {
+            "id": "BE07",
+            "name": "BE07",
+            "epGroup": "Theleft",
+            "voteShare": 5.13,
+            "votes": 5.13,
+            "seats": 1
+          },
+          {
+            "id": "BE08",
+            "name": "BE08",
+            "epGroup": "SD",
+            "voteShare": 7.43,
+            "votes": 7.43,
+            "seats": 2
+          },
+          {
+            "id": "BE09",
+            "name": "BE09",
+            "epGroup": "GREENSEFA",
+            "voteShare": 3.64,
+            "votes": 3.64,
+            "seats": 1
+          },
+          {
+            "id": "BE10",
+            "name": "BE10",
+            "epGroup": "Renew",
+            "voteShare": 12.62,
+            "votes": 12.62,
+            "seats": 3
+          },
+          {
+            "id": "BE11",
+            "name": "BE11",
+            "epGroup": "Renew",
+            "voteShare": 5.17,
+            "votes": 5.17,
+            "seats": 1
+          },
+          {
+            "id": "BE12",
+            "name": "BE12",
+            "epGroup": null,
+            "voteShare": 1.05,
+            "votes": 1.05,
+            "seats": 0
+          },
+          {
+            "id": "BE13",
+            "name": "BE13",
+            "epGroup": "Theleft",
+            "voteShare": 5.57,
+            "votes": 5.57,
+            "seats": 1
+          },
+          {
+            "id": "BE14",
+            "name": "BE14",
+            "epGroup": "EPP",
+            "voteShare": 0.21,
+            "votes": 0.21,
+            "seats": 1
+          },
+          {
+            "id": "BE15",
+            "name": "BE15",
+            "epGroup": null,
+            "voteShare": 0.07,
+            "votes": 0.07,
+            "seats": 0
+          },
+          {
+            "id": "BE16",
+            "name": "BE16",
+            "epGroup": null,
+            "voteShare": 0.08,
+            "votes": 0.08,
+            "seats": 0
+          },
+          {
+            "id": "BE17",
+            "name": "BE17",
+            "epGroup": null,
+            "voteShare": 0.1,
+            "votes": 0.1,
+            "seats": 0
+          },
+          {
+            "id": "BE18",
+            "name": "BE18",
+            "epGroup": null,
+            "voteShare": 0.07,
+            "votes": 0.07,
+            "seats": 0
+          },
+          {
+            "id": "BE90",
+            "name": "BE90",
+            "epGroup": null,
+            "voteShare": 1.2,
+            "votes": 1.2,
+            "seats": 0
+          },
+          {
+            "id": "BE91",
+            "name": "BE91",
+            "epGroup": null,
+            "voteShare": 0.71,
+            "votes": 0.71,
+            "seats": 0
+          },
+          {
+            "id": "BE92",
+            "name": "BE92",
+            "epGroup": null,
+            "voteShare": 0.07,
+            "votes": 0.07,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "BG": {
+    "name": "BG",
+    "countryCode": "BG",
+    "year": 2024,
+    "totalSeats": 17,
+    "totalVotes": 100.00000000000001,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 17,
+        "parties": [
+          {
+            "id": "BG01",
+            "name": "BG01",
+            "epGroup": "EPP",
+            "voteShare": 23.55,
+            "votes": 23.55,
+            "seats": 5
+          },
+          {
+            "id": "BG02",
+            "name": "BG02",
+            "epGroup": "SD",
+            "voteShare": 7.01,
+            "votes": 7.01,
+            "seats": 2
+          },
+          {
+            "id": "BG03",
+            "name": "BG03",
+            "epGroup": "Renew",
+            "voteShare": 14.66,
+            "votes": 14.66,
+            "seats": 3
+          },
+          {
+            "id": "BG04",
+            "name": "BG04",
+            "epGroup": "EPP",
+            "voteShare": 14.45,
+            "votes": 14.45,
+            "seats": 3
+          },
+          {
+            "id": "BG05",
+            "name": "BG05",
+            "epGroup": "ESN",
+            "voteShare": 13.98,
+            "votes": 13.98,
+            "seats": 3
+          },
+          {
+            "id": "BG06",
+            "name": "BG06",
+            "epGroup": "ECR",
+            "voteShare": 6.04,
+            "votes": 6.04,
+            "seats": 1
+          },
+          {
+            "id": "BG90",
+            "name": "BG90",
+            "epGroup": null,
+            "voteShare": 20.31,
+            "votes": 20.31,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "CY": {
+    "name": "CY",
+    "countryCode": "CY",
+    "year": 2024,
+    "totalSeats": 6,
+    "totalVotes": 100,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 6,
+        "parties": [
+          {
+            "id": "CY01",
+            "name": "CY01",
+            "epGroup": "EPP",
+            "voteShare": 24.78,
+            "votes": 24.78,
+            "seats": 2
+          },
+          {
+            "id": "CY02",
+            "name": "CY02",
+            "epGroup": "Theleft",
+            "voteShare": 21.49,
+            "votes": 21.49,
+            "seats": 1
+          },
+          {
+            "id": "CY03",
+            "name": "CY03",
+            "epGroup": "SD",
+            "voteShare": 9.72,
+            "votes": 9.72,
+            "seats": 1
+          },
+          {
+            "id": "CY04",
+            "name": "CY04",
+            "epGroup": null,
+            "voteShare": 5.07,
+            "votes": 5.07,
+            "seats": 0
+          },
+          {
+            "id": "CY05",
+            "name": "CY05",
+            "epGroup": "ECR",
+            "voteShare": 11.19,
+            "votes": 11.19,
+            "seats": 1
+          },
+          {
+            "id": "CY10",
+            "name": "CY10",
+            "epGroup": "NI",
+            "voteShare": 19.36,
+            "votes": 19.36,
+            "seats": 1
+          },
+          {
+            "id": "CY90",
+            "name": "CY90",
+            "epGroup": null,
+            "voteShare": 8.39,
+            "votes": 8.39,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "CZ": {
+    "name": "CZ",
+    "countryCode": "CZ",
+    "year": 2024,
+    "totalSeats": 21,
+    "totalVotes": 100.00000000000001,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 21,
+        "parties": [
+          {
+            "id": "CZ01",
+            "name": "CZ01",
+            "epGroup": "PfE",
+            "voteShare": 26.14,
+            "votes": 26.14,
+            "seats": 7
+          },
+          {
+            "id": "CZ02",
+            "name": "CZ02",
+            "epGroup": "GREENSEFA",
+            "voteShare": 6.2,
+            "votes": 6.2,
+            "seats": 1
+          },
+          {
+            "id": "CZ03",
+            "name": "CZ03",
+            "epGroup": "EPP",
+            "voteShare": 8.7,
+            "votes": 8.7,
+            "seats": 2
+          },
+          {
+            "id": "CZ04",
+            "name": "CZ04",
+            "epGroup": "NI",
+            "voteShare": 9.56,
+            "votes": 9.56,
+            "seats": 2
+          },
+          {
+            "id": "CZ05",
+            "name": "CZ05",
+            "epGroup": null,
+            "voteShare": 1.86,
+            "votes": 1.86,
+            "seats": 0
+          },
+          {
+            "id": "CZ06",
+            "name": "CZ06",
+            "epGroup": null,
+            "voteShare": 1.76,
+            "votes": 1.76,
+            "seats": 0
+          },
+          {
+            "id": "CZ07",
+            "name": "CZ07",
+            "epGroup": "EPP",
+            "voteShare": 22.27,
+            "votes": 22.27,
+            "seats": 6
+          },
+          {
+            "id": "CZ08",
+            "name": "CZ08",
+            "epGroup": null,
+            "voteShare": 1.55,
+            "votes": 1.55,
+            "seats": 0
+          },
+          {
+            "id": "CZ09",
+            "name": "CZ09",
+            "epGroup": "PfE",
+            "voteShare": 10.26,
+            "votes": 10.26,
+            "seats": 2
+          },
+          {
+            "id": "CZ10",
+            "name": "CZ10",
+            "epGroup": "ESN",
+            "voteShare": 5.73,
+            "votes": 5.73,
+            "seats": 1
+          },
+          {
+            "id": "CZ11",
+            "name": "CZ11",
+            "epGroup": null,
+            "voteShare": 2.15,
+            "votes": 2.15,
+            "seats": 0
+          },
+          {
+            "id": "CZ90",
+            "name": "CZ90",
+            "epGroup": null,
+            "voteShare": 3.82,
+            "votes": 3.82,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "DE": {
+    "name": "DE",
+    "countryCode": "DE",
+    "year": 2024,
+    "totalSeats": 96,
+    "totalVotes": 100,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 96,
+        "parties": [
+          {
+            "id": "DE01",
+            "name": "DE01",
+            "epGroup": "EPP",
+            "voteShare": 30,
+            "votes": 30,
+            "seats": 29
+          },
+          {
+            "id": "DE02",
+            "name": "DE02",
+            "epGroup": "SD",
+            "voteShare": 13.9,
+            "votes": 13.9,
+            "seats": 14
+          },
+          {
+            "id": "DE03",
+            "name": "DE03",
+            "epGroup": "GREENSEFA",
+            "voteShare": 11.9,
+            "votes": 11.9,
+            "seats": 12
+          },
+          {
+            "id": "DE04",
+            "name": "DE04",
+            "epGroup": "ESN",
+            "voteShare": 15.9,
+            "votes": 15.9,
+            "seats": 15
+          },
+          {
+            "id": "DE05",
+            "name": "DE05",
+            "epGroup": "Theleft",
+            "voteShare": 2.7,
+            "votes": 2.7,
+            "seats": 3
+          },
+          {
+            "id": "DE06",
+            "name": "DE06",
+            "epGroup": "Renew",
+            "voteShare": 5.2,
+            "votes": 5.2,
+            "seats": 5
+          },
+          {
+            "id": "DE07",
+            "name": "DE07",
+            "epGroup": "Renew",
+            "voteShare": 2.7,
+            "votes": 2.7,
+            "seats": 3
+          },
+          {
+            "id": "DE08",
+            "name": "DE08",
+            "epGroup": "Theleft",
+            "voteShare": 1.4,
+            "votes": 1.4,
+            "seats": 1
+          },
+          {
+            "id": "DE09",
+            "name": "DE09",
+            "epGroup": "NI",
+            "voteShare": 6.2,
+            "votes": 6.2,
+            "seats": 6
+          },
+          {
+            "id": "DE10",
+            "name": "DE10",
+            "epGroup": null,
+            "voteShare": 0.5,
+            "votes": 0.5,
+            "seats": 0
+          },
+          {
+            "id": "DE11",
+            "name": "DE11",
+            "epGroup": "EPP",
+            "voteShare": 0.6,
+            "votes": 0.6,
+            "seats": 1
+          },
+          {
+            "id": "DE12",
+            "name": "DE12",
+            "epGroup": "EPP",
+            "voteShare": 0.6,
+            "votes": 0.6,
+            "seats": 1
+          },
+          {
+            "id": "DE13",
+            "name": "DE13",
+            "epGroup": "NI",
+            "voteShare": 1.9,
+            "votes": 1.9,
+            "seats": 2
+          },
+          {
+            "id": "DE14",
+            "name": "DE14",
+            "epGroup": "GREENSEFA",
+            "voteShare": 2.6,
+            "votes": 2.6,
+            "seats": 3
+          },
+          {
+            "id": "DE16",
+            "name": "DE16",
+            "epGroup": "NI",
+            "voteShare": 0.6,
+            "votes": 0.6,
+            "seats": 1
+          },
+          {
+            "id": "DE90",
+            "name": "DE90",
+            "epGroup": null,
+            "voteShare": 3.3,
+            "votes": 3.3,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "DK": {
+    "name": "DK",
+    "countryCode": "DK",
+    "year": 2024,
+    "totalSeats": 15,
+    "totalVotes": 99.99000000000001,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 15,
+        "parties": [
+          {
+            "id": "DK01",
+            "name": "DK01",
+            "epGroup": "Renew",
+            "voteShare": 14.72,
+            "votes": 14.72,
+            "seats": 2
+          },
+          {
+            "id": "DK02",
+            "name": "DK02",
+            "epGroup": "SD",
+            "voteShare": 15.57,
+            "votes": 15.57,
+            "seats": 3
+          },
+          {
+            "id": "DK03",
+            "name": "DK03",
+            "epGroup": "GREENSEFA",
+            "voteShare": 17.42,
+            "votes": 17.42,
+            "seats": 3
+          },
+          {
+            "id": "DK04",
+            "name": "DK04",
+            "epGroup": "PfE",
+            "voteShare": 6.37,
+            "votes": 6.37,
+            "seats": 1
+          },
+          {
+            "id": "DK05",
+            "name": "DK05",
+            "epGroup": "Renew",
+            "voteShare": 7.08,
+            "votes": 7.08,
+            "seats": 1
+          },
+          {
+            "id": "DK06",
+            "name": "DK06",
+            "epGroup": "EPP",
+            "voteShare": 8.84,
+            "votes": 8.84,
+            "seats": 1
+          },
+          {
+            "id": "DK07",
+            "name": "DK07",
+            "epGroup": "Theleft",
+            "voteShare": 7.04,
+            "votes": 7.04,
+            "seats": 1
+          },
+          {
+            "id": "DK08",
+            "name": "DK08",
+            "epGroup": null,
+            "voteShare": 2.66,
+            "votes": 2.66,
+            "seats": 0
+          },
+          {
+            "id": "DK09",
+            "name": "DK09",
+            "epGroup": "EPP",
+            "voteShare": 6.95,
+            "votes": 6.95,
+            "seats": 1
+          },
+          {
+            "id": "DK10",
+            "name": "DK10",
+            "epGroup": "Renew",
+            "voteShare": 5.95,
+            "votes": 5.95,
+            "seats": 1
+          },
+          {
+            "id": "DK11",
+            "name": "DK11",
+            "epGroup": "ECR",
+            "voteShare": 7.39,
+            "votes": 7.39,
+            "seats": 1
+          },
+          {
+            "id": "DK90",
+            "name": "DK90",
+            "epGroup": null,
+            "voteShare": 0,
+            "votes": 0,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "EE": {
+    "name": "EE",
+    "countryCode": "EE",
+    "year": 2024,
+    "totalSeats": 7,
+    "totalVotes": 99.99999999999999,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 7,
+        "parties": [
+          {
+            "id": "EE01",
+            "name": "EE01",
+            "epGroup": "Renew",
+            "voteShare": 17.9,
+            "votes": 17.9,
+            "seats": 1
+          },
+          {
+            "id": "EE02",
+            "name": "EE02",
+            "epGroup": "SD",
+            "voteShare": 19.3,
+            "votes": 19.3,
+            "seats": 2
+          },
+          {
+            "id": "EE03",
+            "name": "EE03",
+            "epGroup": "Renew",
+            "voteShare": 12.4,
+            "votes": 12.4,
+            "seats": 1
+          },
+          {
+            "id": "EE04",
+            "name": "EE04",
+            "epGroup": "ECR",
+            "voteShare": 14.8,
+            "votes": 14.8,
+            "seats": 1
+          },
+          {
+            "id": "EE05",
+            "name": "EE05",
+            "epGroup": "EPP",
+            "voteShare": 21.5,
+            "votes": 21.5,
+            "seats": 2
+          },
+          {
+            "id": "EE06",
+            "name": "EE06",
+            "epGroup": null,
+            "voteShare": 2.6,
+            "votes": 2.6,
+            "seats": 0
+          },
+          {
+            "id": "EE07",
+            "name": "EE07",
+            "epGroup": null,
+            "voteShare": 0.6,
+            "votes": 0.6,
+            "seats": 0
+          },
+          {
+            "id": "EE08",
+            "name": "EE08",
+            "epGroup": null,
+            "voteShare": 6.8,
+            "votes": 6.8,
+            "seats": 0
+          },
+          {
+            "id": "EE09",
+            "name": "EE09",
+            "epGroup": null,
+            "voteShare": 3.1,
+            "votes": 3.1,
+            "seats": 0
+          },
+          {
+            "id": "EE90",
+            "name": "EE90",
+            "epGroup": null,
+            "voteShare": 1,
+            "votes": 1,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "EL": {
+    "name": "EL",
+    "countryCode": "EL",
+    "year": 2024,
+    "totalSeats": 21,
+    "totalVotes": 100.00000000000001,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 21,
+        "parties": [
+          {
+            "id": "EL01",
+            "name": "EL01",
+            "epGroup": "EPP",
+            "voteShare": 28.31,
+            "votes": 28.31,
+            "seats": 7
+          },
+          {
+            "id": "EL02",
+            "name": "EL02",
+            "epGroup": "Theleft",
+            "voteShare": 14.92,
+            "votes": 14.92,
+            "seats": 4
+          },
+          {
+            "id": "EL03",
+            "name": "EL03",
+            "epGroup": "SD",
+            "voteShare": 12.79,
+            "votes": 12.79,
+            "seats": 3
+          },
+          {
+            "id": "EL04",
+            "name": "EL04",
+            "epGroup": "NI",
+            "voteShare": 9.25,
+            "votes": 9.25,
+            "seats": 2
+          },
+          {
+            "id": "EL05",
+            "name": "EL05",
+            "epGroup": "ECR",
+            "voteShare": 9.3,
+            "votes": 9.3,
+            "seats": 2
+          },
+          {
+            "id": "EL06",
+            "name": "EL06",
+            "epGroup": null,
+            "voteShare": 2.54,
+            "votes": 2.54,
+            "seats": 0
+          },
+          {
+            "id": "EL07",
+            "name": "EL07",
+            "epGroup": "NI",
+            "voteShare": 3.4,
+            "votes": 3.4,
+            "seats": 1
+          },
+          {
+            "id": "EL08",
+            "name": "EL08",
+            "epGroup": "NI",
+            "voteShare": 4.37,
+            "votes": 4.37,
+            "seats": 1
+          },
+          {
+            "id": "EL09",
+            "name": "EL09",
+            "epGroup": null,
+            "voteShare": 2.45,
+            "votes": 2.45,
+            "seats": 0
+          },
+          {
+            "id": "EL10",
+            "name": "EL10",
+            "epGroup": null,
+            "voteShare": 1.45,
+            "votes": 1.45,
+            "seats": 0
+          },
+          {
+            "id": "EL11",
+            "name": "EL11",
+            "epGroup": "PfE",
+            "voteShare": 3.04,
+            "votes": 3.04,
+            "seats": 1
+          },
+          {
+            "id": "EL12",
+            "name": "EL12",
+            "epGroup": null,
+            "voteShare": 1.08,
+            "votes": 1.08,
+            "seats": 0
+          },
+          {
+            "id": "EL90",
+            "name": "EL90",
+            "epGroup": null,
+            "voteShare": 7.1,
+            "votes": 7.1,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "ES": {
+    "name": "ES",
+    "countryCode": "ES",
+    "year": 2024,
+    "totalSeats": 61,
+    "totalVotes": 99.99999999999999,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 61,
+        "parties": [
+          {
+            "id": "ES01",
+            "name": "ES01",
+            "epGroup": "SD",
+            "voteShare": 30.19,
+            "votes": 30.19,
+            "seats": 20
+          },
+          {
+            "id": "ES02",
+            "name": "ES02",
+            "epGroup": "EPP",
+            "voteShare": 34.21,
+            "votes": 34.21,
+            "seats": 22
+          },
+          {
+            "id": "ES03",
+            "name": "ES03",
+            "epGroup": "GREENSEFA",
+            "voteShare": 4.67,
+            "votes": 4.67,
+            "seats": 3
+          },
+          {
+            "id": "ES04",
+            "name": "ES04",
+            "epGroup": "Theleft",
+            "voteShare": 3.3,
+            "votes": 3.3,
+            "seats": 2
+          },
+          {
+            "id": "ES05",
+            "name": "ES05",
+            "epGroup": "PfE",
+            "voteShare": 9.63,
+            "votes": 9.63,
+            "seats": 6
+          },
+          {
+            "id": "ES06",
+            "name": "ES06",
+            "epGroup": "NI",
+            "voteShare": 2.52,
+            "votes": 2.52,
+            "seats": 1
+          },
+          {
+            "id": "ES07",
+            "name": "ES07",
+            "epGroup": "GREENSEFA",
+            "voteShare": 4.91,
+            "votes": 4.91,
+            "seats": 3
+          },
+          {
+            "id": "ES08",
+            "name": "ES08",
+            "epGroup": "Renew",
+            "voteShare": 1.63,
+            "votes": 1.63,
+            "seats": 1
+          },
+          {
+            "id": "ES11",
+            "name": "ES11",
+            "epGroup": "NI",
+            "voteShare": 4.58,
+            "votes": 4.58,
+            "seats": 3
+          },
+          {
+            "id": "ES90",
+            "name": "ES90",
+            "epGroup": null,
+            "voteShare": 4.36,
+            "votes": 4.36,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "FI": {
+    "name": "FI",
+    "countryCode": "FI",
+    "year": 2024,
+    "totalSeats": 15,
+    "totalVotes": 99.99999999999999,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 15,
+        "parties": [
+          {
+            "id": "FI01",
+            "name": "FI01",
+            "epGroup": "EPP",
+            "voteShare": 24.8,
+            "votes": 24.8,
+            "seats": 4
+          },
+          {
+            "id": "FI02",
+            "name": "FI02",
+            "epGroup": "GREENSEFA",
+            "voteShare": 11.3,
+            "votes": 11.3,
+            "seats": 2
+          },
+          {
+            "id": "FI03",
+            "name": "FI03",
+            "epGroup": "SD",
+            "voteShare": 14.9,
+            "votes": 14.9,
+            "seats": 2
+          },
+          {
+            "id": "FI04",
+            "name": "FI04",
+            "epGroup": "ECR",
+            "voteShare": 7.6,
+            "votes": 7.6,
+            "seats": 1
+          },
+          {
+            "id": "FI05",
+            "name": "FI05",
+            "epGroup": "Renew",
+            "voteShare": 11.8,
+            "votes": 11.8,
+            "seats": 2
+          },
+          {
+            "id": "FI06",
+            "name": "FI06",
+            "epGroup": "Theleft",
+            "voteShare": 17.3,
+            "votes": 17.3,
+            "seats": 3
+          },
+          {
+            "id": "FI07",
+            "name": "FI07",
+            "epGroup": "Renew",
+            "voteShare": 6.1,
+            "votes": 6.1,
+            "seats": 1
+          },
+          {
+            "id": "FI08",
+            "name": "FI08",
+            "epGroup": null,
+            "voteShare": 4.6,
+            "votes": 4.6,
+            "seats": 0
+          },
+          {
+            "id": "FI90",
+            "name": "FI90",
+            "epGroup": null,
+            "voteShare": 1.6,
+            "votes": 1.6,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "FR": {
+    "name": "FR",
+    "countryCode": "FR",
+    "year": 2024,
+    "totalSeats": 81,
+    "totalVotes": 100,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 81,
+        "parties": [
+          {
+            "id": "FR01",
+            "name": "FR01",
+            "epGroup": "PfE",
+            "voteShare": 31.37,
+            "votes": 31.37,
+            "seats": 30
+          },
+          {
+            "id": "FR02",
+            "name": "FR02",
+            "epGroup": "Renew",
+            "voteShare": 14.6,
+            "votes": 14.6,
+            "seats": 13
+          },
+          {
+            "id": "FR03",
+            "name": "FR03",
+            "epGroup": "GREENSEFA",
+            "voteShare": 5.5,
+            "votes": 5.5,
+            "seats": 5
+          },
+          {
+            "id": "FR04",
+            "name": "FR04",
+            "epGroup": "EPP",
+            "voteShare": 7.25,
+            "votes": 7.25,
+            "seats": 6
+          },
+          {
+            "id": "FR05",
+            "name": "FR05",
+            "epGroup": "Theleft",
+            "voteShare": 9.89,
+            "votes": 9.89,
+            "seats": 9
+          },
+          {
+            "id": "FR06",
+            "name": "FR06",
+            "epGroup": "SD",
+            "voteShare": 13.83,
+            "votes": 13.83,
+            "seats": 13
+          },
+          {
+            "id": "FR07",
+            "name": "FR07",
+            "epGroup": null,
+            "voteShare": 2.36,
+            "votes": 2.36,
+            "seats": 0
+          },
+          {
+            "id": "FR08",
+            "name": "FR08",
+            "epGroup": "ECR",
+            "voteShare": 5.47,
+            "votes": 5.47,
+            "seats": 5
+          },
+          {
+            "id": "FR09",
+            "name": "FR09",
+            "epGroup": null,
+            "voteShare": 2.35,
+            "votes": 2.35,
+            "seats": 0
+          },
+          {
+            "id": "FR10",
+            "name": "FR10",
+            "epGroup": null,
+            "voteShare": 2,
+            "votes": 2,
+            "seats": 0
+          },
+          {
+            "id": "FR11",
+            "name": "FR11",
+            "epGroup": null,
+            "voteShare": 1.02,
+            "votes": 1.02,
+            "seats": 0
+          },
+          {
+            "id": "FR12",
+            "name": "FR12",
+            "epGroup": null,
+            "voteShare": 0.93,
+            "votes": 0.93,
+            "seats": 0
+          },
+          {
+            "id": "FR13",
+            "name": "FR13",
+            "epGroup": null,
+            "voteShare": 0.15,
+            "votes": 0.15,
+            "seats": 0
+          },
+          {
+            "id": "FR90",
+            "name": "FR90",
+            "epGroup": null,
+            "voteShare": 3.28,
+            "votes": 3.28,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "HR": {
+    "name": "HR",
+    "countryCode": "HR",
+    "year": 2024,
+    "totalSeats": 12,
+    "totalVotes": 100.00000000000001,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 12,
+        "parties": [
+          {
+            "id": "HR01",
+            "name": "HR01",
+            "epGroup": "EPP",
+            "voteShare": 34.6,
+            "votes": 34.6,
+            "seats": 6
+          },
+          {
+            "id": "HR02",
+            "name": "HR02",
+            "epGroup": "SD",
+            "voteShare": 25.96,
+            "votes": 25.96,
+            "seats": 4
+          },
+          {
+            "id": "HR03",
+            "name": "HR03",
+            "epGroup": null,
+            "voteShare": 5.61,
+            "votes": 5.61,
+            "seats": 0
+          },
+          {
+            "id": "HR05",
+            "name": "HR05",
+            "epGroup": "ECR",
+            "voteShare": 8.82,
+            "votes": 8.82,
+            "seats": 1
+          },
+          {
+            "id": "HR06",
+            "name": "HR06",
+            "epGroup": "GREENSEFA",
+            "voteShare": 5.92,
+            "votes": 5.92,
+            "seats": 1
+          },
+          {
+            "id": "HR90",
+            "name": "HR90",
+            "epGroup": null,
+            "voteShare": 19.09,
+            "votes": 19.09,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "HU": {
+    "name": "HU",
+    "countryCode": "HU",
+    "year": 2024,
+    "totalSeats": 21,
+    "totalVotes": 100.00000000000001,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 21,
+        "parties": [
+          {
+            "id": "HU01",
+            "name": "HU01",
+            "epGroup": "PfE",
+            "voteShare": 44.82,
+            "votes": 44.82,
+            "seats": 11
+          },
+          {
+            "id": "HU02",
+            "name": "HU02",
+            "epGroup": null,
+            "voteShare": 3.7,
+            "votes": 3.7,
+            "seats": 0
+          },
+          {
+            "id": "HU03",
+            "name": "HU03",
+            "epGroup": null,
+            "voteShare": 0.99,
+            "votes": 0.99,
+            "seats": 0
+          },
+          {
+            "id": "HU04",
+            "name": "HU04",
+            "epGroup": "ESN",
+            "voteShare": 6.71,
+            "votes": 6.71,
+            "seats": 1
+          },
+          {
+            "id": "HU05",
+            "name": "HU05",
+            "epGroup": null,
+            "voteShare": 3.59,
+            "votes": 3.59,
+            "seats": 0
+          },
+          {
+            "id": "HU06",
+            "name": "HU06",
+            "epGroup": null,
+            "voteShare": 0.87,
+            "votes": 0.87,
+            "seats": 0
+          },
+          {
+            "id": "HU07",
+            "name": "HU07",
+            "epGroup": null,
+            "voteShare": 0.64,
+            "votes": 0.64,
+            "seats": 0
+          },
+          {
+            "id": "HU08",
+            "name": "HU08",
+            "epGroup": "EPP",
+            "voteShare": 29.6,
+            "votes": 29.6,
+            "seats": 7
+          },
+          {
+            "id": "HU09",
+            "name": "HU09",
+            "epGroup": "SD",
+            "voteShare": 8.03,
+            "votes": 8.03,
+            "seats": 2
+          },
+          {
+            "id": "HU10",
+            "name": "HU10",
+            "epGroup": null,
+            "voteShare": 0.68,
+            "votes": 0.68,
+            "seats": 0
+          },
+          {
+            "id": "HU11",
+            "name": "HU11",
+            "epGroup": null,
+            "voteShare": 0.37,
+            "votes": 0.37,
+            "seats": 0
+          },
+          {
+            "id": "HU90",
+            "name": "HU90",
+            "epGroup": null,
+            "voteShare": 0,
+            "votes": 0,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "IE": {
+    "name": "IE",
+    "countryCode": "IE",
+    "year": 2024,
+    "totalSeats": 14,
+    "totalVotes": 100,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 14,
+        "parties": [
+          {
+            "id": "IE01",
+            "name": "IE01",
+            "epGroup": "EPP",
+            "voteShare": 20.79,
+            "votes": 20.79,
+            "seats": 4
+          },
+          {
+            "id": "IE02",
+            "name": "IE02",
+            "epGroup": "Renew",
+            "voteShare": 20.44,
+            "votes": 20.44,
+            "seats": 4
+          },
+          {
+            "id": "IE03",
+            "name": "IE03",
+            "epGroup": "Renew",
+            "voteShare": 13.97,
+            "votes": 13.97,
+            "seats": 2
+          },
+          {
+            "id": "IE04",
+            "name": "IE04",
+            "epGroup": "Theleft",
+            "voteShare": 11.14,
+            "votes": 11.14,
+            "seats": 2
+          },
+          {
+            "id": "IE05",
+            "name": "IE05",
+            "epGroup": null,
+            "voteShare": 5.36,
+            "votes": 5.36,
+            "seats": 0
+          },
+          {
+            "id": "IE06",
+            "name": "IE06",
+            "epGroup": "SD",
+            "voteShare": 3.38,
+            "votes": 3.38,
+            "seats": 1
+          },
+          {
+            "id": "IE07",
+            "name": "IE07",
+            "epGroup": null,
+            "voteShare": 1.82,
+            "votes": 1.82,
+            "seats": 0
+          },
+          {
+            "id": "IE08",
+            "name": "IE08",
+            "epGroup": null,
+            "voteShare": 2.95,
+            "votes": 2.95,
+            "seats": 0
+          },
+          {
+            "id": "IE09",
+            "name": "IE09",
+            "epGroup": null,
+            "voteShare": 3.76,
+            "votes": 3.76,
+            "seats": 0
+          },
+          {
+            "id": "IE12",
+            "name": "IE12",
+            "epGroup": null,
+            "voteShare": 4.58,
+            "votes": 4.58,
+            "seats": 0
+          },
+          {
+            "id": "IE13",
+            "name": "IE13",
+            "epGroup": "Renew",
+            "voteShare": 6.23,
+            "votes": 6.23,
+            "seats": 1
+          },
+          {
+            "id": "IE90",
+            "name": "IE90",
+            "epGroup": null,
+            "voteShare": 5.58,
+            "votes": 5.58,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "IT": {
+    "name": "IT",
+    "countryCode": "IT",
+    "year": 2024,
+    "totalSeats": 76,
+    "totalVotes": 100,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 76,
+        "parties": [
+          {
+            "id": "IT01",
+            "name": "IT01",
+            "epGroup": "PfE",
+            "voteShare": 8.97,
+            "votes": 8.97,
+            "seats": 8
+          },
+          {
+            "id": "IT02",
+            "name": "IT02",
+            "epGroup": "SD",
+            "voteShare": 24.11,
+            "votes": 24.11,
+            "seats": 21
+          },
+          {
+            "id": "IT03",
+            "name": "IT03",
+            "epGroup": "Theleft",
+            "voteShare": 9.98,
+            "votes": 9.98,
+            "seats": 8
+          },
+          {
+            "id": "IT04",
+            "name": "IT04",
+            "epGroup": "EPP",
+            "voteShare": 9.58,
+            "votes": 9.58,
+            "seats": 8
+          },
+          {
+            "id": "IT05",
+            "name": "IT05",
+            "epGroup": "ECR",
+            "voteShare": 28.75,
+            "votes": 28.75,
+            "seats": 24
+          },
+          {
+            "id": "IT06",
+            "name": "IT06",
+            "epGroup": "Theleft",
+            "voteShare": 6.79,
+            "votes": 6.79,
+            "seats": 6
+          },
+          {
+            "id": "IT07",
+            "name": "IT07",
+            "epGroup": null,
+            "voteShare": 3.36,
+            "votes": 3.36,
+            "seats": 0
+          },
+          {
+            "id": "IT08",
+            "name": "IT08",
+            "epGroup": "EPP",
+            "voteShare": 0.52,
+            "votes": 0.52,
+            "seats": 1
+          },
+          {
+            "id": "IT09",
+            "name": "IT09",
+            "epGroup": null,
+            "voteShare": 0.15,
+            "votes": 0.15,
+            "seats": 0
+          },
+          {
+            "id": "IT10",
+            "name": "IT10",
+            "epGroup": null,
+            "voteShare": 2.21,
+            "votes": 2.21,
+            "seats": 0
+          },
+          {
+            "id": "IT11",
+            "name": "IT11",
+            "epGroup": null,
+            "voteShare": 3.78,
+            "votes": 3.78,
+            "seats": 0
+          },
+          {
+            "id": "IT12",
+            "name": "IT12",
+            "epGroup": null,
+            "voteShare": 1.22,
+            "votes": 1.22,
+            "seats": 0
+          },
+          {
+            "id": "IT90",
+            "name": "IT90",
+            "epGroup": null,
+            "voteShare": 0.58,
+            "votes": 0.58,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "LT": {
+    "name": "LT",
+    "countryCode": "LT",
+    "year": 2024,
+    "totalSeats": 11,
+    "totalVotes": 100.00000000000001,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 11,
+        "parties": [
+          {
+            "id": "LT01",
+            "name": "LT01",
+            "epGroup": "EPP",
+            "voteShare": 21.33,
+            "votes": 21.33,
+            "seats": 3
+          },
+          {
+            "id": "LT02",
+            "name": "LT02",
+            "epGroup": "SD",
+            "voteShare": 17.98,
+            "votes": 17.98,
+            "seats": 2
+          },
+          {
+            "id": "LT03",
+            "name": "LT03",
+            "epGroup": "ECR",
+            "voteShare": 9.13,
+            "votes": 9.13,
+            "seats": 1
+          },
+          {
+            "id": "LT04",
+            "name": "LT04",
+            "epGroup": null,
+            "voteShare": 1.66,
+            "votes": 1.66,
+            "seats": 0
+          },
+          {
+            "id": "LT05",
+            "name": "LT05",
+            "epGroup": "Renew",
+            "voteShare": 5.41,
+            "votes": 5.41,
+            "seats": 1
+          },
+          {
+            "id": "LT06",
+            "name": "LT06",
+            "epGroup": "ECR",
+            "voteShare": 5.78,
+            "votes": 5.78,
+            "seats": 1
+          },
+          {
+            "id": "LT07",
+            "name": "LT07",
+            "epGroup": "Renew",
+            "voteShare": 8.09,
+            "votes": 8.09,
+            "seats": 1
+          },
+          {
+            "id": "LT08",
+            "name": "LT08",
+            "epGroup": null,
+            "voteShare": 5.25,
+            "votes": 5.25,
+            "seats": 0
+          },
+          {
+            "id": "LT09",
+            "name": "LT09",
+            "epGroup": "GREENSEFA",
+            "voteShare": 5.95,
+            "votes": 5.95,
+            "seats": 1
+          },
+          {
+            "id": "LT10",
+            "name": "LT10",
+            "epGroup": null,
+            "voteShare": 3.79,
+            "votes": 3.79,
+            "seats": 0
+          },
+          {
+            "id": "LT11",
+            "name": "LT11",
+            "epGroup": null,
+            "voteShare": 1.25,
+            "votes": 1.25,
+            "seats": 0
+          },
+          {
+            "id": "LT12",
+            "name": "LT12",
+            "epGroup": "ESN",
+            "voteShare": 5.45,
+            "votes": 5.45,
+            "seats": 1
+          },
+          {
+            "id": "LT13",
+            "name": "LT13",
+            "epGroup": null,
+            "voteShare": 4.05,
+            "votes": 4.05,
+            "seats": 0
+          },
+          {
+            "id": "LT90",
+            "name": "LT90",
+            "epGroup": null,
+            "voteShare": 4.88,
+            "votes": 4.88,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "LU": {
+    "name": "LU",
+    "countryCode": "LU",
+    "year": 2024,
+    "totalSeats": 6,
+    "totalVotes": 100,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 6,
+        "parties": [
+          {
+            "id": "LU01",
+            "name": "LU01",
+            "epGroup": "Renew",
+            "voteShare": 18.29,
+            "votes": 18.29,
+            "seats": 1
+          },
+          {
+            "id": "LU02",
+            "name": "LU02",
+            "epGroup": "EPP",
+            "voteShare": 22.92,
+            "votes": 22.92,
+            "seats": 2
+          },
+          {
+            "id": "LU03",
+            "name": "LU03",
+            "epGroup": "GREENSEFA",
+            "voteShare": 11.76,
+            "votes": 11.76,
+            "seats": 1
+          },
+          {
+            "id": "LU04",
+            "name": "LU04",
+            "epGroup": "SD",
+            "voteShare": 21.72,
+            "votes": 21.72,
+            "seats": 1
+          },
+          {
+            "id": "LU05",
+            "name": "LU05",
+            "epGroup": "ECR",
+            "voteShare": 11.77,
+            "votes": 11.77,
+            "seats": 1
+          },
+          {
+            "id": "LU06",
+            "name": "LU06",
+            "epGroup": null,
+            "voteShare": 4.92,
+            "votes": 4.92,
+            "seats": 0
+          },
+          {
+            "id": "LU07",
+            "name": "LU07",
+            "epGroup": null,
+            "voteShare": 3.15,
+            "votes": 3.15,
+            "seats": 0
+          },
+          {
+            "id": "LU08",
+            "name": "LU08",
+            "epGroup": null,
+            "voteShare": 0.97,
+            "votes": 0.97,
+            "seats": 0
+          },
+          {
+            "id": "LU09",
+            "name": "LU09",
+            "epGroup": null,
+            "voteShare": 1.04,
+            "votes": 1.04,
+            "seats": 0
+          },
+          {
+            "id": "LU10",
+            "name": "LU10",
+            "epGroup": null,
+            "voteShare": 1.58,
+            "votes": 1.58,
+            "seats": 0
+          },
+          {
+            "id": "LU11",
+            "name": "LU11",
+            "epGroup": null,
+            "voteShare": 0.58,
+            "votes": 0.58,
+            "seats": 0
+          },
+          {
+            "id": "LU90",
+            "name": "LU90",
+            "epGroup": null,
+            "voteShare": 1.3,
+            "votes": 1.3,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "LV": {
+    "name": "LV",
+    "countryCode": "LV",
+    "year": 2024,
+    "totalSeats": 9,
+    "totalVotes": 99.99999999999999,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 9,
+        "parties": [
+          {
+            "id": "LV01",
+            "name": "LV01",
+            "epGroup": "EPP",
+            "voteShare": 25.09,
+            "votes": 25.09,
+            "seats": 2
+          },
+          {
+            "id": "LV02",
+            "name": "LV02",
+            "epGroup": "SD",
+            "voteShare": 7.13,
+            "votes": 7.13,
+            "seats": 1
+          },
+          {
+            "id": "LV03",
+            "name": "LV03",
+            "epGroup": "ECR",
+            "voteShare": 22.07,
+            "votes": 22.07,
+            "seats": 2
+          },
+          {
+            "id": "LV05",
+            "name": "LV05",
+            "epGroup": "Renew",
+            "voteShare": 9.36,
+            "votes": 9.36,
+            "seats": 1
+          },
+          {
+            "id": "LV06",
+            "name": "LV06",
+            "epGroup": null,
+            "voteShare": 2.28,
+            "votes": 2.28,
+            "seats": 0
+          },
+          {
+            "id": "LV07",
+            "name": "LV07",
+            "epGroup": "ECR",
+            "voteShare": 8.18,
+            "votes": 8.18,
+            "seats": 1
+          },
+          {
+            "id": "LV08",
+            "name": "LV08",
+            "epGroup": null,
+            "voteShare": 1.5,
+            "votes": 1.5,
+            "seats": 0
+          },
+          {
+            "id": "LV09",
+            "name": "LV09",
+            "epGroup": "GREENSEFA",
+            "voteShare": 7.45,
+            "votes": 7.45,
+            "seats": 1
+          },
+          {
+            "id": "LV10",
+            "name": "LV10",
+            "epGroup": "PfE",
+            "voteShare": 6.16,
+            "votes": 6.16,
+            "seats": 1
+          },
+          {
+            "id": "LV11",
+            "name": "LV11",
+            "epGroup": null,
+            "voteShare": 1.98,
+            "votes": 1.98,
+            "seats": 0
+          },
+          {
+            "id": "LV12",
+            "name": "LV12",
+            "epGroup": null,
+            "voteShare": 2.62,
+            "votes": 2.62,
+            "seats": 0
+          },
+          {
+            "id": "LV13",
+            "name": "LV13",
+            "epGroup": null,
+            "voteShare": 2.13,
+            "votes": 2.13,
+            "seats": 0
+          },
+          {
+            "id": "LV14",
+            "name": "LV14",
+            "epGroup": null,
+            "voteShare": 1.72,
+            "votes": 1.72,
+            "seats": 0
+          },
+          {
+            "id": "LV90",
+            "name": "LV90",
+            "epGroup": null,
+            "voteShare": 2.33,
+            "votes": 2.33,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "MT": {
+    "name": "MT",
+    "countryCode": "MT",
+    "year": 2024,
+    "totalSeats": 6,
+    "totalVotes": 100,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 6,
+        "parties": [
+          {
+            "id": "MT01",
+            "name": "MT01",
+            "epGroup": "SD",
+            "voteShare": 45.26,
+            "votes": 45.26,
+            "seats": 3
+          },
+          {
+            "id": "MT02",
+            "name": "MT02",
+            "epGroup": "EPP",
+            "voteShare": 42.02,
+            "votes": 42.02,
+            "seats": 3
+          },
+          {
+            "id": "MT90",
+            "name": "MT90",
+            "epGroup": null,
+            "voteShare": 12.72,
+            "votes": 12.72,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "NL": {
+    "name": "NL",
+    "countryCode": "NL",
+    "year": 2024,
+    "totalSeats": 31,
+    "totalVotes": 100,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 31,
+        "parties": [
+          {
+            "id": "NL01",
+            "name": "NL01",
+            "epGroup": "GREENSEFA",
+            "voteShare": 21.09,
+            "votes": 21.09,
+            "seats": 8
+          },
+          {
+            "id": "NL02",
+            "name": "NL02",
+            "epGroup": "Renew",
+            "voteShare": 11.35,
+            "votes": 11.35,
+            "seats": 4
+          },
+          {
+            "id": "NL03",
+            "name": "NL03",
+            "epGroup": "EPP",
+            "voteShare": 9.45,
+            "votes": 9.45,
+            "seats": 3
+          },
+          {
+            "id": "NL04",
+            "name": "NL04",
+            "epGroup": null,
+            "voteShare": 2.49,
+            "votes": 2.49,
+            "seats": 0
+          },
+          {
+            "id": "NL05",
+            "name": "NL05",
+            "epGroup": "Renew",
+            "voteShare": 8.4,
+            "votes": 8.4,
+            "seats": 3
+          },
+          {
+            "id": "NL06",
+            "name": "NL06",
+            "epGroup": null,
+            "voteShare": 2.89,
+            "votes": 2.89,
+            "seats": 0
+          },
+          {
+            "id": "NL07",
+            "name": "NL07",
+            "epGroup": "ECR",
+            "voteShare": 3.66,
+            "votes": 3.66,
+            "seats": 1
+          },
+          {
+            "id": "NL08",
+            "name": "NL08",
+            "epGroup": "Theleft",
+            "voteShare": 4.52,
+            "votes": 4.52,
+            "seats": 1
+          },
+          {
+            "id": "NL09",
+            "name": "NL09",
+            "epGroup": "PfE",
+            "voteShare": 16.97,
+            "votes": 16.97,
+            "seats": 6
+          },
+          {
+            "id": "NL10",
+            "name": "NL10",
+            "epGroup": null,
+            "voteShare": 2.2,
+            "votes": 2.2,
+            "seats": 0
+          },
+          {
+            "id": "NL11",
+            "name": "NL11",
+            "epGroup": "GREENSEFA",
+            "voteShare": 5.13,
+            "votes": 5.13,
+            "seats": 2
+          },
+          {
+            "id": "NL12",
+            "name": "NL12",
+            "epGroup": null,
+            "voteShare": 0.65,
+            "votes": 0.65,
+            "seats": 0
+          },
+          {
+            "id": "NL13",
+            "name": "NL13",
+            "epGroup": "EPP",
+            "voteShare": 3.75,
+            "votes": 3.75,
+            "seats": 1
+          },
+          {
+            "id": "NL14",
+            "name": "NL14",
+            "epGroup": "EPP",
+            "voteShare": 5.41,
+            "votes": 5.41,
+            "seats": 2
+          },
+          {
+            "id": "NL90",
+            "name": "NL90",
+            "epGroup": null,
+            "voteShare": 2.04,
+            "votes": 2.04,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "PL": {
+    "name": "PL",
+    "countryCode": "PL",
+    "year": 2024,
+    "totalSeats": 53,
+    "totalVotes": 100,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 53,
+        "parties": [
+          {
+            "id": "PL01",
+            "name": "PL01",
+            "epGroup": "ECR",
+            "voteShare": 36.16,
+            "votes": 36.16,
+            "seats": 20
+          },
+          {
+            "id": "PL02",
+            "name": "PL02",
+            "epGroup": "EPP",
+            "voteShare": 37.06,
+            "votes": 37.06,
+            "seats": 21
+          },
+          {
+            "id": "PL03",
+            "name": "PL03",
+            "epGroup": "SD",
+            "voteShare": 6.3,
+            "votes": 6.3,
+            "seats": 3
+          },
+          {
+            "id": "PL04",
+            "name": "PL04",
+            "epGroup": "NI",
+            "voteShare": 12.08,
+            "votes": 12.08,
+            "seats": 6
+          },
+          {
+            "id": "PL05",
+            "name": "PL05",
+            "epGroup": "Renew",
+            "voteShare": 6.91,
+            "votes": 6.91,
+            "seats": 3
+          },
+          {
+            "id": "PL06",
+            "name": "PL06",
+            "epGroup": null,
+            "voteShare": 0.93,
+            "votes": 0.93,
+            "seats": 0
+          },
+          {
+            "id": "PL90",
+            "name": "PL90",
+            "epGroup": null,
+            "voteShare": 0.56,
+            "votes": 0.56,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "PT": {
+    "name": "PT",
+    "countryCode": "PT",
+    "year": 2024,
+    "totalSeats": 21,
+    "totalVotes": 100,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 21,
+        "parties": [
+          {
+            "id": "PT01",
+            "name": "PT01",
+            "epGroup": "SD",
+            "voteShare": 32.75,
+            "votes": 32.75,
+            "seats": 8
+          },
+          {
+            "id": "PT02",
+            "name": "PT02",
+            "epGroup": "EPP",
+            "voteShare": 31.74,
+            "votes": 31.74,
+            "seats": 7
+          },
+          {
+            "id": "PT03",
+            "name": "PT03",
+            "epGroup": "Theleft",
+            "voteShare": 4.34,
+            "votes": 4.34,
+            "seats": 1
+          },
+          {
+            "id": "PT04",
+            "name": "PT04",
+            "epGroup": "Theleft",
+            "voteShare": 4.2,
+            "votes": 4.2,
+            "seats": 1
+          },
+          {
+            "id": "PT05",
+            "name": "PT05",
+            "epGroup": null,
+            "voteShare": 1.24,
+            "votes": 1.24,
+            "seats": 0
+          },
+          {
+            "id": "PT06",
+            "name": "PT06",
+            "epGroup": null,
+            "voteShare": 3.83,
+            "votes": 3.83,
+            "seats": 0
+          },
+          {
+            "id": "PT07",
+            "name": "PT07",
+            "epGroup": "Renew",
+            "voteShare": 9.26,
+            "votes": 9.26,
+            "seats": 2
+          },
+          {
+            "id": "PT08",
+            "name": "PT08",
+            "epGroup": "PfE",
+            "voteShare": 9.99,
+            "votes": 9.99,
+            "seats": 2
+          },
+          {
+            "id": "PT90",
+            "name": "PT90",
+            "epGroup": null,
+            "voteShare": 2.65,
+            "votes": 2.65,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "RO": {
+    "name": "RO",
+    "countryCode": "RO",
+    "year": 2024,
+    "totalSeats": 33,
+    "totalVotes": 100.00000000000001,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 33,
+        "parties": [
+          {
+            "id": "RO01",
+            "name": "RO01",
+            "epGroup": "EPP",
+            "voteShare": 48.55,
+            "votes": 48.55,
+            "seats": 19
+          },
+          {
+            "id": "RO03",
+            "name": "RO03",
+            "epGroup": "EPP",
+            "voteShare": 6.48,
+            "votes": 6.48,
+            "seats": 2
+          },
+          {
+            "id": "RO04",
+            "name": "RO04",
+            "epGroup": "ECR",
+            "voteShare": 14.93,
+            "votes": 14.93,
+            "seats": 6
+          },
+          {
+            "id": "RO06",
+            "name": "RO06",
+            "epGroup": "NI",
+            "voteShare": 5.03,
+            "votes": 5.03,
+            "seats": 2
+          },
+          {
+            "id": "RO07",
+            "name": "RO07",
+            "epGroup": "Renew",
+            "voteShare": 8.71,
+            "votes": 8.71,
+            "seats": 3
+          },
+          {
+            "id": "RO08",
+            "name": "RO08",
+            "epGroup": "GREENSEFA",
+            "voteShare": 3.08,
+            "votes": 3.08,
+            "seats": 1
+          },
+          {
+            "id": "RO90",
+            "name": "RO90",
+            "epGroup": null,
+            "voteShare": 13.22,
+            "votes": 13.22,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "SE": {
+    "name": "SE",
+    "countryCode": "SE",
+    "year": 2024,
+    "totalSeats": 21,
+    "totalVotes": 99.99999999999999,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 21,
+        "parties": [
+          {
+            "id": "SE01",
+            "name": "SE01",
+            "epGroup": "SD",
+            "voteShare": 24.77,
+            "votes": 24.77,
+            "seats": 5
+          },
+          {
+            "id": "SE02",
+            "name": "SE02",
+            "epGroup": "EPP",
+            "voteShare": 17.53,
+            "votes": 17.53,
+            "seats": 4
+          },
+          {
+            "id": "SE03",
+            "name": "SE03",
+            "epGroup": "ECR",
+            "voteShare": 13.17,
+            "votes": 13.17,
+            "seats": 3
+          },
+          {
+            "id": "SE04",
+            "name": "SE04",
+            "epGroup": "GREENSEFA",
+            "voteShare": 13.85,
+            "votes": 13.85,
+            "seats": 3
+          },
+          {
+            "id": "SE05",
+            "name": "SE05",
+            "epGroup": "Renew",
+            "voteShare": 7.29,
+            "votes": 7.29,
+            "seats": 2
+          },
+          {
+            "id": "SE06",
+            "name": "SE06",
+            "epGroup": "EPP",
+            "voteShare": 5.71,
+            "votes": 5.71,
+            "seats": 1
+          },
+          {
+            "id": "SE07",
+            "name": "SE07",
+            "epGroup": "Theleft",
+            "voteShare": 11.06,
+            "votes": 11.06,
+            "seats": 2
+          },
+          {
+            "id": "SE08",
+            "name": "SE08",
+            "epGroup": "Renew",
+            "voteShare": 4.38,
+            "votes": 4.38,
+            "seats": 1
+          },
+          {
+            "id": "SE90",
+            "name": "SE90",
+            "epGroup": null,
+            "voteShare": 2.24,
+            "votes": 2.24,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "SI": {
+    "name": "SI",
+    "countryCode": "SI",
+    "year": 2024,
+    "totalSeats": 9,
+    "totalVotes": 100.00999999999999,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 9,
+        "parties": [
+          {
+            "id": "SI01",
+            "name": "SI01",
+            "epGroup": "EPP",
+            "voteShare": 30.59,
+            "votes": 30.59,
+            "seats": 4
+          },
+          {
+            "id": "SI02",
+            "name": "SI02",
+            "epGroup": null,
+            "voteShare": 7.21,
+            "votes": 7.21,
+            "seats": 0
+          },
+          {
+            "id": "SI03",
+            "name": "SI03",
+            "epGroup": "SD",
+            "voteShare": 7.76,
+            "votes": 7.76,
+            "seats": 1
+          },
+          {
+            "id": "SI04",
+            "name": "SI04",
+            "epGroup": "EPP",
+            "voteShare": 7.68,
+            "votes": 7.68,
+            "seats": 1
+          },
+          {
+            "id": "SI05",
+            "name": "SI05",
+            "epGroup": null,
+            "voteShare": 4.81,
+            "votes": 4.81,
+            "seats": 0
+          },
+          {
+            "id": "SI06",
+            "name": "SI06",
+            "epGroup": "Renew",
+            "voteShare": 22.11,
+            "votes": 22.11,
+            "seats": 2
+          },
+          {
+            "id": "SI07",
+            "name": "SI07",
+            "epGroup": "GREENSEFA",
+            "voteShare": 10.53,
+            "votes": 10.53,
+            "seats": 1
+          },
+          {
+            "id": "SI08",
+            "name": "SI08",
+            "epGroup": null,
+            "voteShare": 3.97,
+            "votes": 3.97,
+            "seats": 0
+          },
+          {
+            "id": "SI09",
+            "name": "SI09",
+            "epGroup": null,
+            "voteShare": 2.22,
+            "votes": 2.22,
+            "seats": 0
+          },
+          {
+            "id": "SI10",
+            "name": "SI10",
+            "epGroup": null,
+            "voteShare": 1.61,
+            "votes": 1.61,
+            "seats": 0
+          },
+          {
+            "id": "SI90",
+            "name": "SI90",
+            "epGroup": null,
+            "voteShare": 1.52,
+            "votes": 1.52,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  },
+  "SK": {
+    "name": "SK",
+    "countryCode": "SK",
+    "year": 2024,
+    "totalSeats": 15,
+    "totalVotes": 100.00000000000001,
+    "districts": [
+      {
+        "name": "National",
+        "magnitude": 15,
+        "parties": [
+          {
+            "id": "SK01",
+            "name": "SK01",
+            "epGroup": "NI",
+            "voteShare": 24.76,
+            "votes": 24.76,
+            "seats": 5
+          },
+          {
+            "id": "SK02",
+            "name": "SK02",
+            "epGroup": null,
+            "voteShare": 0.48,
+            "votes": 0.48,
+            "seats": 0
+          },
+          {
+            "id": "SK03",
+            "name": "SK03",
+            "epGroup": null,
+            "voteShare": 4.92,
+            "votes": 4.92,
+            "seats": 0
+          },
+          {
+            "id": "SK04",
+            "name": "SK04",
+            "epGroup": "Renew",
+            "voteShare": 27.81,
+            "votes": 27.81,
+            "seats": 6
+          },
+          {
+            "id": "SK05",
+            "name": "SK05",
+            "epGroup": null,
+            "voteShare": 1.9,
+            "votes": 1.9,
+            "seats": 0
+          },
+          {
+            "id": "SK06",
+            "name": "SK06",
+            "epGroup": "EPP",
+            "voteShare": 7.14,
+            "votes": 7.14,
+            "seats": 1
+          },
+          {
+            "id": "SK07",
+            "name": "SK07",
+            "epGroup": null,
+            "voteShare": 3.88,
+            "votes": 3.88,
+            "seats": 0
+          },
+          {
+            "id": "SK08",
+            "name": "SK08",
+            "epGroup": "NI",
+            "voteShare": 7.18,
+            "votes": 7.18,
+            "seats": 1
+          },
+          {
+            "id": "SK09",
+            "name": "SK09",
+            "epGroup": "ESN",
+            "voteShare": 12.53,
+            "votes": 12.53,
+            "seats": 2
+          },
+          {
+            "id": "SK10",
+            "name": "SK10",
+            "epGroup": null,
+            "voteShare": 4.68,
+            "votes": 4.68,
+            "seats": 0
+          },
+          {
+            "id": "SK11",
+            "name": "SK11",
+            "epGroup": null,
+            "voteShare": 1.98,
+            "votes": 1.98,
+            "seats": 0
+          },
+          {
+            "id": "SK12",
+            "name": "SK12",
+            "epGroup": null,
+            "voteShare": 0.93,
+            "votes": 0.93,
+            "seats": 0
+          },
+          {
+            "id": "SK90",
+            "name": "SK90",
+            "epGroup": null,
+            "voteShare": 1.81,
+            "votes": 1.81,
+            "seats": 0
+          }
+        ]
+      }
+    ]
+  }
+}

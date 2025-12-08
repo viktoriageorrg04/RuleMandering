@@ -1,0 +1,212 @@
+{
+  "id": "SK",
+  "parentDivision": null,
+  "districts": null,
+  "seatsTotal": 15,
+  "seatsPercentEU": 2.08,
+  "groupSummary": {
+    "title": "SEATS_BY_GROUP_TITLE",
+    "status": "CONSTITUTIVE",
+    "time": "2024-07-15T17:47:28.506+0200",
+    "groupDistribution": [
+      {
+        "id": "EPP",
+        "seatsTotal": 1,
+        "seatsPercentEU": 0.14
+      },
+      {
+        "id": "Renew",
+        "seatsTotal": 6,
+        "seatsPercentEU": 0.83
+      },
+      {
+        "id": "ESN",
+        "seatsTotal": 1,
+        "seatsPercentEU": 0.14
+      },
+      {
+        "id": "NI",
+        "seatsTotal": 7,
+        "seatsPercentEU": 0.97
+      }
+    ]
+  },
+  "partySummary": {
+    "breakdownByPartyHeader": {
+      "title": "BREAKDOWN_BY_PARTY_TITLE",
+      "status": "CONSTITUTIVE",
+      "time": "2024-07-16T12:32:42.402+0200"
+    },
+    "resultsByPartyHeader": {
+      "title": "RESULTS_BY_PARTY_TITLE",
+      "status": "OFFICIAL",
+      "time": "2024-07-16T12:32:42.402+0200"
+    },
+    "seatsByParty": [
+      {
+        "id": "SK01",
+        "type": "PARTY",
+        "seatsTotal": 5,
+        "votesPercent": 24.76,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "NI",
+            "seatsTotal": 5,
+            "seatsPercentEU": 0.69
+          }
+        ]
+      },
+      {
+        "id": "SK02",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 0.48,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "SK03",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 4.92,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "SK04",
+        "type": "COALITION",
+        "seatsTotal": 6,
+        "votesPercent": 27.81,
+        "members": [
+          {
+            "id": "SK14",
+            "seatsTotal": 1,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "Renew",
+                "seatsTotal": 1,
+                "seatsPercentEU": 0.14
+              }
+            ]
+          },
+          {
+            "id": "SK13",
+            "seatsTotal": 5,
+            "votesPercent": null,
+            "groupDistribution": [
+              {
+                "id": "Renew",
+                "seatsTotal": 5,
+                "seatsPercentEU": 0.69
+              }
+            ]
+          }
+        ],
+        "groupDistribution": [
+          {
+            "id": "Renew",
+            "seatsTotal": 6,
+            "seatsPercentEU": 0.83
+          }
+        ]
+      },
+      {
+        "id": "SK05",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 1.9,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "SK06",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 7.14,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "EPP",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "SK07",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 3.88,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "SK08",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 7.18,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "NI",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "SK09",
+        "type": "PARTY",
+        "seatsTotal": 2,
+        "votesPercent": 12.53,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "ESN",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          },
+          {
+            "id": "NI",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "SK10",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 4.68,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "SK11",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 1.98,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "SK12",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 0.93,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "SK90",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 1.81,
+        "members": null,
+        "groupDistribution": null
+      }
+    ]
+  }
+}

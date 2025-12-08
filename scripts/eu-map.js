@@ -3,7 +3,7 @@
 
   const NAME_TO_ID = {
     Austria:'AT', Belgium:'BE', Bulgaria:'BG', Croatia:'HR', Cyprus:'CY',
-    'Czechia (Czech Republic)':'CZ', Denmark:'DK', Estonia:'EE', Finland:'FI',
+    'Czechia':'CZ', Denmark:'DK', Estonia:'EE', Finland:'FI',
     France:'FR', Germany:'DE', Greece:'GR', Hungary:'HU', Ireland:'IE', Italy:'IT',
     Latvia:'LV', Lithuania:'LT', Luxembourg:'LU', Malta:'MT', Netherlands:'NL',
     Poland:'PL', Portugal:'PT', Romania:'RO', Slovakia:'SK', Slovenia:'SI',
@@ -125,8 +125,111 @@
     const vb = svg.viewBox.baseVal;
     defaultVB = curVB = {x:vb.x,y:vb.y,w:vb.width,h:vb.height};
 
-    // tag any element with ISO2 id as a country (works for <g> & <path>)
-    $$('[id]', svg).forEach(el => { if (/^[A-Z]{2}$/.test(el.id)) el.classList.add('eu-country'); });
+    // // tag any element with ISO2 id as a country (works for <g> & <path>)
+    // $$('[id]', svg).forEach(el => { if (/^[A-Z]{2}$/.test(el.id)) el.classList.add('eu-country'); });
+
+    // build a reverse map (ISO -> display name)
+    const ID_TO_NAME = Object.fromEntries(
+      Object.entries(NAME_TO_ID).map(([name, iso]) => [iso, name])
+    );
+
+    function nameFromId(id) {
+      return ID_TO_NAME[id] || id;
+    }
+
+    // tag elements as countries and wire up click handlers
+    // Only ISO codes present in NAME_TO_ID are considered allowed EU members.
+    const ALLOWED_ISO = new Set(
+      Object.values(NAME_TO_ID).filter(code => code && code !== 'GB')
+    );
+
+    $$('[id]', svg).forEach(el => {
+      if (/^[A-Z]{2}$/.test(el.id)) {
+        el.classList.add('eu-country');
+
+        // mark cursor based on whether this ISO is one of the allowed EU codes
+        const iso = el.id;
+        const allowed = ALLOWED_ISO.has(iso);
+        try { el.style.cursor = allowed ? 'pointer' : 'not-allowed'; } catch (e) {}
+
+        el.addEventListener('click', (ev) => {
+          ev.stopPropagation();
+
+          // reject non-EU selections with a user-facing error
+          if (!allowed) {
+            if (typeof window.showErrorToast === 'function') {
+              window.showErrorToast('Country not available — please select an EU member.');
+            } else {
+              console.warn('[eu-map] non-EU country clicked:', iso);
+            }
+            // small visual hint (optional; harmless if CSS doesn't have this class)
+            try {
+              el.classList.add('is-invalid');
+              setTimeout(() => el.classList.remove('is-invalid'), 700);
+            } catch (_) {}
+            return;
+          }
+
+          // allowed: stage and sync UI
+          const id = iso;
+          stagedId = id;
+
+          const countryName = nameFromId(id);
+          const labelEl = document.querySelector('.dropdown[data-dropdown="country"] .dropdown-label');
+          if (labelEl) labelEl.textContent = countryName;
+
+          // also mark the matching item in the dropdown list
+          if (typeof setDropdownSelectionByName === 'function') {
+            setDropdownSelectionByName(countryName);
+          }
+
+          // close dropdown UI if open (best-effort)
+          const toggle = document.querySelector('.dropdown[data-dropdown="country"] .dropdown-toggle');
+          if (toggle) toggle.setAttribute('aria-expanded', 'false');
+
+          // highlight & zoom the clicked country immediately
+          highlightCountry(id);
+
+          // if you want clicks to also apply the selection (press "Apply"), uncomment:
+          // applyFromUI();
+        });
+      }
+    });
+  }
+
+  // keep the dropdown in sync when a country is clicked on the map
+  function setDropdownSelectionByName(name) {
+    const dd = document.querySelector('.dropdown[data-dropdown="country"]');
+    if (!dd) return;
+    const toggle = dd.querySelector('.dropdown-toggle');
+    const list = dd.querySelector('.dropdown-list');
+    // set visible label
+    if (toggle) {
+      const lbl = toggle.querySelector('.dropdown-label');
+      if (lbl) lbl.textContent = name;
+    }
+    // mark the matching item as selected (if present)
+    if (list) {
+      Array.from(list.children).forEach(it => it.removeAttribute('aria-selected'));
+      const match = Array.from(list.children).find(it => (it.textContent || '').trim() === name);
+      if (match) match.setAttribute('aria-selected', 'true');
+    }
+    // ensure dropdown is closed
+    if (toggle) toggle.setAttribute('aria-expanded', 'false');
+  }
+
+  // listen for dropdown selection events and highlight on the map
+  const countryDropdownEl = document.querySelector('.dropdown[data-dropdown="country"]');
+  if (countryDropdownEl) {
+    countryDropdownEl.addEventListener('dropdown-change', (ev) => {
+      const name = ev?.detail?.value;
+      if (!name) { resetMap(); return; }
+      const id = NAME_TO_ID[name] || null;
+      if (!id) { resetMap(); return; }
+      stagedId = id;
+      // immediate visual sync
+      highlightCountry(id);
+    });
   }
 
   // only apply when the page's Apply button is pressed

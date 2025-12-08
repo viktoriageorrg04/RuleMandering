@@ -1,0 +1,139 @@
+{
+  "id": "CY",
+  "parentDivision": null,
+  "districts": null,
+  "seatsTotal": 6,
+  "seatsPercentEU": 0.83,
+  "groupSummary": {
+    "title": "SEATS_BY_GROUP_TITLE",
+    "status": "CONSTITUTIVE",
+    "time": "2024-07-15T17:47:28.506+0200",
+    "groupDistribution": [
+      {
+        "id": "EPP",
+        "seatsTotal": 2,
+        "seatsPercentEU": 0.28
+      },
+      {
+        "id": "SD",
+        "seatsTotal": 1,
+        "seatsPercentEU": 0.14
+      },
+      {
+        "id": "ECR",
+        "seatsTotal": 1,
+        "seatsPercentEU": 0.14
+      },
+      {
+        "id": "Theleft",
+        "seatsTotal": 1,
+        "seatsPercentEU": 0.14
+      },
+      {
+        "id": "NI",
+        "seatsTotal": 1,
+        "seatsPercentEU": 0.14
+      }
+    ]
+  },
+  "partySummary": {
+    "breakdownByPartyHeader": {
+      "title": "BREAKDOWN_BY_PARTY_TITLE",
+      "status": "CONSTITUTIVE",
+      "time": "2024-07-15T17:47:28.506+0200"
+    },
+    "resultsByPartyHeader": {
+      "title": "RESULTS_BY_PARTY_TITLE",
+      "status": "OFFICIAL",
+      "time": "2024-07-15T17:47:28.506+0200"
+    },
+    "seatsByParty": [
+      {
+        "id": "CY01",
+        "type": "PARTY",
+        "seatsTotal": 2,
+        "votesPercent": 24.78,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "EPP",
+            "seatsTotal": 2,
+            "seatsPercentEU": 0.28
+          }
+        ]
+      },
+      {
+        "id": "CY02",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 21.49,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "Theleft",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "CY03",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 9.72,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "SD",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "CY04",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 5.07,
+        "members": null,
+        "groupDistribution": null
+      },
+      {
+        "id": "CY05",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 11.19,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "ECR",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "CY10",
+        "type": "PARTY",
+        "seatsTotal": 1,
+        "votesPercent": 19.36,
+        "members": null,
+        "groupDistribution": [
+          {
+            "id": "NI",
+            "seatsTotal": 1,
+            "seatsPercentEU": 0.14
+          }
+        ]
+      },
+      {
+        "id": "CY90",
+        "type": "PARTY",
+        "seatsTotal": 0,
+        "votesPercent": 8.39,
+        "members": null,
+        "groupDistribution": null
+      }
+    ]
+  }
+}
