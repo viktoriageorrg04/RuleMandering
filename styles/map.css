@@ -82,6 +82,9 @@
   transform-origin: 50% 50%;
 }
 
+/* pointer cursor on countries */
+svg#eu-map .eu-country { cursor: pointer; }
+
 /* remove decorative circles over the map */
 .map::before,.map::after{ content:none !important }
 

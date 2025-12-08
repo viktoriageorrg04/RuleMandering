@@ -1133,6 +1133,14 @@ document.addEventListener('DOMContentLoaded', () => {
     if (result) {
       allowFab = true;
 
+      // reset seat-bonus pager to the first page when Apply is pressed
+      try {
+        const seatMetric = document.querySelector('.metric.seat-bonus');
+        if (seatMetric) {
+          seatMetric.dataset.rmPageIndex = '0';
+        }
+      } catch (err) { /* ignore */ }
+
       // UI updates
       renderMetrics(result);
       if (typeof renderMap === 'function') renderMap(result);
