@@ -20,6 +20,7 @@ document.addEventListener('DOMContentLoaded', () => {
   const resetBtn = document.querySelector('.toolbar .reset, [data-action="reset"], .control-panel .reset, button.reset');
   let   applyBtn = document.querySelector('.toolbar .apply, [data-action="apply"], .control-panel .apply, button.apply')
            || Array.from(document.querySelectorAll('button, .btn')).find(b => (b.textContent||'').trim().toLowerCase()==='apply');
+  let applyBouncedOnce = false;
 
   // View Results pill (FAB)
   const viewFab = document.querySelector('.fab-to-results');
@@ -208,6 +209,69 @@ document.addEventListener('DOMContentLoaded', () => {
     // hard refresh keeps everything in a clean base state
     window.location.reload();
   });
+
+  // --- Apply attention helpers: mark/unmark when controls change ---
+  function bounceApplyOnce() {
+    if (!applyBtn) {
+      console.debug('[APP] bounceApplyOnce: no applyBtn found');
+      return;
+    }
+    console.debug('[APP] bounceApplyOnce: triggering bounce');
+    applyBtn.classList.add('is-bounce');
+    // remove the is-bounce class after the nudge duration so it doesn't linger
+    setTimeout(() => {
+      try { applyBtn.classList.remove('is-bounce'); } catch (e) {}
+      console.debug('[APP] bounceApplyOnce: removed is-bounce');
+    }, 900);
+  }
+
+  function markApplyNeeded(source = 'unknown') {
+    try {
+      if (!applyBtn) {
+        console.debug('[APP] markApplyNeeded called but no applyBtn (source:', source, ')');
+        return;
+      }
+
+      console.debug('[APP] markApplyNeeded called (source:', source, '), applyBouncedOnce=', applyBouncedOnce, 'needs-apply?',
+                    applyBtn.classList.contains('needs-apply'));
+
+      // If this is the first time since the last Apply, trigger the one-time bounce
+      if (!applyBtn.classList.contains('needs-apply') && !applyBouncedOnce) {
+        applyBtn.classList.add('needs-apply');
+        bounceApplyOnce();
+        applyBouncedOnce = true;
+      } else {
+        // already marked — just ensure the gentle halo persists
+        applyBtn.classList.add('needs-apply');
+      }
+    } catch (e) { /* non-critical */ }
+  }
+
+  // Attach listeners: sliders, radios, dropdown changes
+  sliders.forEach(s => s.addEventListener('input', markApplyNeeded));
+  sliders.forEach(s => s.addEventListener('change', markApplyNeeded));
+  radios.forEach(r => r.addEventListener('change', markApplyNeeded));
+
+  // fallback: delegated listeners on the control panel to catch anything we missed
+  const controlPanel = document.querySelector('.control-panel');
+  if (controlPanel) {
+    controlPanel.addEventListener('input', (e) => markApplyNeeded('control-panel:input'));
+    controlPanel.addEventListener('change', (e) => markApplyNeeded('control-panel:change'));
+    controlPanel.addEventListener('click', (e) => {
+      // small filter: ignore clicks on the Apply button itself
+      if (e.target.closest('.action.apply')) return;
+      markApplyNeeded('control-panel:click');
+    });
+  }
+  // Dropdown component dispatches a 'dropdown-change' event when a value is picked
+  document.addEventListener('dropdown-change', markApplyNeeded);
+
+  // Also consider marking when dropdown text is typed (search) — best-effort:
+  document.querySelectorAll('.dropdown-search').forEach(inp => inp.addEventListener('input', () => {
+    // don't mark on tiny typing delays; only mark if they selected something later.
+    // but we keep it simple and mark it:
+    markApplyNeeded();
+  }));
 
   // ---------- dropdowns ----------
   const Dropdowns = (() => {
@@ -1132,6 +1196,14 @@ document.addEventListener('DOMContentLoaded', () => {
 
     if (result) {
       allowFab = true;
+
+      // clear "needs apply" state
+      // if (applyBtn) applyBtn.classList.remove('needs-apply');
+      if (applyBtn) {
+        applyBtn.classList.remove('needs-apply');
+        applyBtn.classList.remove('is-bounce');
+      }
+      applyBouncedOnce = false;
 
       // reset seat-bonus pager to the first page when Apply is pressed
       try {

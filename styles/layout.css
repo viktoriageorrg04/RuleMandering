@@ -76,8 +76,47 @@
   transition: background-color .18s ease;
   border: 0; outline: 0; box-shadow: none;
 }
-.toolbar > .action.reset { color: var(--gray-700); }
-.toolbar > .action.apply { color: var(--blue-900); }
+/* .toolbar > .action.reset { color: var(--gray-700); }
+.toolbar > .action.apply {
+  position: relative;
+  color: var(--blue-900);
+  background: rgba(33, 121, 255, 0.04);
+}
+
+.toolbar > .action.apply:hover {
+  background: rgba(33, 121, 255, 0.08);
+} */
+/* gentle blue glow for the Apply button */
+.toolbar > .action.apply {
+  position: relative;
+  color: var(--blue-900);
+  background: rgba(33, 121, 255, 0.04);
+  box-shadow: 0 6px 18px rgba(13, 60, 120, 0.06);
+  transform: translateY(-2px);
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
+  z-index: 1;
+}
+
+/* hover lifts a little more and strengthens the shadow */
+.toolbar > .action.apply:hover {
+  background: rgba(33, 121, 255, 0.08);
+  box-shadow: 0 10px 24px rgba(13, 60, 120, 0.08);
+  transform: translateY(-3px);
+}
+
+/* pressing the button returns it to the surface (tactile feedback) */
+.toolbar > .action.apply:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 10px rgba(13, 60, 120, 0.05);
+}
+
+/* keep Reset visually flat and unchanged */
+.toolbar > .action.reset {
+  color: var(--gray-700);
+  transform: none;
+  box-shadow: none;
+}
+
 .toolbar-sep { width: 1px; background: var(--gray-200); height: 100%; }
 .toolbar .action:hover { background: var(--gray-100); }
 .toolbar > .action:active { transform: none; box-shadow: none; }
