@@ -166,12 +166,27 @@
 /* highlighted element: soft glow, sits above dim background but below card */
 .rm-tour-highlight {
   position: relative;
-  z-index: 9700; /* above overlay, below card */
-  border-radius: 22px;
+  z-index: 9700 !important;
+  border-radius: inherit;
   box-shadow:
-    0 0 0 2px #fbbf24,
-    0 0 0 6px rgba(251, 191, 36, 0.35);
-  transition: box-shadow 150ms ease, opacity 120ms ease;
+    0 0 0 1px #fbbf24,
+    0 0 0 4px rgba(251, 191, 36, 0.35) !important;
+  outline: 2px solid #fbbf24;
+  outline-offset: -2px;
+}
+
+/* apply button: emphasize text instead of a border highlight */
+.rm-tour-highlight.action.apply {
+  box-shadow: none !important;
+  outline: 0;
+  border-radius: 0;
+  color: #1d4ed8;
+  text-shadow: 0 0 10px rgba(37, 99, 235, 0.45);
+}
+
+/* Step 2: match the control card's rounded contour */
+.control-panel .control-card.rm-tour-highlight {
+  border-radius: 22px;
 }
 
 /* toast message shown when user tries to interact during tour */

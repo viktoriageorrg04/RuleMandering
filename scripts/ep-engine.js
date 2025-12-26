@@ -17,10 +17,12 @@
     const mode = state.dmMode || "";
     const sliderVal = Number(state.dmMag) || 0;
 
-    if (mode.includes("Mode 2")) {
+    // if (mode.includes("Mode 2")) {
+    if (mode === "mode-2") {
       // direct override by slider
       if (sliderVal > 0) m = sliderVal;
-    } else if (mode.includes("Mode 3")) {
+    // } else if (mode.includes("Mode 3")) {
+    } else if (mode === "mode-3") {
       // scale base magnitude by slider percentage (0–10 -> 0–100%)
       const factor = sliderVal > 0 ? sliderVal : 10; // default = 10 (100%)
       m = Math.round(baseMag * (factor / 10));

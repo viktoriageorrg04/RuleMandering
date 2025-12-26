@@ -471,10 +471,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const l = c?.closest('label.formula')?.querySelector('.text')?.textContent?.trim();
     return l || 'Formula';
   }
+  // function currentDmMode(){
+  //   const m = document.querySelector('input[name="dm-mode"]:checked');
+  //   const lbl = m ? document.querySelector(`label[for="${m.id}"]`) : null;
+  //   return lbl ? lbl.textContent.trim() : '';
+  // }
   function currentDmMode(){
     const m = document.querySelector('input[name="dm-mode"]:checked');
-    const lbl = m ? document.querySelector(`label[for="${m.id}"]`) : null;
-    return lbl ? lbl.textContent.trim() : '';
+    return m ? (m.value || '') : '';
   }
   const dmMagnitudeValue = () => Math.max(1, Math.round(Number(dmSlider?.value||0)) + 2);
 

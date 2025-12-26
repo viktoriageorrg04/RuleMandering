@@ -1,5 +1,4 @@
 (function () {
-  // if you want to gate on localStorage again, you can re-enable this:
   // const STORAGE_KEY = "rm_tour_done_v8";
   // const params = new URLSearchParams(window.location.search);
   // const forceTour = params.get("tour") === "1";
@@ -11,7 +10,8 @@
       title: "Step 1 · Select a country",
       text:
         "First, pick a country from this menu to load its baseline election results and settings.",
-      selector: '.dropdown[data-dropdown="country"]'
+      // selector: '.dropdown[data-dropdown="country"]'
+      selector: '.dropdown-toggle'
     },
     {
       id: "controls",
@@ -20,25 +20,19 @@
         "Change the threshold, formula and district magnitude to explore how different rules reshape parties’ seat shares.",
       selector: ".control-panel .control-card"
     },
-    // {
-    //   id: "compare",
-    //   title: "Step 3 · Optional compare mode",
-    //   text:
-    //     "Turn on Compare to keep the baseline visible, so you can contrast your new scenario against the original.",
-    //   selector: ".compare-control"
-    // },
-    // {
-    //   id: "apply",
-    //   title: "Step 4 · Apply your scenario",
-    //   text:
-    //     "Click Apply when ready to update the map and metrics with your chosen settings.",
-    //   selector: ".action.apply, #applyBtn, [data-action='apply']"
-    // }
+    {
+      id: "methods",
+      title: "Step 3 · Understand the methods",
+      text:
+        "Review the mathematical formulas used to calculate seat bonuses, wasted votes, and disproportionality metrics.",
+      selector: ".methods-card"
+    },
     {
       id: "apply",
       title: "Step 3 · Apply your scenario",
       text:
         "Click Apply when ready to update the map and metrics with your chosen settings.",
+      // selector: ".action.apply, #applyBtn, [data-action='apply']"
       selector: ".action.apply, #applyBtn, [data-action='apply']"
     }
   ];
@@ -49,10 +43,40 @@
   let toast = null;
   let toastTimer = null;
   let blockClickHandler = null;
+  let scrollBlockHandler = null;
+  let keyBlockHandler = null;
   let initialScrollY = 0;
+  let methodsCardWasCollapsed = false;
 
-  function lockScroll () {}
-  function unlockScroll () {}
+  // function lockScroll () {}
+  // function unlockScroll () {}
+
+  function lockScroll () {
+    scrollBlockHandler = function(e) {
+      e.preventDefault();
+      e.stopPropagation();
+    };
+    
+    keyBlockHandler = function(e) {
+      if ([32, 33, 34, 35, 36, 37, 38, 39, 40].indexOf(e.keyCode) > -1) {
+        e.preventDefault();
+      }
+    };
+    
+    window.addEventListener('wheel', scrollBlockHandler, { passive: false });
+    window.addEventListener('touchmove', scrollBlockHandler, { passive: false });
+    window.addEventListener('keydown', keyBlockHandler, false);
+ }
+ 
+ function unlockScroll () {
+    if (scrollBlockHandler) {
+      window.removeEventListener('wheel', scrollBlockHandler);
+      window.removeEventListener('touchmove', scrollBlockHandler);
+    }
+    if (keyBlockHandler) {
+      window.removeEventListener('keydown', keyBlockHandler);
+    }
+ }
 
   /* element wiring */
   function cacheElements () {
@@ -173,6 +197,45 @@
     }, 1800);
   }
 
+  /* expand methods card if we're on that step */
+  function handleMethodsCard(stepId) {
+    const methodsCard = document.querySelector('.methods-card');
+    if (!methodsCard) return;
+ 
+    if (stepId === 'methods') {
+      methodsCardWasCollapsed = methodsCard.classList.contains('is-collapsed');
+      
+      if (methodsCardWasCollapsed) {
+        const toggle = methodsCard.querySelector('.collapse-toggle');
+        const body = methodsCard.querySelector('.methods-body');
+        
+        methodsCard.classList.remove('is-collapsed');
+        toggle?.setAttribute('aria-expanded', 'true');
+        
+        if (body) {
+          body.style.display = '';
+          const full = body.scrollHeight + 'px';
+          body.style.height = '0px';
+          body.style.opacity = '0';
+          
+          requestAnimationFrame(() => {
+            body.style.transition = 'height .34s cubic-bezier(.2,.9,.2,1), opacity .18s ease';
+            body.style.height = full;
+            body.style.opacity = '1';
+          });
+          
+          function done(e) {
+            if (e.propertyName === 'height') {
+              body.style.height = 'auto';
+              body.removeEventListener('transitionend', done);
+            }
+          }
+          body.addEventListener('transitionend', done);
+        }
+      }
+    }
+  }
+
   /* scroll + highlight + card placement */
   function scrollToTarget (selector) {
     const el = getTarget(selector);
@@ -182,13 +245,31 @@
       el.scrollIntoView({
         behavior: "auto",
         block: "center",
+        // block: selector === '.methods-card' ? "start" : "center",
         inline: "nearest"
-      });
+      });   
+
+      // add top margin for methods card to center it better
+      if (selector === '.methods-card') {
+        // window.scrollBy(0, 300);
+        const rect = el.getBoundingClientRect();
+        const offset = (window.innerHeight * 0.85) - (rect.height / 2) - rect.top;
+        window.scrollBy(0, offset);
+      }
     } catch {
       el.scrollIntoView();
     }
 
     // highlight + position on next frame so layout is settled
+    // const delay = selector === '.methods-card' ? 450 : 100;
+    // setTimeout(() => {
+    //   requestAnimationFrame(() => {
+    //     clearHighlight();
+    //     el.classList.add("rm-tour-highlight");
+    //     highlightedEl = el;
+    //     repositionCard();
+    //   });
+    // }, delay);
     requestAnimationFrame(() => {
       clearHighlight();
       el.classList.add("rm-tour-highlight");
@@ -226,7 +307,8 @@
       const spaceLeft = r.left - padding;
 
       const prefersSide =
-        r.width > cardW * 0.5 || step.id === "controls";
+        // r.width > cardW * 0.5 || step.id === "controls";
+        r.width > cardW * 0.5 || step.id === "controls" || step.id === "methods";
 
       if (
         prefersSide &&
@@ -304,6 +386,7 @@
     textEl.textContent = step.text;
     nextBtn.textContent = index === total - 1 ? "Finish" : "Next";
 
+    handleMethodsCard(step.id);
     scrollToTarget(step.selector);
   }
 
@@ -345,6 +428,35 @@
   function finishTour (persist) {
     hideOverlaySoft();
 
+    // restore methods card to original state if needed
+    if (methodsCardWasCollapsed) {
+      const methodsCard = document.querySelector('.methods-card');
+      if (methodsCard) {
+        const toggle = methodsCard.querySelector('.collapse-toggle');
+        const body = methodsCard.querySelector('.methods-body');
+        
+        methodsCard.classList.add('is-collapsed');
+        toggle?.setAttribute('aria-expanded', 'false');
+        
+        if (body) {
+          body.style.height = body.scrollHeight + 'px';
+          requestAnimationFrame(() => {
+            body.style.transition = 'height .28s cubic-bezier(.2,.9,.2,1), opacity .14s ease';
+            body.style.height = '0px';
+            body.style.opacity = '0';
+          });
+          
+          function done(e) {
+            if (e.propertyName === 'height') {
+              body.style.display = 'none';
+              body.removeEventListener('transitionend', done);
+            }
+          }
+          body.addEventListener('transitionend', done);
+        }
+      }
+    }
+
     if (blockClickHandler) {
       document.removeEventListener("click", blockClickHandler, true);
       blockClickHandler = null;
@@ -355,7 +467,7 @@
       toastTimer = null;
     }
 
-    // smooth scroll back to where the user started the tour
+    // // smooth scroll back to where the user started the tour
     // try {
     //   window.scrollTo({
     //     top: initialScrollY,
@@ -364,6 +476,7 @@
     // } catch {
     //   window.scrollTo(0, initialScrollY);
     // }
+
     // smooth scroll back to the top when the tour finishes
     try {
       window.scrollTo({

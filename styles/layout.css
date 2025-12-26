@@ -76,16 +76,6 @@
   transition: background-color .18s ease;
   border: 0; outline: 0; box-shadow: none;
 }
-/* .toolbar > .action.reset { color: var(--gray-700); }
-.toolbar > .action.apply {
-  position: relative;
-  color: var(--blue-900);
-  background: rgba(33, 121, 255, 0.04);
-}
-
-.toolbar > .action.apply:hover {
-  background: rgba(33, 121, 255, 0.08);
-} */
 /* gentle blue glow for the Apply button */
 .toolbar > .action.apply {
   position: relative;
@@ -96,10 +86,43 @@
   transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
   z-index: 1;
 }
+.toolbar > .action.apply {
+  position: relative;
+  color: var(--blue-900);
+  background: linear-gradient(180deg, rgba(57,86,243,0.10), rgba(57,86,243,0.04));
+  box-shadow: inset 0 1px 0 rgba(255,255,255,0.7);
+  transform: translateY(-1px);
+  /* background: linear-gradient(180deg, rgba(57,86,243,0.16), rgba(57,86,243,0.06));
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.7),
+    0 6px 18px rgba(57,86,243,0.10);
+  transform: translateY(-1px); */
+}
+
+/* pending changes: one-time jump pulse */
+/* .toolbar > .action.apply.is-bounce {
+  animation: rm-apply-jump 650ms cubic-bezier(.22,1.61,.36,1) 1;
+} */
+
+/* pending changes: one-time jump pulse (label only) */
+.toolbar > .action.apply .apply-label {
+  display: inline-block;
+  transform: translateY(0);
+}
+.toolbar > .action.apply.is-bounce .apply-label {
+  animation: rm-apply-jump 650ms cubic-bezier(.22,1.61,.36,1) 1;
+}
+
+@keyframes rm-apply-jump {
+  0%   { transform: translateY(0); }
+  35%  { transform: translateY(-2px); }  /* jump */
+  65%  { transform: translateY(0.5px); }  /* soft overshoot */
+  100% { transform: translateY(0); }
+}
 
 /* hover lifts a little more and strengthens the shadow */
 .toolbar > .action.apply:hover {
-  background: rgba(33, 121, 255, 0.08);
+  /* background: rgba(33, 121, 255, 0.08); */
   box-shadow: 0 10px 24px rgba(13, 60, 120, 0.08);
   transform: translateY(-3px);
 }

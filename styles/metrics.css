@@ -317,12 +317,12 @@
 /* dots */
 .metric.seat-bonus .pager-dots {
   display: flex;
-  gap: 4px;
+  gap: 6px;
 }
 
 .metric.seat-bonus .pager-dots .dot {
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   aspect-ratio: 1 / 1;
   border-radius: 50%;
   background: #d5deea;
@@ -433,7 +433,7 @@
   padding-bottom: 12px;
   --rm-row-h: 56px;
   /* min-height: calc(var(--rm-row-h) * 3); */
-  min-height: calc(var(--rm-row-h) * 3 + 20px);
+    min-height: calc(var(--rm-row-h) * 3 + 50px);
   transition: min-height .25s ease;
 }
 
