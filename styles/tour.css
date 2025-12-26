@@ -176,12 +176,17 @@
 }
 
 /* apply button: emphasize text instead of a border highlight */
-.rm-tour-highlight.action.apply {
+/* .rm-tour-highlight.action.apply {
   box-shadow: none !important;
   outline: 0;
   border-radius: 0;
   color: #1d4ed8;
   text-shadow: 0 0 10px rgba(37, 99, 235, 0.45);
+} */
+.rm-tour-highlight.action.apply {
+  background: transparent !important;
+  box-shadow: none !important;
+  border-radius: 0;
 }
 
 /* Step 2: match the control card's rounded contour */

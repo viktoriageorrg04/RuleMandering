@@ -217,6 +217,9 @@ document.addEventListener('DOMContentLoaded', () => {
       return;
     }
     console.debug('[APP] bounceApplyOnce: triggering bounce');
+    // restart animation even if it is already applied
+    applyBtn.classList.remove('is-bounce');
+    void applyBtn.offsetWidth;
     applyBtn.classList.add('is-bounce');
     // remove the is-bounce class after the nudge duration so it doesn't linger
     setTimeout(() => {
@@ -1368,6 +1371,39 @@ document.addEventListener('DOMContentLoaded', () => {
       } else {
         expand(body);
       }
+    });
+
+    // "What's this?" link should open Methods and scroll it into view
+    document.querySelectorAll('.methods-hint').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (methodsCard.classList.contains('is-collapsed')) {
+          toggle?.setAttribute('aria-expanded', 'true');
+          methodsCard.classList.remove('is-collapsed');
+          if (body) expand(body);
+        }
+
+        requestAnimationFrame(() => {
+          try {
+            const rect = methodsCard.getBoundingClientRect();
+            const padding = 16;
+            let delta = 0;
+
+            if (rect.top < padding) {
+              delta = rect.top - padding;
+            } else if (rect.bottom > window.innerHeight - padding) {
+              delta = rect.bottom - (window.innerHeight - padding);
+            }
+
+            if (delta !== 0) {
+              window.scrollBy({ top: delta, behavior: 'smooth' });
+            }
+          } catch {
+            methodsCard.scrollIntoView();
+          }
+        });
+      });
     });
   }
 });

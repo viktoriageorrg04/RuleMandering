@@ -177,7 +177,7 @@
           </div>
 
           <!-- COLLAPSIBLE METHODS — collapsed by default -->
-          <div class="card methods-card collapsible is-collapsed">
+          <div class="card methods-card collapsible is-collapsed" id="methods-panel">
             <button class="collapse-toggle" type="button" aria-expanded="false" aria-controls="methods-body">
               <span class="eyebrow">METHODS</span>
               <span class="chev" aria-hidden="true">▾</span>
@@ -271,7 +271,10 @@
             <div class="card insights-card">
               <div class="metric-grid">
                 <div class="metric seat-bonus">
-                  <span class="label">Seat bonus</span>
+                  <div class="metric-label">
+                    <span class="label">Seat bonus</span>
+                    <a class="methods-hint" href="#methods-panel">What's this?</a>
+                  </div>
 
                   <!-- Top section: table + pager -->
                   <div class="seat-bonus-top">
