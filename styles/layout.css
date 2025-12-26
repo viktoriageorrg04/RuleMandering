@@ -109,14 +109,22 @@
   display: inline-block;
   transform: translateY(0);
 }
-.toolbar > .action.apply.is-bounce .apply-label {
-  animation: rm-apply-jump 650ms cubic-bezier(.22,1.61,.36,1) 1;
+.toolbar > .action.apply .apply-label.is-bounce {
+  animation: rm-apply-jump 950ms cubic-bezier(.22,1.61,.36,1) 1;
 }
 
+/* @keyframes rm-apply-jump {
+  0%   { transform: translateY(0); }
+  35%  { transform: translateY(-3px); }
+  65%  { transform: translateY(0.5px); }
+  100% { transform: translateY(0); }
+} */
 @keyframes rm-apply-jump {
   0%   { transform: translateY(0); }
-  35%  { transform: translateY(-2px); }  /* jump */
-  65%  { transform: translateY(0.5px); }  /* soft overshoot */
+  20%  { transform: translateY(-3px); }
+  35%  { transform: translateY(0); }
+  50%  { transform: translateY(-2px); }
+  65%  { transform: translateY(0); }
   100% { transform: translateY(0); }
 }
 

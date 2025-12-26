@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let   applyBtn = document.querySelector('.toolbar .apply, [data-action="apply"], .control-panel .apply, button.apply')
            || Array.from(document.querySelectorAll('button, .btn')).find(b => (b.textContent||'').trim().toLowerCase()==='apply');
   let applyBouncedOnce = false;
+  let applyBounceTimer = null;
 
   // View Results pill (FAB)
   const viewFab = document.querySelector('.fab-to-results');
@@ -212,18 +213,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
   // --- Apply attention helpers: mark/unmark when controls change ---
   function bounceApplyOnce() {
-    if (!applyBtn) {
+    const target = applyBtn?.querySelector('.apply-label') || applyBtn;
+    if (!target) {
       console.debug('[APP] bounceApplyOnce: no applyBtn found');
       return;
     }
     console.debug('[APP] bounceApplyOnce: triggering bounce');
     // restart animation even if it is already applied
-    applyBtn.classList.remove('is-bounce');
-    void applyBtn.offsetWidth;
-    applyBtn.classList.add('is-bounce');
+    target.classList.remove('is-bounce');
+    void target.offsetWidth;
+    target.classList.add('is-bounce');
     // remove the is-bounce class after the nudge duration so it doesn't linger
-    setTimeout(() => {
-      try { applyBtn.classList.remove('is-bounce'); } catch (e) {}
+    if (applyBounceTimer) clearTimeout(applyBounceTimer);
+    applyBounceTimer = setTimeout(() => {
+      try { target.classList.remove('is-bounce'); } catch (e) {}
       console.debug('[APP] bounceApplyOnce: removed is-bounce');
     }, 900);
   }
@@ -238,34 +241,26 @@ document.addEventListener('DOMContentLoaded', () => {
       console.debug('[APP] markApplyNeeded called (source:', source, '), applyBouncedOnce=', applyBouncedOnce, 'needs-apply?',
                     applyBtn.classList.contains('needs-apply'));
 
-      // If this is the first time since the last Apply, trigger the one-time bounce
-      if (!applyBtn.classList.contains('needs-apply') && !applyBouncedOnce) {
-        applyBtn.classList.add('needs-apply');
-        bounceApplyOnce();
+      // // If this is the first time since the last Apply, trigger the one-time bounce
+      // if (!applyBtn.classList.contains('needs-apply') && !applyBouncedOnce) {
+      //   applyBtn.classList.add('needs-apply');
+      //   bounceApplyOnce();
+      //   applyBouncedOnce = true;
+      // } else {
+      //   // already marked — just ensure the gentle halo persists
+      //   applyBtn.classList.add('needs-apply');
+      // }
+      if (!applyBtn.classList.contains('needs-apply')) {
         applyBouncedOnce = true;
-      } else {
-        // already marked — just ensure the gentle halo persists
-        applyBtn.classList.add('needs-apply');
+        bounceApplyOnce();
       }
     } catch (e) { /* non-critical */ }
   }
 
   // Attach listeners: sliders, radios, dropdown changes
   sliders.forEach(s => s.addEventListener('input', markApplyNeeded));
-  sliders.forEach(s => s.addEventListener('change', markApplyNeeded));
   radios.forEach(r => r.addEventListener('change', markApplyNeeded));
 
-  // fallback: delegated listeners on the control panel to catch anything we missed
-  const controlPanel = document.querySelector('.control-panel');
-  if (controlPanel) {
-    controlPanel.addEventListener('input', (e) => markApplyNeeded('control-panel:input'));
-    controlPanel.addEventListener('change', (e) => markApplyNeeded('control-panel:change'));
-    controlPanel.addEventListener('click', (e) => {
-      // small filter: ignore clicks on the Apply button itself
-      if (e.target.closest('.action.apply')) return;
-      markApplyNeeded('control-panel:click');
-    });
-  }
   // Dropdown component dispatches a 'dropdown-change' event when a value is picked
   document.addEventListener('dropdown-change', markApplyNeeded);
 
@@ -1291,17 +1286,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // initial legend render without revealing the FAB
   applyChanges({scroll:false, userTriggered:false});
 
-  // close popups when clicking anywhere else
-  document.addEventListener('click', () => {
-    document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
-  });
+  // // close popups when clicking anywhere else
+  // document.addEventListener('click', () => {
+  //   document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
+  // });
 
-  // close on Escape for accessibility
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
-    }
-  });
+  // // close on Escape for accessibility
+  // document.addEventListener('keydown', (e) => {
+  //   if (e.key === 'Escape') {
+  //     document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
+  //   }
+  // });
 
   // ---------- methods accordion ----------
   const methodsCard = document.querySelector('.methods-card');
@@ -1406,4 +1401,10 @@ document.addEventListener('DOMContentLoaded', () => {
       });
     });
   }
+  document.querySelectorAll('.info-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+  });
 });
