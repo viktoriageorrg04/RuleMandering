@@ -246,7 +246,13 @@
             </div>
 
             <div class="map-placeholder">
-              <div class="map"></div>
+              <div class="map-wrap" aria-label="Map">
+                <div class="map"></div>
+                <div class="map-zoom" aria-label="Map zoom controls">
+                  <button type="button" class="zoom-btn" data-zoom="in" aria-label="Zoom in">+</button>
+                  <button type="button" class="zoom-btn" data-zoom="out" aria-label="Zoom out">-</button>
+                </div>
+              </div>
 
               <div class="map-meta">
                 <!-- Country → Threshold 4% → Formula 1 → District magnitude 6 (Mode 1) -->

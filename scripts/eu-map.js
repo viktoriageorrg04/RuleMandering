@@ -16,6 +16,10 @@
   if (!mount) return;
 
   let svg, defaultVB, curVB, stagedId=null, lastAppliedId=null;
+  let isPanning = false;
+  let panStart = null;
+  let panVB = null;
+  const DRAG_THRESHOLD = 6;
 
   // --- tiny easing for viewBox animations
   const ease = t => (t<.5) ? 4*t*t*t : 1 - Math.pow(-2*t+2,3)/2;
@@ -41,6 +45,169 @@
       if(p<1) requestAnimationFrame(step);
     };
     requestAnimationFrame(step);
+  }
+
+  function clamp(val, min, max) {
+    return Math.min(max, Math.max(min, val));
+  }
+
+  function zoomBy(factor, animate = true) {
+    if (!svg || !defaultVB) return;
+    const vb = curVB || defaultVB;
+    const scale = defaultVB.w / vb.w;
+    const targetScale = clamp(scale * factor, 1, 4);
+
+    const newW = defaultVB.w / targetScale;
+    const newH = defaultVB.h / targetScale;
+    const cx = vb.x + vb.w / 2;
+    const cy = vb.y + vb.h / 2;
+
+    let newX = cx - newW / 2;
+    let newY = cy - newH / 2;
+
+    const minX = defaultVB.x;
+    const minY = defaultVB.y;
+    const maxX = defaultVB.x + defaultVB.w - newW;
+    const maxY = defaultVB.y + defaultVB.h - newH;
+
+    newX = clamp(newX, minX, maxX);
+    newY = clamp(newY, minY, maxY);
+
+    const next = { x: newX, y: newY, w: newW, h: newH };
+    if (animate) {
+      animateViewBox(vb, next, 350);
+    } else {
+      svg.setAttribute('viewBox', `${next.x} ${next.y} ${next.w} ${next.h}`);
+      curVB = next;
+    }
+  }
+
+  function wireZoomControls() {
+    const zoomIn = document.querySelector('.map-zoom [data-zoom="in"]');
+    const zoomOut = document.querySelector('.map-zoom [data-zoom="out"]');
+    if (!zoomIn || !zoomOut) return;
+
+    zoomIn.addEventListener('click', (e) => {
+      e.preventDefault();
+      zoomBy(1.25);
+    });
+    zoomOut.addEventListener('click', (e) => {
+      e.preventDefault();
+      zoomBy(1 / 1.25);
+    });
+    zoomIn.addEventListener('dblclick', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+    zoomOut.addEventListener('dblclick', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+  }
+
+  function wirePanControls() {
+    const wrap = document.querySelector('.map-wrap');
+    if (!svg || !wrap) return;
+
+    svg.addEventListener('dblclick', (e) => {
+      e.preventDefault();
+    });
+
+    let lastClickTime = 0;
+    let lastClickTarget = null;
+
+    const onPointerDown = (e) => {
+      if (e.button !== 0) return;
+      if (!curVB && defaultVB) curVB = { ...defaultVB };
+      panStart = { x: e.clientX, y: e.clientY };
+      panVB = curVB ? { ...curVB } : { ...defaultVB };
+    };
+
+    const onPointerMove = (e) => {
+      if (!panStart || !panVB) return;
+      const dxPx = e.clientX - panStart.x;
+      const dyPx = e.clientY - panStart.y;
+
+      if (!isPanning) {
+        if (Math.abs(dxPx) < DRAG_THRESHOLD && Math.abs(dyPx) < DRAG_THRESHOLD) {
+          return;
+        }
+        isPanning = true;
+        wrap.classList.add('is-panning');
+        try { svg.setPointerCapture(e.pointerId); } catch (_) {}
+      }
+
+      const scaleX = panVB.w / Math.max(1, svg.clientWidth);
+      const scaleY = panVB.h / Math.max(1, svg.clientHeight);
+      let newX = panVB.x - (dxPx * scaleX);
+      let newY = panVB.y - (dyPx * scaleY);
+
+      const minX = defaultVB.x;
+      const minY = defaultVB.y;
+      const maxX = defaultVB.x + defaultVB.w - panVB.w;
+      const maxY = defaultVB.y + defaultVB.h - panVB.h;
+
+      newX = clamp(newX, minX, maxX);
+      newY = clamp(newY, minY, maxY);
+
+      svg.setAttribute('viewBox', `${newX} ${newY} ${panVB.w} ${panVB.h}`);
+      curVB = { x: newX, y: newY, w: panVB.w, h: panVB.h };
+    };
+
+    const onPointerUp = (e) => {
+      if (!panStart) return;
+      const clickTarget = e.target && e.target.closest && e.target.closest('.eu-country');
+      if (isPanning) {
+        try { svg.releasePointerCapture(e.pointerId); } catch (_) {}
+      }
+      isPanning = false;
+      panStart = null;
+      panVB = null;
+      wrap.classList.remove('is-panning');
+
+      if (clickTarget && !isPanning) {
+        const now = Date.now();
+        const isDouble = lastClickTarget === clickTarget && (now - lastClickTime) < 350;
+        lastClickTime = now;
+        lastClickTarget = clickTarget;
+        if (isDouble) {
+          const iso = clickTarget.id;
+          const allowed = ALLOWED_ISO.has(iso);
+          handleCountrySelect(clickTarget, iso, allowed, e);
+        }
+      }
+    };
+
+    svg.addEventListener('pointerdown', onPointerDown);
+    svg.addEventListener('pointermove', onPointerMove);
+    svg.addEventListener('pointerup', onPointerUp);
+    svg.addEventListener('pointerleave', onPointerUp);
+    svg.addEventListener('pointercancel', onPointerUp);
+
+    // wheel zoom (no modifier needed)
+    wrap.addEventListener('wheel', (e) => {
+      e.preventDefault();
+      const factor = Math.pow(1.0012, -e.deltaY);
+      zoomBy(factor, false);
+    }, { passive: false });
+
+    // touch pinch zoom
+    let pinchStart = 0;
+    function dist(t0, t1) {
+      const dx = t0.clientX - t1.clientX;
+      const dy = t0.clientY - t1.clientY;
+      return Math.hypot(dx, dy);
+    }
+    wrap.addEventListener('touchmove', (e) => {
+      if (e.touches.length !== 2) return;
+      e.preventDefault();
+      const d = dist(e.touches[0], e.touches[1]);
+      if (!pinchStart) pinchStart = d;
+      const factor = d / pinchStart;
+      zoomBy(factor, false);
+      pinchStart = d;
+    }, { passive: false });
+    wrap.addEventListener('touchend', () => { pinchStart = 0; });
   }
 
   function resetMap(){
@@ -137,6 +304,42 @@
       return ID_TO_NAME[id] || id;
     }
 
+    function handleCountrySelect(el, iso, allowed, ev) {
+      if (ev) {
+        ev.preventDefault();
+        ev.stopPropagation();
+      }
+
+      if (!allowed) {
+        if (typeof window.showErrorToast === 'function') {
+          window.showErrorToast('Country not available — please select an EU member.');
+        } else {
+          console.warn('[eu-map] non-EU country clicked:', iso);
+        }
+        try {
+          el.classList.add('is-invalid');
+          setTimeout(() => el.classList.remove('is-invalid'), 700);
+        } catch (_) {}
+        return;
+      }
+
+      const id = iso;
+      stagedId = id;
+
+      const countryName = nameFromId(id);
+      const labelEl = document.querySelector('.dropdown[data-dropdown="country"] .dropdown-label');
+      if (labelEl) labelEl.textContent = countryName;
+
+      if (typeof setDropdownSelectionByName === 'function') {
+        setDropdownSelectionByName(countryName);
+      }
+
+      const toggle = document.querySelector('.dropdown[data-dropdown="country"] .dropdown-toggle');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+
+      highlightCountry(id);
+    }
+
     // tag elements as countries and wire up click handlers
     // Only ISO codes present in NAME_TO_ID are considered allowed EU members.
     const ALLOWED_ISO = new Set(
@@ -151,49 +354,16 @@
         const iso = el.id;
         const allowed = ALLOWED_ISO.has(iso);
         try { el.style.cursor = allowed ? 'pointer' : 'not-allowed'; } catch (e) {}
-
-        el.addEventListener('click', (ev) => {
-          ev.stopPropagation();
-
-          // reject non-EU selections with a user-facing error
-          if (!allowed) {
-            if (typeof window.showErrorToast === 'function') {
-              window.showErrorToast('Country not available — please select an EU member.');
-            } else {
-              console.warn('[eu-map] non-EU country clicked:', iso);
-            }
-            // small visual hint (optional; harmless if CSS doesn't have this class)
-            try {
-              el.classList.add('is-invalid');
-              setTimeout(() => el.classList.remove('is-invalid'), 700);
-            } catch (_) {}
-            return;
-          }
-
-          // allowed: stage and sync UI
-          const id = iso;
-          stagedId = id;
-
-          const countryName = nameFromId(id);
-          const labelEl = document.querySelector('.dropdown[data-dropdown="country"] .dropdown-label');
-          if (labelEl) labelEl.textContent = countryName;
-
-          // also mark the matching item in the dropdown list
-          if (typeof setDropdownSelectionByName === 'function') {
-            setDropdownSelectionByName(countryName);
-          }
-
-          // close dropdown UI if open (best-effort)
-          const toggle = document.querySelector('.dropdown[data-dropdown="country"] .dropdown-toggle');
-          if (toggle) toggle.setAttribute('aria-expanded', 'false');
-
-          // highlight & zoom the clicked country immediately
-          highlightCountry(id);
-
-          // if you want clicks to also apply the selection (press "Apply"), uncomment:
-          // applyFromUI();
-        });
       }
+    });
+
+    svg.addEventListener('click', (ev) => {
+      if (ev.detail !== 2) return;
+      const target = ev.target.closest && ev.target.closest('.eu-country');
+      if (!target) return;
+      const iso = target.id;
+      const allowed = ALLOWED_ISO.has(iso);
+      handleCountrySelect(target, iso, allowed, ev);
     });
   }
 
@@ -252,6 +422,8 @@
       svg = $('svg', mount);
       if(!svg) throw new Error('SVG not found');
       postProcessSVG();
+      wireZoomControls();
+      wirePanControls();
       wireApply();
       readStagedId();
     }catch(e){
