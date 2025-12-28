@@ -217,6 +217,8 @@
     lastAppliedId = null;
   }
 
+  window.resetMap = resetMap;
+
   function highlightCountry(id){
     if(!svg) return;
     const targets = $$(`[id="${id}"]`, svg);

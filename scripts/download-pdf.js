@@ -53,26 +53,33 @@ function initDownloadFeature() {
       const canvas = await html2canvas(el, Object.assign({
         backgroundColor: "#ffffff",
         scale: 2,
-        useCORS: true
+        useCORS: true,
+        onclone: (doc) => {
+          const selectors = opts.hideSelectors || [];
+          if (selectors.length) {
+            selectors.forEach((sel) => {
+              doc.querySelectorAll(sel).forEach((node) => {
+                node.style.display = "none";
+              });
+            });
+          }
+          if (typeof opts.onclone === "function") {
+            opts.onclone(doc);
+          }
+        }
       }, opts));
       return canvas.toDataURL("image/png", 1.0);
     }
 
-    // Capture parts
-    // Hide legend while capturing the map to avoid duplication (mapCard contains the legend)
-    let legendBackupDisplay = legendEl.style.display;
-    try {
-      legendEl.style.display = "none";
-      var mapImg = await capture(mapEl);
-    } finally {
-      legendEl.style.display = legendBackupDisplay || "";
-    }
+    // capture parts
+    // hide legend + zoom controls in the canvas clone to avoid flashing
+    const mapImg = await capture(mapEl, { hideSelectors: [".legend", ".map-zoom"] });
 
-    // Capture legend separately
+    // capture legend separately
     const legendImg = await capture(legendEl);
 
-    // Build metrics capture element
-    // If we have the last engine result, build an off-screen cloned metrics card that contains ALL parties.
+    // build metrics capture element
+    // if we have the last engine result, build an off-screen cloned metrics card that contains ALL parties.
     let metricsClone = null;
     let metricsToCapture = metricsEl;
     let hiddenHints = [];
@@ -185,16 +192,16 @@ function initDownloadFeature() {
         });
       }
 
-      // Add map + legend to the first page
+      // add map + legend to the first page
       await addImageCentered(mapImg);
       await addImageCentered(legendImg);
 
-      // Start a new page for metrics to avoid cropping
+      // start a new page for metrics to avoid cropping
       pdf.addPage();
       y = marginTop;
       await addImageCentered(metricsImg, pageWidth - 100);
 
-      // Save
+      // save
       pdf.save("RuleMandering-Report.pdf");
     } finally {
       if (!metricsClone && hiddenHints.length) {

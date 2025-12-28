@@ -43,6 +43,8 @@
   let toast = null;
   let toastTimer = null;
   let blockClickHandler = null;
+  let blockPointerHandler = null;
+  let blockKeyHandler = null;
   let scrollBlockHandler = null;
   let keyBlockHandler = null;
   let initialScrollY = 0;
@@ -149,6 +151,39 @@
       showToast();
     };
     document.addEventListener("click", blockClickHandler, true);
+
+    function shouldBlockControls(e) {
+      if (!isVisible()) return false;
+      const step = steps[current];
+      if (!step || step.id !== "controls") return false;
+      const clickedInsideOverlay = overlay.contains(e.target);
+      const clickedInsideCard = card && card.contains(e.target);
+      if (clickedInsideOverlay || clickedInsideCard) return false;
+      return !!(e.target.closest && e.target.closest(".control-panel"));
+    }
+
+    blockPointerHandler = function (e) {
+      if (!shouldBlockControls(e)) return;
+      e.preventDefault();
+      e.stopPropagation();
+      showToast();
+    };
+    blockKeyHandler = function (e) {
+      if (!isVisible()) return;
+      const step = steps[current];
+      if (!step || step.id !== "controls") return;
+      const active = document.activeElement;
+      if (active && active.closest && active.closest(".control-panel")) {
+        e.preventDefault();
+        e.stopPropagation();
+        showToast();
+      }
+    };
+
+    document.addEventListener("pointerdown", blockPointerHandler, true);
+    document.addEventListener("mousedown", blockPointerHandler, true);
+    document.addEventListener("touchstart", blockPointerHandler, true);
+    document.addEventListener("keydown", blockKeyHandler, true);
 
     return true;
   }
@@ -379,6 +414,12 @@
     if (!step || !titleEl || !textEl || !stepEl) return;
 
     current = index;
+    if (step.id === "controls") {
+      const active = document.activeElement;
+      if (active && active.closest && active.closest(".control-panel")) {
+        try { active.blur(); } catch (e) {}
+      }
+    }
 
     const total = steps.length;
     stepEl.textContent = `Step ${index + 1} of ${total}`;
@@ -460,6 +501,16 @@
     if (blockClickHandler) {
       document.removeEventListener("click", blockClickHandler, true);
       blockClickHandler = null;
+    }
+    if (blockPointerHandler) {
+      document.removeEventListener("pointerdown", blockPointerHandler, true);
+      document.removeEventListener("mousedown", blockPointerHandler, true);
+      document.removeEventListener("touchstart", blockPointerHandler, true);
+      blockPointerHandler = null;
+    }
+    if (blockKeyHandler) {
+      document.removeEventListener("keydown", blockKeyHandler, true);
+      blockKeyHandler = null;
     }
 
     if (toastTimer) {

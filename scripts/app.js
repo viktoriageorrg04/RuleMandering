@@ -207,8 +207,71 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   resetBtn?.addEventListener('click', () => {
-    // hard refresh keeps everything in a clean base state
-    window.location.reload();
+    // restore default control values without reloading the page
+    sliders.forEach((input) => {
+      const initial = initialSliderValue.get(input);
+      if (typeof initial !== 'undefined') {
+        input.value = initial;
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+
+    radioGroupDefault.forEach((radio) => {
+      if (radio) {
+        radio.checked = true;
+        radio.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+
+    // reset dropdown labels back to placeholders
+    document.querySelectorAll('.dropdown .dropdown-label').forEach((label) => {
+      const dd = label.closest('.dropdown');
+      if (dd?.dataset?.dropdown === 'country') {
+        label.textContent = 'Country';
+      }
+    });
+    document.querySelectorAll('.dropdown .dropdown-list .item[aria-selected="true"]').forEach((item) => {
+      item.setAttribute('aria-selected', 'false');
+    });
+
+    // reset derived UI to baseline state
+    renderEmptyMetricsPlaceholder();
+    renderLegend(readState());
+    if (viewFab) viewFab.classList.add('is-hidden');
+    allowFab = true;
+    fabAutoHidden = false;
+
+    if (applyBtn) {
+      applyBtn.classList.remove('needs-apply', 'is-bounce');
+    }
+    applyBouncedOnce = false;
+
+    if (downloadBtn) {
+      downloadBtn.classList.add('is-disabled');
+      downloadBtn.setAttribute('aria-disabled', 'true');
+    }
+
+    if (typeof window.resetMap === 'function') {
+      window.resetMap();
+    }
+
+    // collapse Methods panel if open
+    const methodsCard = document.querySelector('.methods-card');
+    if (methodsCard) {
+      const toggle = methodsCard.querySelector('.methods-toggle');
+      const body = methodsCard.querySelector('.methods-body');
+      methodsCard.classList.add('is-collapsed');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      if (body) {
+        body.style.display = 'none';
+        body.style.height = '0px';
+        body.style.opacity = '0';
+      }
+    }
+
+    // scroll back to the top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   // --- Apply attention helpers: mark/unmark when controls change ---
