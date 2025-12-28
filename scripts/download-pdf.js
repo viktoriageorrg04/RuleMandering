@@ -75,6 +75,8 @@ function initDownloadFeature() {
     // If we have the last engine result, build an off-screen cloned metrics card that contains ALL parties.
     let metricsClone = null;
     let metricsToCapture = metricsEl;
+    let hiddenHints = [];
+    let hiddenHintsDisplay = [];
     try {
       const engineResult = window._lastEngineResult || null;
       if (engineResult && Array.isArray(engineResult.parties)) {
@@ -143,10 +145,17 @@ function initDownloadFeature() {
           if (pager) pager.remove();
         }
 
+        // remove "What's this?" hint from the cloned card
+        metricsClone.querySelectorAll('.methods-hint').forEach((el) => el.remove());
         metricsToCapture = metricsClone;
       }
 
       // now capture metricsToCapture
+      if (!metricsClone) {
+        hiddenHints = Array.from(metricsEl.querySelectorAll('.methods-hint'));
+        hiddenHintsDisplay = hiddenHints.map((el) => el.style.display);
+        hiddenHints.forEach((el) => { el.style.display = 'none'; });
+      }
       const metricsImg = await capture(metricsToCapture, { scrollY: -window.scrollY });
 
       const pdf = new jsPDF({ unit: "pt", format: "a4" });
@@ -188,6 +197,11 @@ function initDownloadFeature() {
       // Save
       pdf.save("RuleMandering-Report.pdf");
     } finally {
+      if (!metricsClone && hiddenHints.length) {
+        hiddenHints.forEach((el, idx) => {
+          el.style.display = hiddenHintsDisplay[idx] || '';
+        });
+      }
       // cleanup clone if used
       if (metricsClone && metricsClone.parentNode) metricsClone.parentNode.removeChild(metricsClone);
     }
