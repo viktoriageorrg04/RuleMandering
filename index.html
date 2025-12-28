@@ -135,20 +135,29 @@
                     <div class="info-popup-inner">
                       <!-- <strong>District magnitude</strong>
                       <p>Seats per district. Lower → less proportional, more volatile.</p> -->
-                      <strong>Mode 1:</strong> <p>Same seats everywhere.</p>
+                      <!-- <strong>Mode 1:</strong> <p>Same seats everywhere.</p>
                       <strong>Mode 2:</strong> <p>Scaled by population.</p>
-                      <strong>Mode 3:</strong> <p>Fewer, larger districts (more proportional).</p>
+                      <strong>Mode 3:</strong> <p>Fewer, larger districts (more proportional).</p> -->
+                      <strong>Fixed:</strong> <p>Same seats everywhere.</p>
+                      <strong>Scaled:</strong> <p>Scaled by population.</p>
+                      <strong>Merged:</strong> <p>Fewer, larger districts (more proportional).</p>
                     </div>
                   </div>
                 </div>
                 <div class="mode-wrap">
                   <div class="segmented tabs" role="tablist" aria-label="District magnitude mode">
-                    <input id="mode-1" name="dm-mode" type="radio" checked aria-controls="dm-mode-1-panel">
-                    <label for="mode-1" role="tab" aria-selected="true" tabindex="0">Mode 1</label>
-                    <input id="mode-2" name="dm-mode" type="radio" aria-controls="dm-mode-2-panel">
-                    <label for="mode-2" role="tab" aria-selected="false" tabindex="-1">Mode 2</label>
-                    <input id="mode-3" name="dm-mode" type="radio" aria-controls="dm-mode-3-panel">
-                    <label for="mode-3" role="tab" aria-selected="false" tabindex="-1">Mode 3</label>
+                    <!-- <input id="mode-1" name="dm-mode" type="radio" checked aria-controls="dm-mode-1-panel"> -->
+                    <!-- <label for="mode-1" role="tab" aria-selected="true" tabindex="0">Mode 1</label> -->
+                    <input id="mode-1" name="dm-mode" type="radio" value="mode-1" checked aria-controls="dm-mode-1-panel">
+                    <label for="mode-1" role="tab" aria-selected="true" tabindex="0">Fixed</label>
+                    <!-- <input id="mode-2" name="dm-mode" type="radio" aria-controls="dm-mode-2-panel"> -->
+                    <!-- <label for="mode-2" role="tab" aria-selected="false" tabindex="-1">Mode 2</label> -->
+                    <input id="mode-2" name="dm-mode" type="radio" value="mode-2" aria-controls="dm-mode-2-panel">
+                    <label for="mode-2" role="tab" aria-selected="false" tabindex="-1">Scaled</label>
+                    <!-- <input id="mode-3" name="dm-mode" type="radio" aria-controls="dm-mode-3-panel"> -->
+                    <!-- <label for="mode-3" role="tab" aria-selected="false" tabindex="-1">Mode 3</label> -->
+                    <input id="mode-3" name="dm-mode" type="radio" value="mode-3" aria-controls="dm-mode-3-panel">
+                    <label for="mode-3" role="tab" aria-selected="false" tabindex="-1">Merged</label>
                     <span class="seg-thumb" aria-hidden="true"></span>
                   </div>
                 </div>
@@ -162,12 +171,13 @@
             <div class="toolbar">
               <button class="action reset">Reset</button>
               <span class="toolbar-sep" aria-hidden="true"></span>
-              <button class="action apply">Apply</button>
+              <!-- <button class="action apply">Apply</button> -->
+              <button class="action apply"><span class="apply-label">Apply</span></button>
             </div>
           </div>
 
           <!-- COLLAPSIBLE METHODS — collapsed by default -->
-          <div class="card methods-card collapsible is-collapsed">
+          <div class="card methods-card collapsible is-collapsed" id="methods-panel">
             <button class="collapse-toggle" type="button" aria-expanded="false" aria-controls="methods-body">
               <span class="eyebrow">METHODS</span>
               <span class="chev" aria-hidden="true">▾</span>
@@ -208,9 +218,14 @@
                 <li class="method-note">
                   <p class="m-text m-muted">
                     <strong>Implementation note.</strong>
-                    District magnitude and seat-allocation formulas only serve to generate these metrics.
+                    <!-- District magnitude and seat-allocation formulas only serve to generate these metrics.
                     Mode&nbsp;1 uses the base seats per district, Mode&nbsp;2 takes the slider value,
                     and Mode&nbsp;3 scales the base by the slider. D’Hondt and Sainte-Laguë use
+                    different divisor series, while the “Hare” option allocates seats proportional
+                    to raw votes. -->
+                    District magnitude and seat-allocation formulas only serve to generate these metrics.
+                    Fixed uses the base seats per district, Scaled takes the slider value,
+                    and Merged scales the base by the slider. D’Hondt and Sainte-Laguë use
                     different divisor series, while the “Hare” option allocates seats proportional
                     to raw votes.
                   </p>
@@ -231,10 +246,17 @@
             </div>
 
             <div class="map-placeholder">
-              <div class="map"></div>
+              <div class="map-wrap" aria-label="Map">
+                <div class="map"></div>
+                <div class="map-zoom" aria-label="Map zoom controls">
+                  <button type="button" class="zoom-btn" data-zoom="in" aria-label="Zoom in">+</button>
+                  <button type="button" class="zoom-btn" data-zoom="out" aria-label="Zoom out">-</button>
+                </div>
+              </div>
 
               <div class="map-meta">
-                Country → Threshold 4% → Formula 1 → District magnitude 6 (Mode 1)
+                <!-- Country → Threshold 4% → Formula 1 → District magnitude 6 (Mode 1) -->
+                Country → Threshold 4% → Formula 1 → District magnitude 6 (Fixed)
               </div>
 
               <aside class="legend" id="results">
@@ -255,7 +277,10 @@
             <div class="card insights-card">
               <div class="metric-grid">
                 <div class="metric seat-bonus">
-                  <span class="label">Seat bonus</span>
+                  <div class="metric-label">
+                    <span class="label">Seat bonus</span>
+                    <a class="methods-hint" href="#methods-panel">What's this?</a>
+                  </div>
 
                   <!-- Top section: table + pager -->
                   <div class="seat-bonus-top">

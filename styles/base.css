@@ -40,7 +40,6 @@ body{
 
 /* Compact neutral "i" info button (overrides previous .info-btn rules) */
 .info-btn {
-  /* smaller, compact circle */
   width: 20px;
   height: 20px;
   min-width: 20px;
@@ -50,15 +49,24 @@ body{
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  background: #f3f4f6;            /* very light grey */
-  border: 1px solid #e5e7eb;     /* light border */
-  color: #374151;                /* dark grey for the "i" */
+  background: #f3f4f6;
+  border: 1px solid #e5e7eb;
+  color: #374151;
   font-weight: 600;
-  font-size: 11px;               /* small 'i' */
+  font-size: 11px;
   line-height: 1;
   cursor: pointer;
   transition: background .12s ease, transform .08s ease, box-shadow .08s ease;
   box-shadow: none;
+}
+/* disable clicks - hover only */
+.info-btn {
+  cursor: default;
+}
+
+/* but allow the popup itself to be hoverable */
+.info-popup {
+  pointer-events: auto;
 }
 
 /* hide inline SVG icons (keeps HTML unchanged) and show typographic "i" */
@@ -198,10 +206,7 @@ body{
 
 /* show info popup when hovering or keyboard-focusing the info button only */
 .info-btn:hover ~ .info-popup,
-.info-btn:focus ~ .info-popup,
-.info-btn:focus-visible ~ .info-popup,
-.info-popup:hover,
-.info-popup:focus-within {
+.info-popup:hover {
 display: block;
 opacity: 1;
 pointer-events: auto;

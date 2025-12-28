@@ -21,6 +21,7 @@ document.addEventListener('DOMContentLoaded', () => {
   let   applyBtn = document.querySelector('.toolbar .apply, [data-action="apply"], .control-panel .apply, button.apply')
            || Array.from(document.querySelectorAll('button, .btn')).find(b => (b.textContent||'').trim().toLowerCase()==='apply');
   let applyBouncedOnce = false;
+  let applyBounceTimer = null;
 
   // View Results pill (FAB)
   const viewFab = document.querySelector('.fab-to-results');
@@ -206,21 +207,89 @@ document.addEventListener('DOMContentLoaded', () => {
   });
 
   resetBtn?.addEventListener('click', () => {
-    // hard refresh keeps everything in a clean base state
-    window.location.reload();
+    // restore default control values without reloading the page
+    sliders.forEach((input) => {
+      const initial = initialSliderValue.get(input);
+      if (typeof initial !== 'undefined') {
+        input.value = initial;
+        input.dispatchEvent(new Event('input', { bubbles: true }));
+        input.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+
+    radioGroupDefault.forEach((radio) => {
+      if (radio) {
+        radio.checked = true;
+        radio.dispatchEvent(new Event('change', { bubbles: true }));
+      }
+    });
+
+    // reset dropdown labels back to placeholders
+    document.querySelectorAll('.dropdown .dropdown-label').forEach((label) => {
+      const dd = label.closest('.dropdown');
+      if (dd?.dataset?.dropdown === 'country') {
+        label.textContent = 'Country';
+      }
+    });
+    document.querySelectorAll('.dropdown .dropdown-list .item[aria-selected="true"]').forEach((item) => {
+      item.setAttribute('aria-selected', 'false');
+    });
+
+    // reset derived UI to baseline state
+    renderEmptyMetricsPlaceholder();
+    renderLegend(readState());
+    if (viewFab) viewFab.classList.add('is-hidden');
+    allowFab = true;
+    fabAutoHidden = false;
+
+    if (applyBtn) {
+      applyBtn.classList.remove('needs-apply', 'is-bounce');
+    }
+    applyBouncedOnce = false;
+
+    if (downloadBtn) {
+      downloadBtn.classList.add('is-disabled');
+      downloadBtn.setAttribute('aria-disabled', 'true');
+    }
+
+    if (typeof window.resetMap === 'function') {
+      window.resetMap();
+    }
+
+    // collapse Methods panel if open
+    const methodsCard = document.querySelector('.methods-card');
+    if (methodsCard) {
+      const toggle = methodsCard.querySelector('.methods-toggle');
+      const body = methodsCard.querySelector('.methods-body');
+      methodsCard.classList.add('is-collapsed');
+      if (toggle) toggle.setAttribute('aria-expanded', 'false');
+      if (body) {
+        body.style.display = 'none';
+        body.style.height = '0px';
+        body.style.opacity = '0';
+      }
+    }
+
+    // scroll back to the top
+    window.scrollTo({ top: 0, behavior: 'smooth' });
   });
 
   // --- Apply attention helpers: mark/unmark when controls change ---
   function bounceApplyOnce() {
-    if (!applyBtn) {
+    const target = applyBtn?.querySelector('.apply-label') || applyBtn;
+    if (!target) {
       console.debug('[APP] bounceApplyOnce: no applyBtn found');
       return;
     }
     console.debug('[APP] bounceApplyOnce: triggering bounce');
-    applyBtn.classList.add('is-bounce');
+    // restart animation even if it is already applied
+    target.classList.remove('is-bounce');
+    void target.offsetWidth;
+    target.classList.add('is-bounce');
     // remove the is-bounce class after the nudge duration so it doesn't linger
-    setTimeout(() => {
-      try { applyBtn.classList.remove('is-bounce'); } catch (e) {}
+    if (applyBounceTimer) clearTimeout(applyBounceTimer);
+    applyBounceTimer = setTimeout(() => {
+      try { target.classList.remove('is-bounce'); } catch (e) {}
       console.debug('[APP] bounceApplyOnce: removed is-bounce');
     }, 900);
   }
@@ -235,34 +304,26 @@ document.addEventListener('DOMContentLoaded', () => {
       console.debug('[APP] markApplyNeeded called (source:', source, '), applyBouncedOnce=', applyBouncedOnce, 'needs-apply?',
                     applyBtn.classList.contains('needs-apply'));
 
-      // If this is the first time since the last Apply, trigger the one-time bounce
-      if (!applyBtn.classList.contains('needs-apply') && !applyBouncedOnce) {
-        applyBtn.classList.add('needs-apply');
-        bounceApplyOnce();
+      // // If this is the first time since the last Apply, trigger the one-time bounce
+      // if (!applyBtn.classList.contains('needs-apply') && !applyBouncedOnce) {
+      //   applyBtn.classList.add('needs-apply');
+      //   bounceApplyOnce();
+      //   applyBouncedOnce = true;
+      // } else {
+      //   // already marked — just ensure the gentle halo persists
+      //   applyBtn.classList.add('needs-apply');
+      // }
+      if (!applyBtn.classList.contains('needs-apply')) {
         applyBouncedOnce = true;
-      } else {
-        // already marked — just ensure the gentle halo persists
-        applyBtn.classList.add('needs-apply');
+        bounceApplyOnce();
       }
     } catch (e) { /* non-critical */ }
   }
 
   // Attach listeners: sliders, radios, dropdown changes
   sliders.forEach(s => s.addEventListener('input', markApplyNeeded));
-  sliders.forEach(s => s.addEventListener('change', markApplyNeeded));
   radios.forEach(r => r.addEventListener('change', markApplyNeeded));
 
-  // fallback: delegated listeners on the control panel to catch anything we missed
-  const controlPanel = document.querySelector('.control-panel');
-  if (controlPanel) {
-    controlPanel.addEventListener('input', (e) => markApplyNeeded('control-panel:input'));
-    controlPanel.addEventListener('change', (e) => markApplyNeeded('control-panel:change'));
-    controlPanel.addEventListener('click', (e) => {
-      // small filter: ignore clicks on the Apply button itself
-      if (e.target.closest('.action.apply')) return;
-      markApplyNeeded('control-panel:click');
-    });
-  }
   // Dropdown component dispatches a 'dropdown-change' event when a value is picked
   document.addEventListener('dropdown-change', markApplyNeeded);
 
@@ -437,18 +498,33 @@ document.addEventListener('DOMContentLoaded', () => {
     return { wire, closeAll };
   })();
 
-  // attach dropdowns
+  // // attach dropdowns
+  // const euCountries = [
+  //   "Austria","Belgium","Bulgaria","Croatia","Cyprus","Czechia",
+  //   "Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Ireland",
+  //   "Italy","Latvia","Lithuania","Luxembourg","Malta","Netherlands","Poland",
+  //   "Portugal","Romania","Slovakia","Slovenia","Spain","Sweden"
+  // ].sort((a,b)=>a.localeCompare(b));
+
+  // const EU_CODES = {
+  //   "Austria": "AT","Belgium":"BE","Bulgaria":"BG","Croatia":"HR","Cyprus":"CY","Czechia":"CZ",
+  //   "Denmark":"DK","Estonia":"EE","Finland":"FI","France":"FR","Germany":"DE","Greece":"EL","Hungary":"HU","Ireland":"IE",
+  //   "Italy":"IT","Latvia":"LV","Lithuania":"LT","Luxembourg":"LU","Malta":"MT","Netherlands":"NL","Poland":"PL",
+  //   "Portugal":"PT","Romania":"RO","Slovakia":"SK","Slovenia":"SI","Spain":"ES","Sweden":"SE"
+  // };
+  
+  // attach dropdowns (no Malta bcs they don't have it on the map SVG)
   const euCountries = [
     "Austria","Belgium","Bulgaria","Croatia","Cyprus","Czechia",
     "Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Ireland",
-    "Italy","Latvia","Lithuania","Luxembourg","Malta","Netherlands","Poland",
+    "Italy","Latvia","Lithuania","Luxembourg","Netherlands","Poland",
     "Portugal","Romania","Slovakia","Slovenia","Spain","Sweden"
   ].sort((a,b)=>a.localeCompare(b));
 
   const EU_CODES = {
     "Austria": "AT","Belgium":"BE","Bulgaria":"BG","Croatia":"HR","Cyprus":"CY","Czechia":"CZ",
     "Denmark":"DK","Estonia":"EE","Finland":"FI","France":"FR","Germany":"DE","Greece":"EL","Hungary":"HU","Ireland":"IE",
-    "Italy":"IT","Latvia":"LV","Lithuania":"LT","Luxembourg":"LU","Malta":"MT","Netherlands":"NL","Poland":"PL",
+    "Italy":"IT","Latvia":"LV","Lithuania":"LT","Luxembourg":"LU","Netherlands":"NL","Poland":"PL",
     "Portugal":"PT","Romania":"RO","Slovakia":"SK","Slovenia":"SI","Spain":"ES","Sweden":"SE"
   };
   
@@ -471,10 +547,14 @@ document.addEventListener('DOMContentLoaded', () => {
     const l = c?.closest('label.formula')?.querySelector('.text')?.textContent?.trim();
     return l || 'Formula';
   }
+  // function currentDmMode(){
+  //   const m = document.querySelector('input[name="dm-mode"]:checked');
+  //   const lbl = m ? document.querySelector(`label[for="${m.id}"]`) : null;
+  //   return lbl ? lbl.textContent.trim() : '';
+  // }
   function currentDmMode(){
     const m = document.querySelector('input[name="dm-mode"]:checked');
-    const lbl = m ? document.querySelector(`label[for="${m.id}"]`) : null;
-    return lbl ? lbl.textContent.trim() : '';
+    return m ? (m.value || '') : '';
   }
   const dmMagnitudeValue = () => Math.max(1, Math.round(Number(dmSlider?.value||0)) + 2);
 
@@ -1284,17 +1364,17 @@ document.addEventListener('DOMContentLoaded', () => {
   // initial legend render without revealing the FAB
   applyChanges({scroll:false, userTriggered:false});
 
-  // close popups when clicking anywhere else
-  document.addEventListener('click', () => {
-    document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
-  });
+  // // close popups when clicking anywhere else
+  // document.addEventListener('click', () => {
+  //   document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
+  // });
 
-  // close on Escape for accessibility
-  document.addEventListener('keydown', (e) => {
-    if (e.key === 'Escape') {
-      document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
-    }
-  });
+  // // close on Escape for accessibility
+  // document.addEventListener('keydown', (e) => {
+  //   if (e.key === 'Escape') {
+  //     document.querySelectorAll('.info-popup.is-open').forEach(p => p.classList.remove('is-open'));
+  //   }
+  // });
 
   // ---------- methods accordion ----------
   const methodsCard = document.querySelector('.methods-card');
@@ -1365,5 +1445,37 @@ document.addEventListener('DOMContentLoaded', () => {
         expand(body);
       }
     });
+
+    // "What's this?" link should open Methods and scroll it into view
+    document.querySelectorAll('.methods-hint').forEach((link) => {
+      link.addEventListener('click', (e) => {
+        e.preventDefault();
+
+        if (methodsCard.classList.contains('is-collapsed')) {
+          toggle?.setAttribute('aria-expanded', 'true');
+          methodsCard.classList.remove('is-collapsed');
+          if (body) expand(body);
+        }
+
+        requestAnimationFrame(() => {
+          requestAnimationFrame(() => {
+            try {
+              const rect = methodsCard.getBoundingClientRect();
+              const anchor = 70; // fixed viewport offset from the top
+              const targetTop = Math.max(0, window.scrollY + rect.top - anchor);
+              window.scrollTo({ top: targetTop, behavior: 'smooth' });
+            } catch {
+              methodsCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }
+          });
+        });
+      });
+    });
   }
+  document.querySelectorAll('.info-btn').forEach(btn => {
+    btn.addEventListener('click', (e) => {
+      e.preventDefault();
+      e.stopPropagation();
+    });
+  });
 });
