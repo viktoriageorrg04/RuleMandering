@@ -435,18 +435,33 @@ document.addEventListener('DOMContentLoaded', () => {
     return { wire, closeAll };
   })();
 
-  // attach dropdowns
+  // // attach dropdowns
+  // const euCountries = [
+  //   "Austria","Belgium","Bulgaria","Croatia","Cyprus","Czechia",
+  //   "Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Ireland",
+  //   "Italy","Latvia","Lithuania","Luxembourg","Malta","Netherlands","Poland",
+  //   "Portugal","Romania","Slovakia","Slovenia","Spain","Sweden"
+  // ].sort((a,b)=>a.localeCompare(b));
+
+  // const EU_CODES = {
+  //   "Austria": "AT","Belgium":"BE","Bulgaria":"BG","Croatia":"HR","Cyprus":"CY","Czechia":"CZ",
+  //   "Denmark":"DK","Estonia":"EE","Finland":"FI","France":"FR","Germany":"DE","Greece":"EL","Hungary":"HU","Ireland":"IE",
+  //   "Italy":"IT","Latvia":"LV","Lithuania":"LT","Luxembourg":"LU","Malta":"MT","Netherlands":"NL","Poland":"PL",
+  //   "Portugal":"PT","Romania":"RO","Slovakia":"SK","Slovenia":"SI","Spain":"ES","Sweden":"SE"
+  // };
+  
+  // attach dropdowns (no Malta bcs they don't have it on the map SVG)
   const euCountries = [
     "Austria","Belgium","Bulgaria","Croatia","Cyprus","Czechia",
     "Denmark","Estonia","Finland","France","Germany","Greece","Hungary","Ireland",
-    "Italy","Latvia","Lithuania","Luxembourg","Malta","Netherlands","Poland",
+    "Italy","Latvia","Lithuania","Luxembourg","Netherlands","Poland",
     "Portugal","Romania","Slovakia","Slovenia","Spain","Sweden"
   ].sort((a,b)=>a.localeCompare(b));
 
   const EU_CODES = {
     "Austria": "AT","Belgium":"BE","Bulgaria":"BG","Croatia":"HR","Cyprus":"CY","Czechia":"CZ",
     "Denmark":"DK","Estonia":"EE","Finland":"FI","France":"FR","Germany":"DE","Greece":"EL","Hungary":"HU","Ireland":"IE",
-    "Italy":"IT","Latvia":"LV","Lithuania":"LT","Luxembourg":"LU","Malta":"MT","Netherlands":"NL","Poland":"PL",
+    "Italy":"IT","Latvia":"LV","Lithuania":"LT","Luxembourg":"LU","Netherlands":"NL","Poland":"PL",
     "Portugal":"PT","Romania":"RO","Slovakia":"SK","Slovenia":"SI","Spain":"ES","Sweden":"SE"
   };
   

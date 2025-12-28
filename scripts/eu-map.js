@@ -21,7 +21,7 @@
   let panVB = null;
   const DRAG_THRESHOLD = 6;
 
-  // --- tiny easing for viewBox animations
+  // tiny easing for viewBox animations
   const ease = t => (t<.5) ? 4*t*t*t : 1 - Math.pow(-2*t+2,3)/2;
 
   function fitBoxToAspect(bbox, vbAspect) {
@@ -219,22 +219,38 @@
 
   function highlightCountry(id){
     if(!svg) return;
-    const target = svg.getElementById(id);
-    if(!target) return;
+    const targets = $$(`[id="${id}"]`, svg);
+    if(!targets.length) return;
 
     // keep z-order and stroke so borders stay continuous
     const all = $$('.eu-country', svg);
     all.forEach(n => n.classList.remove('is-selected','is-dimmed'));
     all.forEach(n => n.classList.add('is-dimmed'));
-    target.classList.remove('is-dimmed');
-    target.classList.add('is-selected');
+    targets.forEach((target) => {
+      target.classList.remove('is-dimmed');
+      target.classList.add('is-selected');
+    });
 
     // zoom to the country with small padding
     const vb = svg.viewBox.baseVal;
     const vbAspect = vb.width / vb.height;
-    const b = target.getBBox();
+    const union = targets.reduce((acc, el) => {
+      const b = el.getBBox();
+      if (!acc) return { x: b.x, y: b.y, r: b.x + b.width, b: b.y + b.height };
+      return {
+        x: Math.min(acc.x, b.x),
+        y: Math.min(acc.y, b.y),
+        r: Math.max(acc.r, b.x + b.width),
+        b: Math.max(acc.b, b.y + b.height)
+      };
+    }, null);
     const pad = Math.max(vb.width, vb.height) * 0.04;
-    const padded = { x:b.x-pad, y:b.y-pad, width:b.width+pad*2, height:b.height+pad*2 };
+    const padded = {
+      x: union.x - pad,
+      y: union.y - pad,
+      width: (union.r - union.x) + pad * 2,
+      height: (union.b - union.y) + pad * 2
+    };
     const fit = fitBoxToAspect(
       {x:padded.x,y:padded.y,width:padded.width,height:padded.height},
       vbAspect
@@ -341,7 +357,6 @@
     }
 
     // tag elements as countries and wire up click handlers
-    // Only ISO codes present in NAME_TO_ID are considered allowed EU members.
     const ALLOWED_ISO = new Set(
       Object.values(NAME_TO_ID).filter(code => code && code !== 'GB')
     );
