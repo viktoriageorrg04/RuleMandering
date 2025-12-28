@@ -1395,23 +1395,16 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         requestAnimationFrame(() => {
-          try {
-            const rect = methodsCard.getBoundingClientRect();
-            const padding = 16;
-            let delta = 0;
-
-            if (rect.top < padding) {
-              delta = rect.top - padding;
-            } else if (rect.bottom > window.innerHeight - padding) {
-              delta = rect.bottom - (window.innerHeight - padding);
+          requestAnimationFrame(() => {
+            try {
+              const rect = methodsCard.getBoundingClientRect();
+              const anchor = 70; // fixed viewport offset from the top
+              const targetTop = Math.max(0, window.scrollY + rect.top - anchor);
+              window.scrollTo({ top: targetTop, behavior: 'smooth' });
+            } catch {
+              methodsCard.scrollIntoView({ behavior: 'smooth', block: 'start' });
             }
-
-            if (delta !== 0) {
-              window.scrollBy({ top: delta, behavior: 'smooth' });
-            }
-          } catch {
-            methodsCard.scrollIntoView();
-          }
+          });
         });
       });
     });
