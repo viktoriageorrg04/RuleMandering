@@ -1451,6 +1451,13 @@ document.addEventListener('DOMContentLoaded', () => {
       link.addEventListener('click', (e) => {
         e.preventDefault();
 
+        methodsCard.classList.remove('is-bounce');
+        void methodsCard.offsetWidth;
+        methodsCard.classList.add('is-bounce');
+        setTimeout(() => {
+          try { methodsCard.classList.remove('is-bounce'); } catch (err) {}
+        }, 420);
+
         if (methodsCard.classList.contains('is-collapsed')) {
           toggle?.setAttribute('aria-expanded', 'true');
           methodsCard.classList.remove('is-collapsed');

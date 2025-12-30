@@ -24,7 +24,7 @@ function initDownloadFeature() {
   if (!downloadBtn) return;
 
   downloadBtn.addEventListener("click", async (ev) => {
-    // EARLY GUARD: abort if marked disabled via class/aria
+    // early guard: abort if marked disabled via class/aria
     if (downloadBtn.classList.contains("is-disabled") || downloadBtn.getAttribute("aria-disabled") === "true") {
       ev && ev.preventDefault && ev.preventDefault();
       ev && ev.stopPropagation && ev.stopPropagation();
@@ -38,7 +38,7 @@ function initDownloadFeature() {
 
     const { jsPDF } = window.jspdf;
 
-    // Elements to capture
+    // elements to capture
     const mapEl = document.querySelector(".map-card");
     const legendEl = document.querySelector(".legend");
     const metricsEl = document.querySelector(".insights-card");
@@ -48,7 +48,7 @@ function initDownloadFeature() {
       return;
     }
 
-    // Helper for capturing a DOM node → canvas → PNG
+    // helper for capturing a DOM node → canvas → PNG
     async function capture(el, opts = {}) {
       const canvas = await html2canvas(el, Object.assign({
         backgroundColor: "#ffffff",
@@ -73,13 +73,12 @@ function initDownloadFeature() {
 
     // capture parts
     // hide legend + zoom controls in the canvas clone to avoid flashing
-    const mapImg = await capture(mapEl, { hideSelectors: [".legend", ".map-zoom"] });
+    const mapImg = await capture(mapEl, { hideSelectors: [".legend", ".map-zoom", ".map-actions"] });
 
     // capture legend separately
     const legendImg = await capture(legendEl);
 
     // build metrics capture element
-    // if we have the last engine result, build an off-screen cloned metrics card that contains ALL parties.
     let metricsClone = null;
     let metricsToCapture = metricsEl;
     let hiddenHints = [];
@@ -171,7 +170,7 @@ function initDownloadFeature() {
       const marginTop = 40; // top padding on each page
       let y = marginTop; // current vertical position on current page
 
-      // Adds an image centered at `y`, updates y to after the image.
+      // adds an image centered at `y`, updates y to after the image.
       function addImageCentered(img, maxWidth = pageWidth - 80) {
         const baseImg = new Image();
         baseImg.src = img;

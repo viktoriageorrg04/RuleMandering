@@ -93,6 +93,15 @@
   background:#fff;
   box-shadow:var(--shadow);
 }
+.control-panel .methods-card.is-bounce{
+  animation: methods-bounce 380ms ease-out 1;
+}
+@keyframes methods-bounce{
+  0%{ transform: translateY(0); }
+  40%{ transform: translateY(-4px); }
+  70%{ transform: translateY(1px); }
+  100%{ transform: translateY(0); }
+}
 
 .methods-card .collapse-toggle{
   appearance:none; border:0; background:transparent;

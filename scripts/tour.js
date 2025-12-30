@@ -163,6 +163,12 @@
     }
 
     blockPointerHandler = function (e) {
+      if (isVisible() && e.target.closest && e.target.closest(".info-btn")) {
+        e.preventDefault();
+        e.stopPropagation();
+        showToast();
+        return;
+      }
       if (!shouldBlockControls(e)) return;
       e.preventDefault();
       e.stopPropagation();
@@ -195,6 +201,7 @@
   function showOverlay () {
     if (!overlay) return;
     overlay.classList.remove("rm-tour-overlay--hidden");
+    document.body.classList.add("rm-tour-active");
     lockScroll();
   }
 
@@ -202,6 +209,7 @@
     if (!overlay) return;
     overlay.classList.add("rm-tour-overlay--hidden");
     clearHighlight();
+    document.body.classList.remove("rm-tour-active");
     unlockScroll();
   }
 
@@ -543,6 +551,7 @@
       overlay.parentNode.removeChild(overlay);
       overlay = null;
     }
+    document.body.classList.remove("rm-tour-active");
     if (card && card.parentNode) {
       card.parentNode.removeChild(card);
       card = null;
